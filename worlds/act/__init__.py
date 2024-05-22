@@ -1,10 +1,11 @@
 from typing import Dict
 from ..AutoWorld import WebWorld, World
-from ...BaseClasses import Item, Location, ItemClassification
+from ...BaseClasses import Item, Location, ItemClassification, Region
 
 from .Items import item_table
 from .Locations import location_table
 from .Options import ACTGameOptions
+
 
 class ACTWeb(WebWorld):
     theme = "ocean"
@@ -48,3 +49,10 @@ class ACTWorld(World):
             
         junk = 0
         self.multiworld.itempool += [self.create_item("nothing") for _ in range(junk)]
+
+    def create_regions(self):
+        player = self.player
+        multiworld = self.multiworld
+
+        menu = Region("Menu", player, multiworld)
+        multiworld.regions.append(menu)
