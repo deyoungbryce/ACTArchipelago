@@ -1,18 +1,24 @@
-from typing import List, TypedDict
+from itertools import groupby
+from typing import Dict, List, Set, NamedTuple
+from BaseClasses import ItemClassification
+from .names import item_names as iname
 
-from ...BaseClasses import Item, ItemClassification
+item_base_id = 483021700
 
-class ItemDict(TypedDict):
-    name: str
-    id: int
-    count: int
+class ACTItemData(NamedTuple):
     classification: ItemClassification
+    quantity_in_item_pool: int
+    item_group: str = ""
 
-base_id = 0
 
-item_table:  List[ItemDict] = [
-    
-    {"name": "Fork", "id": base_id + 1, "count": 1, "classification": ItemClassification.progression},
-    {"name": "Map Piece", "id": base_id + 2, "count": 3, "classification": ItemClassification.progression}
+item_table: Dict[str, ACTItemData] = {
+    # progression
+    iname.fork: ACTItemData(ItemClassification.progression, 1, "Progression"),
 
-]
+    #upgrade
+    iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 25 , "Upgrades"),
+    iname.heartkelp_sprout: ACTItemData(ItemClassification.useful, 7, "Upgrades"),
+    iname.old_whorl: ACTItemData(ItemClassification.useful, 11, "Upgrades"),
+    iname.stainless_relic: ACTItemData(ItemClassification.useful, 15, "Upgrades"),
+    iname.tackle_pouch: ACTItemData(ItemClassification.useful, 1, "Upgrades") # setting quantity to 1 for now because i don't know how many there are in the game
+}
