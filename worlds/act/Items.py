@@ -13,7 +13,9 @@ class ACTItemData(NamedTuple):
 
 item_table: Dict[str, ACTItemData] = {
     # progression
-    iname.fork: ACTItemData(ItemClassification.progression, 1, "Progression"),
+    iname.fork: ACTItemData(ItemClassification.progression, 1, "Progression"), 
+    iname.heartkelp_pod: ACTItemData(ItemClassification.progression, 1, "Progression"), #throwing this into the progression items because the average player will definitely need heals to beat the game
+    iname.fishing_line: ACTItemData(ItemClassification.progression, 1, "Progression"),
 
     #upgrade
     iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 25 , "Upgrades"),

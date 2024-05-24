@@ -9,7 +9,18 @@ class ACTLocationData(NamedTuple):
 
 
 location_table: Dict[str, ACTLocationData] = {
+    # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
+    lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),
+    lname.fork_pickup: ACTLocationData("Cave of Respite", "Starting Items"),
+    
+    # currency item locations
+    lname.breadclaw_ledge_cave: ACTLocationData("Cave of Respite", "Currency"),
 
+    # upgrade item locations
+    lname.bloodstar_shallows_help: ACTLocationData("Central Shallows", "Upgrades"),
+
+    # stowaway locations
+    lname.siphonophore_shallows: ACTLocationData("Central Shallows", "Stowaways")
 }
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + index for index, name in enumerate(location_table)}
