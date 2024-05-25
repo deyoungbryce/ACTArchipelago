@@ -1,20 +1,32 @@
-from .Types import LocationData
-from .Regions import Stages
+from typing import Dict, NamedTuple, Set, Optional
+from .names import location_names as lname
 
-base_id = 0
+location_base_id = 483021700
 
-actStandardLocations = {
-    "The Shallows - Fork": LocationData(base_id + 1, Stages.Shallows)
+class ACTLocationData(NamedTuple):
+    region: str
+    location_group: Optional[str] = None
 
+
+location_table: Dict[str, ACTLocationData] = {
+    # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
+    lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),
+    lname.fork_pickup: ACTLocationData("Cave of Respite", "Starting Items"),
+    
+    # currency item locations
+    lname.breadclaw_ledge_cave: ACTLocationData("Cave of Respite", "Currency"),
+    lname.breadclaw_slacktide_sandcastle: ACTLocationData("Fort Slacktide - Before Destruction", "Currency"),
+
+    # upgrade item locations
+    lname.bloodstar_shallows_help: ACTLocationData("Central Shallows", "Upgrades"),
+
+    # stowaway locations
+    lname.siphonophore_shallows: ACTLocationData("Central Shallows", "Stowaways")
 }
 
-actBossLocations = {
-    "The Shallows - Royal Shell Splitter": LocationData(base_id + 1001, Stages.Shallows),
-    "The Shallows - Nephro": LocationData(base_id + 1002, Stages.Shallows),
-    "The Shallows - Duchess Magista": LocationData(base_id + 1003, Stages.Shallows)
-}
+location_name_to_id: Dict[str, int] = {name: location_base_id + index for index, name in enumerate(location_table)}
 
-location_table = {
-    **actStandardLocations,
-    **actBossLocations
-}
+location_name_groups: Dict[str, Set[str]] = {}
+for loc_name, loc_data in location_table.items():
+    if loc_data.location_group:
+        location_name_groups.setdefault(loc_data.location_group, set()).add(loc_name)
