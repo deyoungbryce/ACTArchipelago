@@ -17,6 +17,9 @@ class ACTData(NamedTuple):
 
 
 availability_requirements: Dict[str, Dict[str, ACTData]] = {
+    rname.menu: {
+
+    },
     rname.tide_pool: {
         lname.heartkelp_inital:
             ACTData(ACTType.location)
@@ -42,13 +45,31 @@ availability_requirements: Dict[str, Dict[str, ACTData]] = {
     rname.reefs_edge: {
 
     },
-    rname.new_carcinia_upper: {
-
-    },
-    rname.new_carcinia_lower: {
+    rname.new_carcinia: {
 
     },
     rname.sands_between: {
         
+    },
+    rname.expired_grove: {
+
+    },
+    rname.flotsam_vale: {
+
+    },
+    rname.pinbarge: {
+
+    },
+    rname.unfathom: {
+
+    },
+    rname.bleached_city: {
+
+    },
+    rname.drain_bottom: {
+
+    },
+    rname.trash_island: {
+
     }
 }

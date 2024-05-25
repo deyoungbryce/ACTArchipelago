@@ -2,8 +2,8 @@ from typing import Dict
 from ..AutoWorld import WebWorld, World
 from ...BaseClasses import Item, Location, ItemClassification, Region
 
-from .Items import item_table
-from .Locations import location_table
+from .Items import item_name_to_id, item_table, item_name_groups
+from .Locations import location_table, location_name_groups, location_name_to_id
 from .Options import ACTGameOptions
 
 
@@ -24,11 +24,6 @@ class ACTWorld(World):
     web = ACTWeb()
     options_dataclass = ACTGameOptions
     options: ACTGameOptions
-    
-    base_id = 0
-
-    item_name_to_id = {name: id for id, name in enumerate(item_table, base_id)}
-    location_name_to_id = {name: id for id, name in enumerate(location_table, base_id)}
 
     def create_item(self, item: str) -> ACTItem:
         classification = ItemClassification.progression if item.classification == ItemClassification.progression else ItemClassification.filler

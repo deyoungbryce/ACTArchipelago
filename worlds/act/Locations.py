@@ -1,7 +1,7 @@
 from typing import Dict, NamedTuple, Set, Optional
 from .names import location_names as lname
 
-location_base_id = 483022700
+location_base_id = 483021700
 
 class ACTLocationData(NamedTuple):
     region: str
@@ -15,6 +15,7 @@ location_table: Dict[str, ACTLocationData] = {
     
     # currency item locations
     lname.breadclaw_ledge_cave: ACTLocationData("Cave of Respite", "Currency"),
+    lname.breadclaw_slacktide_sandcastle: ACTLocationData("Fort Slacktide - Before Destruction", "Currency"),
 
     # upgrade item locations
     lname.bloodstar_shallows_help: ACTLocationData("Central Shallows", "Upgrades"),
