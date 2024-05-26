@@ -101,6 +101,13 @@ item_table: Dict[str, ACTItemData] = {
 
 #item_name_to_id: Dict[str, int] = {name: item_base_id + index for index, name in enumerate(item_table)}
 
+def get_item_id(item_name: str) -> int:
+    return item_table[item_name].id
+
+item_ids: Dict[str, Set[int]] = {
+    id: set(item_id) for id, item_id in groupby(sorted(item_table, key=get_item_id), get_item_id) if id != None
+}
+
 filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
 
 

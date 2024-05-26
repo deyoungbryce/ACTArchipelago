@@ -88,7 +88,7 @@ availability_requirements: Dict[str, Dict[str, ACTData]] = {
 
 ACT_regions: Dict[str, Set[str]] = {
     rname.menu: {
-        rname.shallows
+        
     },
     rname.shallows: {
         rname.tide_pool, rname.starting_cave, rname.central_shallows, rname.snail_cave, rname.fort_slacktide
