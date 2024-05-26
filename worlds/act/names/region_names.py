@@ -2,6 +2,7 @@
 
 # main regions
 menu = "Menu" # needed for AP to fuction
+shallows = "Shallows" # a region encompassing everything on the shallows map
 tide_pool = "Tide Pools" # starting area, only item here is the inital heartkelp pod (heal) item
 starting_cave = "Cave of Respite" # where the fork is found
 central_shallows = "Central Shallows" # first big main area the player has access to

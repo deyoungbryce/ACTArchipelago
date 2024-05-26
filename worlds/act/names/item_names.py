@@ -29,24 +29,67 @@ mussel = "Mussel"
 anemone = "Anemone"
 whelk = "Whelk"
 rusty_nail = "Rusty Nail"
+bobber = "Bobber"
+chum = "Chum"
+cockle = "Cockle"
+contact_lens = "Contact Lens"
+cotton_ball = "Cotton Ball"
+fredrick = "Fredrick"
+fruit_sticker = "Fruit Sticker"
+googly_eye = "Googly Eye"
+lamprey = "Lamprey"
+lanternfish = "Lanternfish"
+lumpsucker = "Lumpsucker"
+oyster = "Oyster"
+packing_peanut = "Packing Peanut"
+phytoplankton = "Phytoplankton"
+puffer_quill = "Puffer Quill"
+rubber_band = "Rubber Band"
+salp = "Salp"
+sea_cucumber = "Sea Cucumber"
+shark_tooth = "Shark Tooth"
+sinker = "Sinker"
+small_battery = "Small Battery"
+turtle_shell_shard = "Turtle Shell Shard"
+used_bandage = "Used Bandage"
+wad_of_gum = "Wad of Gum"
+zooplankton = "Zooplankton"
 
 # currency items
-breadclaw = "Breadclaw"
-chipclaw = "Chipclaw"
-hairclaw = "Hairclaw"
-clothesclaw = "Clothesclaw"
+breadclaw = "Breadclaw" # 250 microplastics
+chipclaw = "Chipclaw" # 500 microplastics
+hairclaw = "Hairclaw" # 1000 microplastics
+clothesclaw = "Clothesclaw" # 2500 microplastics
+paperclaw = "Paperclaw" # 5000 microplastics
+stapleclaw = "Stapleclaw" # 10000 microplastics
+carclaw = "Carclaw" # 20000 microplastics
 
 #consumables
 barbed_hook = "Barbed Hook" # apparently some of these are just laying around on the ground by default
 
 # costumes
-captain_costume = "Captain" # costume found by where nephro spawns - can be obtained after defeating nephro
+plastic_poncho = "Plastic Poncho" # given to the player when they pick up the fork
+captain_costume = "Captain" # costume found by where nephro spawns
+dr_kril = "Dr. Kril"
+exiled_flame = "Exiled Flame" # found near pinbarge wreckage surrounded by bones
+blackout_poncho = "Blackout Poncho" # shellfish desires: 2500 microplastics
+ivory_poncho = "Ivory Poncho" # shellfish desires: 2500 microplastics
+intern = "Intern" # found in the curdled village, in a building on the left
+sunlight = "Sunlight" # found by the blank moonsail shell in the sands between
+krillionaire = "Krillionaire" # found after you are revived by nemma and konch in the unfathom
+midnight = "Midnight" # shellfish desires: 10000 microplastics
+maid_kril = "Maid Kril" # shellfish desires: 15000 miscroplastics
+rainbow_crabitalism = "Rainbow Crabitalism" # shellfish desires: 2500 microplastics
+mr_kril = "Mr. Kril" # shellfish desires: 7500 microplastics
+cowfishboy = "Cowfishboy"
+cult_leader = "Cult Leader" # shellfish desires: 10000 microplastics
+blue_collar =  "Blue-Collar" # inside one of the lockers at the beginning of the tower in flotsam vale
 
 # adaptations
 royal_wave = "Royal Wave" # obtained from defeating magista (duchess)
 
 # ---- Event Items ----
-shell_access = "Acquired Any Shell"
+shell_access = "Acquire Any Shell"
 
 # ---- Fake Items - for the purpose of logic rules ----
 spin_attack = "Spin Attack" # r1 air attack that allows for more distance and height for jumps
