@@ -86,7 +86,7 @@ location_table: Dict[str, ACTLocationData] = {
 def get_location_id(location_name: str) -> int:
     return location_table[location_name].id
 
-location_ids: Dict[str, Set[int]] = {
+location_name_to_id: Dict[str, Set[int]] = {
     id: set(location_id) for id, location_id in groupby(sorted(location_table, key=get_location_id), get_location_id) if id != None
 }
 

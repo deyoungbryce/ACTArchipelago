@@ -104,7 +104,7 @@ item_table: Dict[str, ACTItemData] = {
 def get_item_id(item_name: str) -> int:
     return item_table[item_name].id
 
-item_ids: Dict[str, Set[int]] = {
+item_name_to_id: Dict[str, Set[int]] = {
     id: set(item_id) for id, item_id in groupby(sorted(item_table, key=get_item_id), get_item_id) if id != None
 }
 

@@ -1,4 +1,4 @@
-# apworld Specification
+w# apworld Specification
 
 Archipelago depends on worlds to provide game-specific details like items, locations and output generation.
 Those are located in the `worlds/` folder (source) or `<install dir>/lib/worlds/` (when installed).
