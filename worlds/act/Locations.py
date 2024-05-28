@@ -1,8 +1,12 @@
 from typing import Dict, NamedTuple, Set, Optional
 from itertools import groupby
+from BaseClasses import Location
 from .names import location_names as lname
 
 location_base_id = 483021700
+
+class ACTLocation(Location):
+    game: str = "Another Crab's Treasure"
 
 class ACTLocationData(NamedTuple):
     region: str
@@ -81,14 +85,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.royal_wave_reward: ACTLocationData("Fort Slacktide", "Fort Slacktide - After Destruction", location_base_id+44)
 }
 
-#location_name_to_id: Dict[str, int] = {name: location_base_id + index for index, name in enumerate(location_table)}
-
-def get_location_id(location_name: str) -> int:
-    return location_table[location_name].id
-
-location_name_to_id: Dict[str, Set[int]] = {
-    id: set(location_id) for id, location_id in groupby(sorted(location_table, key=get_location_id), get_location_id) if id != None
-}
+location_name_to_id: Dict[str, int] = {name: id for name, id in location_table.items()}
 
 location_name_groups: Dict[str, Set[str]] = {}
 for loc_name, loc_data in location_table.items():
