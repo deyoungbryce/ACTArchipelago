@@ -6,7 +6,7 @@ from .names import location_names as lname
 location_base_id = 483021700
 
 class ACTLocation(Location):
-    game: str = "Another Crab's Treasure"
+    game: str = "Another Crabs Treasure"
 
 class ACTLocationData(NamedTuple):
     region: str

@@ -11,13 +11,13 @@ from .Options import ACTGameOptions
 
 class ACTWeb(WebWorld):
     theme = "ocean"
-    game = "Another Crab's Treasure"
+    game = "Another Crabs Treasure"
 
 class ACTWorld(World):
     """
     Another Crab's Treasure is an underwater souls-like with a charming art style and a quirky sense of humor.
     """
-    game: str = "Another Crab's Treasure"
+    game: str = "Another Crabs Treasure"
     web = ACTWeb()
 
     options_dataclass = ACTGameOptions
