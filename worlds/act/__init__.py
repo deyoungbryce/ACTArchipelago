@@ -1,17 +1,17 @@
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import Item, Location, ItemClassification, Region, MultiWorld
+from BaseClasses import ItemClassification, Region, MultiWorld
 
-from .Items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
-from .Locations import location_table, location_name_groups, location_name_to_id, ACTLocation
-from .Regions import ACT_regions
-from .Rules import set_location_rules, set_region_rules
-from .Options import ACTGameOptions
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
+from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
+from .regions import ACT_regions
+from .rules import set_location_rules, set_region_rules
+from .options import ACTGameOptions
 
 
 class ACTWeb(WebWorld):
     theme = "ocean"
-    game = "Another Crabs Treasure"
+    game = "Another Crab's Treasure"
 
 class ACTWorld(World):
     """
@@ -28,18 +28,18 @@ class ACTWorld(World):
     item_name_to_id = item_name_to_id
     location_name_to_id = location_name_to_id
 
-    slot_data_items = List[ACTItem]
+    #slot_data_items = List[ACTItem]
 
     def create_item(self, name: str) -> ACTItem:
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
 
-    def create_event(self, event: str) -> ACTItem:
-        return ACTItem(event, True, None, self.player)
+    '''def create_event(self, event: str) -> ACTItem:
+        return ACTItem(event, True, None, self.player)'''
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
-        self.slot_data_items = []
+        #self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
@@ -63,11 +63,11 @@ class ACTWorld(World):
         self.multiworld.itempool += [self.create_item("nothing") for _ in range(junk)]'''
 
     def create_regions(self):
-        player = self.player
+        '''player = self.player
         multiworld = self.multiworld
 
         menu = Region("Menu", player, multiworld)
-        multiworld.regions.append(menu)
+        multiworld.regions.append(menu)'''
 
         for region_name in ACT_regions:
             region = Region(region_name, self.player, self.multiworld)
@@ -82,11 +82,11 @@ class ACTWorld(World):
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
 
-        victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
+        '''victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
         victory_location = ACTLocation(self.player, "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", None, victory_region)
         victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
-        victory_region.locations.append(victory_location)
+        victory_region.locations.append(victory_location)'''
 
     def set_rules(self) -> None:
         set_region_rules(self)
