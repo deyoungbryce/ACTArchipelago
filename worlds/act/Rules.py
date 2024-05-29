@@ -2,7 +2,8 @@ from typing import Dict, TYPE_CHECKING
 
 from worlds.generic.Rules import set_rule, forbid_item
 from BaseClasses import CollectionState
-from .Options import ACTGameOptions
+from .options import ACTGameOptions
+from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
@@ -15,12 +16,12 @@ def has_pearl(state: CollectionState, player: int) -> bool:
 def set_region_rules(world: "ACTWorld") -> None:
     multiworld = world.multiworld
     player = world.player
-    options = world.options
+    #options = world.options
 
-    multiworld.get_entrance("Moon Snail's Cave", player).access_rule = \
+    '''multiworld.get_entrance(rname.snail_cave, player).access_rule = \
         lambda state: has_grapple(state, player)
-    multiworld.get_entrance("Fort Slacktide - After Destruction", player).access_rule = \
-        lambda state: has_pearl(state, player)
+    multiworld.get_entrance(rname.slacktide_after, player).access_rule = \
+        lambda state: has_pearl(state, player)'''
     
 def set_location_rules(world: "ACTWorld") -> None:
     multiworld = world.multiworld

@@ -1,26 +1,32 @@
 from typing import Dict, NamedTuple, Set, Optional
 from itertools import groupby
+from BaseClasses import Location
 from .names import location_names as lname
 
 location_base_id = 483021700
 
+class ACTLocation(Location):
+    game: str = "Another Crabs Treasure"
+
 class ACTLocationData(NamedTuple):
     region: str
+    location_id_offset: int
     location_group: Optional[str] = None
-    id: int
 
 
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
+
     #Last used number: 45
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     lname.fork_pickup: ACTLocationData("Cave of Respite", "Starting Items", location_base_id+1),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
-    lname.fishing_line: ACTLocationData("Fort Slacktide", "Fort Slacktide - Before Destruction", location_base_id+2),
-    lname.pristine_pearl: ACTLocationData("Moon Snail's Cave", "Moon Snail's Cave", location_base_id+3),
+    lname.fishing_line: ACTLocationData("Fort Slacktide", 2, "Fort Slacktide - Before Destruction"),
+    lname.pristine_pearl: ACTLocationData("Moon Snail's Cave", 3, "Moon Snail's Cave"),
     
     # currency item locations
+
     lname.breadclaw_caveofrespite_ledge: ACTLocationData("Cave of Respite", "Cave of Respite", location_base_id+4),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     lname.breadclaw_shallows_southsandal: ACTLocationData("Central Shallows", "Central Shallows Ground", location_base_id+5),#0171a152-809a-47cf-9fcc-60ddb61511bb-2_B-ShallowsBigSand
@@ -83,14 +89,8 @@ location_table: Dict[str, ACTLocationData] = {
     lname.royal_wave_reward: ACTLocationData("Fort Slacktide", "Fort Slacktide - After Destruction", location_base_id+44) #AUTO NEEDS TO DO BOSS SCRIPT
 }
 
-#location_name_to_id: Dict[str, int] = {name: location_base_id + index for index, name in enumerate(location_table)}
-
-def get_location_id(location_name: str) -> int:
-    return location_table[location_name].id
-
-location_ids: Dict[str, Set[int]] = {
-    id: set(location_id) for id, location_id in groupby(sorted(location_table, key=get_location_id), get_location_id) if id != None
-}
+#location_name_to_id: Dict[str, int] = {name: id for name, id in location_table.items()}
+location_name_to_id: Dict[str, int] = {name: location_base_id + data.location_id_offset for name, data in location_table.items()}
 
 location_name_groups: Dict[str, Set[str]] = {}
 for loc_name, loc_data in location_table.items():
