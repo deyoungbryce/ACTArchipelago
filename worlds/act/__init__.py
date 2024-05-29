@@ -34,8 +34,8 @@ class ACTWorld(World):
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
 
-    '''def create_event(self, event: str) -> ACTItem:
-        return ACTItem(event, True, None, self.player)'''
+    def create_event(self, event: str) -> ACTItem:
+        return ACTItem(event, True, None, self.player)
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
@@ -82,11 +82,11 @@ class ACTWorld(World):
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
 
-        '''victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
-        victory_location = ACTLocation(self.player, "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", None, victory_region)
+        victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
+        victory_location = ACTLocation(self.player, "Magista", None, victory_region)
         victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
-        victory_region.locations.append(victory_location)'''
+        victory_region.locations.append(victory_location)
 
     def set_rules(self) -> None:
         set_region_rules(self)
