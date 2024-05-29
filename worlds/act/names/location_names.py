@@ -25,6 +25,7 @@ breadclaw_shallows_eastledge = "Breadclaw (Central Shallows - East Grapple Ledge
 hairclaw_shallows_turret = "Hairclaw (Central Shallows - Grapple to Castle Turret)"
 chipclaw_shallows_sandcastle = "Chipclaw (Central Shallows - Southwest Sandcastle)"
 clothesclaw_shallows_shellsplitter = "Clothesclaw (Central Shallows - Defeat Royal Shellsplitter)"
+clothesclaw_shallows_southwestfort = "Clothesclaw (Fort Slacktide - Small Tower Outside Southwest Fort)"
 
 breadclaw_slacktide_crates = "Breadclaw (Fort Slacktide - Sand Crates and Barrels" # the breadclaw near the line of people waiting to meet the duchess
 
