@@ -34,8 +34,8 @@ class ACTWorld(World):
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
 
-    '''def create_event(self, event: str) -> ACTItem:
-        return ACTItem(event, True, None, self.player)'''
+    def create_event(self, event: str) -> ACTItem:
+        return ACTItem(event, True, None, self.player)
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
@@ -50,24 +50,7 @@ class ACTWorld(World):
 
         self.multiworld.itempool += ACT_items
 
-        '''exclude = [item for item in self.multiworld.precollected_items[self.player]]
-
-        for item in map(self.create_item, ACTItem):
-            if item in exclude:
-                exclude.remove(item)
-                self.multiworld.itempool.append(self.create_item("nothing"))
-            else:
-                self.multiworld.itempool.append(item)
-            
-        junk = 0
-        self.multiworld.itempool += [self.create_item("nothing") for _ in range(junk)]'''
-
     def create_regions(self):
-        '''player = self.player
-        multiworld = self.multiworld
-
-        menu = Region("Menu", player, multiworld)
-        multiworld.regions.append(menu)'''
 
         for region_name in ACT_regions:
             region = Region(region_name, self.player, self.multiworld)
@@ -87,6 +70,8 @@ class ACTWorld(World):
         victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
         victory_region.locations.append(victory_location)'''
+
+        self.multiworld.completion_condition[self.player] = lambda state: state.has("Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)
