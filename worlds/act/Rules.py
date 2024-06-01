@@ -4,6 +4,7 @@ from worlds.generic.Rules import set_rule, forbid_item
 from BaseClasses import CollectionState
 from .options import ACTGameOptions
 from .names import region_names as rname
+from .names import location_names as lname
 if TYPE_CHECKING:
     from . import ACTWorld
 
@@ -13,15 +14,20 @@ def has_grapple(state: CollectionState, player: int) -> bool:
 def has_pearl(state: CollectionState, player: int) -> bool:
     return state.has("Pristine Pearl", player)
 
+def has_rwave(state: CollectionState, player: int)  -> bool:
+    return state.has(lname.royal_wave_reward, player)
+
 def set_region_rules(world: "ACTWorld") -> None:
     multiworld = world.multiworld
     player = world.player
     #options = world.options
 
-    '''multiworld.get_entrance(rname.snail_cave, player).access_rule = \
+    multiworld.get_entrance("Central Shallows -> Moon Snail's Cave", player).access_rule = \
         lambda state: has_grapple(state, player)
-    multiworld.get_entrance(rname.slacktide_after, player).access_rule = \
-        lambda state: has_pearl(state, player)'''
+    #multiworld.get_entrance(rname.slacktide_after, player).access_rule = \
+        #lambda state: has_pearl(state, player)
+
+    #multiworld.completion_condition[player] = lambda state: has_rwave(state, player)
     
 def set_location_rules(world: "ACTWorld") -> None:
     multiworld = world.multiworld

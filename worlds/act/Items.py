@@ -42,7 +42,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.barnacle: ACTItemData(ItemClassification.useful, 1, 19, "Stowaways"),
     iname.mussel: ACTItemData(ItemClassification.useful, 1, 20, "Stowaways",),
     iname.anemone: ACTItemData(ItemClassification.useful, 1, 21, "Stowaways"),
-    iname.whelk: ACTItemData(ItemClassification.useful, 2, 22, "Stowaways"),
+    iname.whelk: ACTItemData(ItemClassification.useful, 1, 22, "Stowaways"),
     #iname.rusty_nail: ACTItemData(ItemClassification.useful, 1, 23, "Stowaways"),
     #iname.bobber: ACTItemData(ItemClassification.useful, 1, 24, "Stowaways"),
     #iname.chum: ACTItemData(ItemClassification.useful, 1, 25, "Stowaways"),
@@ -74,7 +74,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.breadclaw: ACTItemData(ItemClassification.filler, 16, 49, "Currency"),
     iname.chipclaw: ACTItemData(ItemClassification.filler, 2, 50, "Currency"),
     iname.hairclaw: ACTItemData(ItemClassification.filler, 1, 51, "Currency"),
-    iname.clothesclaw: ACTItemData(ItemClassification.filler, 1, 52, "Currency"),
+    iname.clothesclaw: ACTItemData(ItemClassification.filler, 2, 52, "Currency"),
     #iname.paperclaw: ACTItemData(ItemClassification.filler, 1, 53, "Currency"),
     #iname.stapleclaw: ACTItemData(ItemClassification.filler, 1, 54, "Currency"),
     #iname.carclaw: ACTItemData(ItemClassification.filler, 1, 55, "Currency"),
@@ -100,6 +100,8 @@ item_table: Dict[str, ACTItemData] = {
     #iname.cult_leader: ACTItemData(ItemClassification.filler, 1, 71, "Costume"),
     #iname.blue_collar: ACTItemData(ItemClassification.filler, 1, 72, "Costume"),
 
+    # adaptations
+    iname.royal_wave: ACTItemData(ItemClassification.progression, 1, 73, "Adapations")
 }
 
 #item_name_to_id: Dict[str, int] = {name: id for name, id in item_table.items()}

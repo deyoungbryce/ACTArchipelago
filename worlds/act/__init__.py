@@ -1,12 +1,13 @@
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import ItemClassification, Region, MultiWorld
+from BaseClasses import ItemClassification, Region, MultiWorld, CollectionState
 
 from .items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
+from .names import location_names as lname
 
 
 class ACTWeb(WebWorld):
@@ -34,7 +35,7 @@ class ACTWorld(World):
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
 
-    #not actually used rn
+    # not actually used rn
     def create_event(self, event: str) -> ACTItem:
         return ACTItem(event, True, None, self.player)
 
@@ -52,6 +53,7 @@ class ACTWorld(World):
         self.multiworld.itempool += ACT_items
 
     def create_regions(self):
+        player = self.player
 
         for region_name in ACT_regions:
             region = Region(region_name, self.player, self.multiworld)
@@ -66,15 +68,12 @@ class ACTWorld(World):
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
 
-        #to be used later
+        # to be used later
         '''victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
         victory_location = ACTLocation(self.player, "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", None, victory_region)
         victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
         victory_region.locations.append(victory_location)'''
-
-        #using for now to get some testing done
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)

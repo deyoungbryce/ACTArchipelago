@@ -1,7 +1,9 @@
-from typing import Dict, List, NamedTuple, Set
+from typing import Dict, List, NamedTuple, Set, TYPE_CHECKING
 from enum import IntEnum
 
 from .names import region_names as rname, item_names as iname, location_names as lname
+if TYPE_CHECKING:
+    from . import ACTWorld
 
 '''class ACTType(IntEnum):
     location = 1
@@ -88,22 +90,21 @@ availability_requirements: Dict[str, Dict[str, ACTData]] = {
 
 ACT_regions: Dict[str, Set[str]] = {
     rname.menu: {
-        rname.shallows
+        rname.central_shallows
     },
-    rname.shallows: {
-        rname.tide_pool, rname.starting_cave, rname.central_shallows, rname.snail_cave, rname.fort_slacktide
+    rname.tide_pool: {
+        rname.starting_cave
     },
-    rname.tide_pool: set(),
-    rname.starting_cave: set(),
-    rname.central_shallows: set(),
+    rname.starting_cave: {
+        rname.central_shallows
+    },
+    rname.central_shallows: {
+        rname.snail_cave, rname.slacktide_before, rname.slacktide_after
+    },
     rname.snail_cave: set(),
-    rname.fort_slacktide: {
-        rname.slacktide_before, rname.slacktide_after
-    },
     rname.slacktide_before: set(),
-    rname.slacktide_after: set(),
-    rname.new_carcinia: {
-        rname.reefs_edge, rname.new_carcinia_lower, rname.new_carcinia_upper
+    rname.slacktide_after: {
+        rname.reefs_edge
     },
     rname.reefs_edge: set(),
     rname.new_carcinia_lower: set(),
@@ -117,3 +118,4 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.drain_bottom: set(),
     rname.trash_island: set()
 }
+
