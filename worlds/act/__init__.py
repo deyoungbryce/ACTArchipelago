@@ -2,8 +2,8 @@ from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import ItemClassification, Region, MultiWorld
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
-from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, Item
+from .locations import location_table, location_name_groups, location_name_to_id, Location
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
@@ -12,6 +12,12 @@ from .options import ACTGameOptions
 class ACTWeb(WebWorld):
     theme = "ocean"
     game = "Another Crab's Treasure"
+
+class ACTItem (Item):
+    game: str = "Another Crabs Treasure"
+
+class ACTLocation(Location):
+    game: str = "Another Crabs Treasure"
 
 class ACTWorld(World):
     """

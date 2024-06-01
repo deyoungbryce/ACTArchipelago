@@ -5,9 +5,6 @@ from .names import item_names as iname
 
 item_base_id = 483021700
 
-class ACTItem (Item):
-    game: str = "Another Crabs Treasure"
-
 class ACTItemData(NamedTuple):
     classification: ItemClassification
     quantity_in_item_pool: int
