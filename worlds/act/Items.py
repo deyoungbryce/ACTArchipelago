@@ -3,6 +3,9 @@ from typing import Dict, List, Set, NamedTuple
 from BaseClasses import ItemClassification, Item
 from .names import item_names as iname
 
+class ACTItem(Item):
+    game: str = "Another Crabs Treasure"
+
 item_base_id = 483021700
 
 class ACTItemData(NamedTuple):
