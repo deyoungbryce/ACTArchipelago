@@ -1,9 +1,9 @@
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import ItemClassification, Region, MultiWorld
+from BaseClasses import ItemClassification, Region, MultiWorld, Item, Location
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, Item
-from .locations import location_table, location_name_groups, location_name_to_id, Location
+from .items import item_table, item_name_groups, item_name_to_id, filler_items
+from .locations import location_table, location_name_groups, location_name_to_id
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
