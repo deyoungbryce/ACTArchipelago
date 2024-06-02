@@ -3,6 +3,7 @@ from enum import IntEnum
 
 from .names import region_names as rname, item_names as iname, location_names as lname
 
+
 class ACTType(IntEnum):
     location = 1
     region = 2
@@ -11,14 +12,14 @@ class ACTType(IntEnum):
 
 class ACTData(NamedTuple):
     type: int  # whether it is a location or region
-    rules: List[List[str]] = [] # logic rules for how to access
-    # Rule Example: [[grapple],[air_attack]] means that grapple and air_attack are needed to access
-
+    rules: List[List[str]] = []  # logic rules for how to access
+    # Rule Example: [[grapple], [air_attack]] means that grapple or air_attack are needed to access
 
 
 availability_requirements: Dict[str, Dict[str, ACTData]] = {
     rname.menu: {
-
+        rname.tide_pool:
+            ACTData(ACTType.region),
     },
     rname.tide_pool: {
         lname.heartkelp_inital:
@@ -37,7 +38,7 @@ availability_requirements: Dict[str, Dict[str, ACTData]] = {
         rname.slacktide_before:
             ACTData(ACTType.region, [[iname.shell_access]]),
         rname.slacktide_after:
-            ACTData(ACTType.region, [[iname.fishing_line],[iname.pristine_pearl]])
+            ACTData(ACTType.region, [[iname.fishing_line], [iname.pristine_pearl]])
     },
     rname.snail_cave: {
 

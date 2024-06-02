@@ -5,16 +5,18 @@ from .names import item_names as iname
 
 item_base_id = 483021700
 
+
 class ACTItemData(NamedTuple):
     classification: ItemClassification
     quantity_in_item_pool: int
     item_group: str = ""
 
+
 # a lot of quantities here will need to be adjusted later
 item_table: Dict[str, ACTItemData] = {
     # progression
     iname.fork: ACTItemData(ItemClassification.progression, 1, "Progression"), 
-    iname.heartkelp_pod: ACTItemData(ItemClassification.progression, 1, "Progression"), #throwing this into the progression items because the average player will definitely need heals to beat the game
+    iname.heartkelp_pod: ACTItemData(ItemClassification.progression, 1, "Progression"),  # throwing this into the progression items because the average player will definitely need heals to beat the game
     iname.fishing_line: ACTItemData(ItemClassification.progression, 1, "Progression"),
     iname.pristine_pearl: ACTItemData(ItemClassification.progression, 1, "Progression"),
     iname.map_piece_fv: ACTItemData(ItemClassification.progression, 1, "Progression"),
@@ -22,7 +24,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.map_piece_pagurus: ACTItemData(ItemClassification.progression, 1, "Progression"),
 
     # upgrade
-    iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 25 , "Upgrades"),
+    iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 25, "Upgrades"),
     iname.heartkelp_sprout: ACTItemData(ItemClassification.useful, 7, "Upgrades"),
     iname.old_whorl: ACTItemData(ItemClassification.useful, 11, "Upgrades"),
     iname.stainless_relic: ACTItemData(ItemClassification.useful, 15, "Upgrades"),

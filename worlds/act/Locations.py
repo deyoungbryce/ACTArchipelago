@@ -1,7 +1,8 @@
 from typing import Dict, NamedTuple, Set, Optional
-from .names import location_names as lname
+from .names import location_names as lname, region_names as rname
 
 location_base_id = 483021700
+
 
 class ACTLocationData(NamedTuple):
     region: str
@@ -10,18 +11,18 @@ class ACTLocationData(NamedTuple):
 
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
-    lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),
-    lname.fork_pickup: ACTLocationData("Cave of Respite", "Starting Items"),
+    lname.heartkelp_inital: ACTLocationData(rname.tide_pool, "Starting Items"),
+    lname.fork_pickup: ACTLocationData(rname.starting_cave, "Starting Items"),
     
     # currency item locations
-    lname.breadclaw_ledge_cave: ACTLocationData("Cave of Respite", "Currency"),
-    lname.breadclaw_slacktide_sandcastle: ACTLocationData("Fort Slacktide - Before Destruction", "Currency"),
+    lname.breadclaw_ledge_cave: ACTLocationData(rname.starting_cave, "Currency"),
+    lname.breadclaw_slacktide_sandcastle: ACTLocationData(rname.slacktide_before, "Currency"),
 
     # upgrade item locations
-    lname.bloodstar_shallows_help: ACTLocationData("Central Shallows", "Upgrades"),
+    lname.bloodstar_shallows_help: ACTLocationData(rname.central_shallows, "Upgrades"),
 
     # stowaway locations
-    lname.siphonophore_shallows: ACTLocationData("Central Shallows", "Stowaways")
+    lname.siphonophore_shallows: ACTLocationData(rname.central_shallows, "Stowaways")
 }
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + index for index, name in enumerate(location_table)}

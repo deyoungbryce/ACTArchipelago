@@ -1,5 +1,6 @@
-from ...BaseClasses import Location
+from BaseClasses import Location
 from typing import List, NamedTuple
+
 
 class LocationData(NamedTuple):
     id: int = 0
