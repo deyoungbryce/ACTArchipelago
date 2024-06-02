@@ -1,6 +1,6 @@
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import ItemClassification, Region, MultiWorld, CollectionState
+from BaseClasses import Region
 
 from .items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
@@ -74,6 +74,9 @@ class ACTWorld(World):
         victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
         victory_region.locations.append(victory_location)'''
+
+        self.multiworld.completion_condition[self.player] = \
+            lambda state: state.can_reach(spot = lname.royal_wave_reward, resolution_hint="Location", player = self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)
