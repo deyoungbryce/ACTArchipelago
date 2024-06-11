@@ -18,13 +18,35 @@ class ACTLocationData(NamedTuple):
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
-    #Last used number: 45
+    #Last used number: 73
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
     lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide - Before Destruction"),
-    lname.pristine_pearl: ACTLocationData(rname.snail_cave, 3, "Moon Snail's Cave"),
+    #lname.pristine_pearl: ACTLocationData(rname.snail_cave, x, "Moon Snail's Cave"), #Redundant, overlaps with Platoon Pathfinder
+
+    # boss locations
+    lname.nephro: ACTLocationData(rname.central_shallows,3,"Central Shallows"),
+    lname.platoon_pathfinder: ACTLocationData(rname.snail_cave,46,"Moon Snail's Cave"),
+    lname.magista: ACTLocationData(rname.slacktide_after,44,"Fort Slacktide - After Destruction"),
+    lname.royal_shellsplitter: ACTLocationData(rname.central_shallows,47,"Central Shallows"),
+    lname.pagurus: ACTLocationData(rname.sands_between,48,"Sands Between"),
+    #lname.lycanthrope: ACTLocationData(rname.central_shallows,49,"Central Shallows"), #must fix region name and location group before re-adding
+    #lname.carbonara_connessuer: ACTLocationData(rname.central_shallows,50,"Central Shallows"),
+    #lname.heikea: ACTLocationData(rname.central_shallows,51,"Central Shallows"),
+    #lname.topoda: ACTLocationData(rname.central_shallows,52,"Central Shallows"),
+    #lname.consortium: ACTLocationData(rname.central_shallows,53,"Central Shallows"),
+    #lname.sludge_steamroller: ACTLocationData(rname.central_shallows,54,"Central Shallows"),
+    #lname.ceviche_sisters: ACTLocationData(rname.central_shallows,55,"Central Shallows"),
+    #lname.voltai: ACTLocationData(rname.central_shallows,56,"Central Shallows"),
+    #lname.roland: ACTLocationData(rname.central_shallows,57,"Central Shallows"),
+    #lname.petroch: ACTLocationData(rname.central_shallows,58,"Central Shallows"),
+    #lname.inkerton: ACTLocationData(rname.central_shallows,59,"Central Shallows"),
+    #lname.camtscha: ACTLocationData(rname.central_shallows,60,"Central Shallows"),
+    #lname.praya_dubia: ACTLocationData(rname.central_shallows,61,"Central Shallows"),
+    #lname.firth: ACTLocationData(rname.central_shallows,62,"Central Shallows"),
+    
     
     # currency item locations
 
@@ -54,6 +76,10 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_slacktide_crabtrio: ACTLocationData(rname.slacktide_after, 22, "Fort Slacktide - After Destruction"), #2af7f575-51f3-4da9-b3bf-eab9d32a3bd8-2_C-Slacktide2
     lname.chipclaw_slacktide_brokenwall: ACTLocationData(rname.slacktide_after, 23, "Fort Slacktide - After Destruction"), #45f42ae3-41b6-4333-875f-3a9e8387e087-2_C-Slacktide2
 
+    lname.chipclaw_reefsedge_brokenbridge: ACTLocationData(rname.reefs_edge, 63, "Reef's Edge"), #e9bf56b8-1362-42a9-87a2-00bed3a6f5d2-2_A-NCTradeRoute
+    lname.breadclaw_reefsedge_thimblecrab: ACTLocationData(rname.reefs_edge, 67, "Reef's Edge"), #1f5a8d6b-10ab-4e4e-b240-284e2ec2c77a-2_A-NCTradeRoute
+    lname.hairclaw_reefsedge_sign: ACTLocationData(rname.reefs_edge, 71, "Reef's Edge"), #b478df52-084c-4c14-8a55-215fdbaeaffe-2_A-NCTradeRoute
+
     # upgrade item locations
     lname.bloodstar_shallows_help: ACTLocationData(rname.central_shallows, 24, "Central Shallows"), #AUTO NEEDS TO DO QUEST SCRIPT
     lname.bloodstar_shallows_parkour: ACTLocationData(rname.central_shallows, 25, "Central Shallows"),#ff9d47b6-7f55-4ad2-a110-e7c4492d87c1-2_B-ShallowsBigSand
@@ -64,6 +90,14 @@ location_table: Dict[str, ACTLocationData] = {
     lname.bloodstar_snailcave_platoon: ACTLocationData(rname.snail_cave, 29, "Moon Snail's Cave"), #00fc94c3-320c-4d0a-a4e0-2b5eccd42d55-2_D-MoonSnailShellCave
 
     lname.bloodstar_slacktide_clam: ACTLocationData(rname.slacktide_after, 30, "Fort Slacktide - After Destruction"), #451b4cfb-7176-4103-999f-358b09374e0c-2_B-ShallowsBigSand
+
+    lname.stainlessrelic_reefsedge_coral: ACTLocationData(rname.reefs_edge, 64, "Reef's Edge"), #d8433d6b-5400-4dec-aad0-032e27babdeb-2_A-NCTradeRoute
+
+    # consumable item locations
+    lname.barbedhook_reefsedge_undercoral: ACTLocationData(rname.reefs_edge, 65, "Reef's Edge"), #c44729ce-4c25-4059-8432-212381ca6835-2_A-NCTradeRoute
+    lname.barbedhook_reefsedge_seahorses: ACTLocationData(rname.reefs_edge, 66, "Reef's Edge"), #08434b00-0100-4ea1-8f2a-f1567b84bdf2-2_A-NCTradeRoute
+    lname.barbedhook_reefsedge_shortcut: ACTLocationData(rname.reefs_edge, 69, "Reef's Edge"), #2b4849b0-2798-4600-8db1-c5d6bf6952b1-2_A-NCTradeRoute
+    lname.barbedhook_reefsedge_cliff: ACTLocationData(rname.reefs_edge, 72, "Reef's Edge"), #76ad26b0-4305-498c-8510-4940ad569210-2_A-NCTradeRoute
 
     # stowaway locations
     lname.siphonophore_shallows_westwall: ACTLocationData(rname.central_shallows, 31, "Central Shallows"),#4d4ac114-06e4-400f-b888-b500a7348cc9-2_B-ShallowsBigSand
@@ -82,11 +116,15 @@ location_table: Dict[str, ACTLocationData] = {
     lname.anemone_slacktide_fortwall: ACTLocationData(rname.slacktide_after, 41, "Fort Slacktide - After Destruction"), #557546a8-096b-49cd-b63b-452fb751a8bf-2_C-Slacktide2
     lname.whelk_slacktide_turrettop: ACTLocationData(rname.slacktide_after, 42, "Fort Slacktide - After Destruction"), #e1848736-945b-406d-853e-d213f7c80f14-2_C-Slacktide2
 
+    lname.seastar_reefsedge_crabs: ACTLocationData(rname.reefs_edge, 68, "Reef's Edge"), #d93f0715-7c15-4f74-b376-34468705093c-2_A-NCTradeRoute
+    lname.seastarplus_reefsedge_pole: ACTLocationData(rname.reefs_edge, 70, "Reef's Edge"), #3473ed8f-db06-4bb7-9932-862f92258542-2_A-NCTradeRoute
+    lname.whelkplus_reefsedge_sponge: ACTLocationData(rname.reefs_edge, 73, "Reef's Edge"), #5e8a3fb6-f3b1-42a0-a8b8-10b57b340138-2_A-NCTradeRoute
+
     # costume locations
     lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"),#7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand
 
     # adaptation locations
-    lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, 44, "Fort Slacktide - After Destruction") #AUTO NEEDS TO DO BOSS SCRIPT
+    #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 }
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + data.location_id_offset for name, data in location_table.items()}

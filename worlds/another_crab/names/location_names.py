@@ -36,6 +36,19 @@ breadclaw_snailcave_jelly = "Breadclaw (Moon Snail's Cave = Ledge Past Moon Jell
 breadclaw_slacktide_crabtrio = "Breadclaw (Fort Slacktide - Near Crab Trio)" # breadclaw found in slacktide post-corruption sitting in a corner near a trio of crabs
 chipclaw_slacktide_brokenwall = "Chipclaw (Fort Slacktide - Behind Broken Wall)" # chipclaw found in the room after the enemy breaks out of the wall on the way to fight the duchess
 
+chipclaw_reefsedge_brokenbridge = "Chipclaw (Reef's Edge - Broken Bridge)"
+breadclaw_reefsedge_thimblecrab = "Breadclaw (Reef's Edge - Near Thimble Crab)"
+hairclaw_reefsedge_sign = "Hairclaw (Reef's Edge - Near I95 Sign On Ledge)"
+
+breadclaw_newcarcinia_entrance = "Breadclaw (New Carcinia - Top of Buildings Near Entrance)"
+breadclaw_newcarcinia_hammerhead = "Breadclaw (New Carcinia - Corner Near Hammerhead)"
+breadclaw_newcarcinia_bottomalley = "Breadclaw (New Carcinia - Alleyway Near Bottom Feeders)"
+breadclaw_newcarcinia_prawnalley = "Breadclaw (New Carcinia - Alleyway Across from Prawn Shop)"
+chipclaw_newcarcinia_leg = "Chipclaw (New Carcinia - On Building Near Climbable Mannequin Leg)"
+breadclaw_newcarcinia_tallbuilding = "Breadclaw (New Carcinia - On Tall Building Across from Prawn Shop)"
+breadclaw_newcarcinia_shortbuilding = "Breadclaw (New Carcinia - On Short Building Across From Mannequin Leg)"
+chipclaw_newcarcinia_prawnshop = "Chipclaw (New Carcinia - On Top of Prawn Shop)"
+
 # upgrade item locations
 bloodstar_shallows_help = "Bloodstar Limb (Central Shallows - Help a Crab)" # the bloodstar limb acquired from helping the surrounded crab in the shallows
 bloodstar_shallows_parkour = "Bloodstar Limb (Central Shallows - Parkour on Small Islands)"
@@ -46,6 +59,15 @@ kelpsprout_snailcave_elevator = "Heartkelp Sprout (Moon Snail's Cave - Moon Jell
 bloodstar_snailcave_platoon = "Bloodstar Limb (Moon Snail's Cave - Just Before Platoon Pathfinder)"
 
 bloodstar_slacktide_clam = "Bloodstar Limb (Slacktide - Clam Above Duchess's Chamber)" # bloodstar limb found by grappling up in the area before you fight the duchess and opening the clam
+
+stainlessrelic_reefsedge_coral = "Stainless Relic (Reef's Edge - Flat Coral Near Entrance)"
+
+# consumable item locations
+barbedhook_reefsedge_undercoral = "Barbed Hook (Reef's Edge - Under Coral Near Shot Glass Crab)"
+barbedhook_reefsedge_seahorses = "Barbed Hook (Reef's Edge - Coral Near Two Seahorses)"
+barbedhook_reefsedge_shortcut = "Barbed Hook (Reef's Edge - Near Shortcut)"
+barbedhook_reefsedge_cliff = "Barbed Hook (Reef's Edge - North Facing Cliff Near Seahorse)"
+barbedhook_newcarcinia_citycenter = "Barbed Hook (New Carcinia - Top of Building in City Center)"
 
 # stowaway item locations
 siphonophore_shallows_westwall = "Siphonophore (Central Shallows - Along West Wall)" # siphonophore stowaway found in the shallow
@@ -65,14 +87,39 @@ mussel_slacktide_fortentrance =  "Mussel (Slacktide - Southwest Fort Entrance)" 
 anemone_slacktide_fortwall = "Anemone (Slacktide - South Fort Wall)" # anemone found on top of the fort wall toward the south
 whelk_slacktide_turrettop = "Whelk (Slacktide - Center Castle Turret Top)" # whelk found after climbing up the castle turret in the center of slacktide
 
+seastar_reefsedge_crabs = "Seastar (Reef's Edge - Surrounded by Crabs)"
+seastarplus_reefsedge_pole = "Sea Star+ (Reef's Edge - Top of Large Hammer Crab Pole)"
+whelkplus_reefsedge_sponge = "Whelk+ (Reef's Edge - Near Orange Coral and Sponge)"
+
+limpet_newcarcinia_entrance = "Breadclaw (New Carcinia - Top of Cardboard Buildings Near Entrance)"
+rustynail_newcarcinia_hammerhead = "(New Carcinia - On Top of Hammerhead Toolbox)"
+
+sanddollar_newcarcinia_hammerhead = "Sand Dollar [Stowaway] (New Carcinia - Flat Coral Near Above Hammerhead)"
+
 # costume locations
 captain_costume_pickup = "Captain Costume (Central Shallows - Near Nephro Spawn)"
 
 # adaptation locations
 royal_wave_reward = "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)"
+urchin_toss_quest = "Urchin Toss Adaptation (New Carcinia - Hug Erich Too Much)"
 
 # boss locations
-royal_shellsplitter = "Royal Shellsplitter" # first miniboss of the game in the shallows
+royal_shellsplitter = "Royal Shellsplitter" # first hidden/optional boss of the game in the shallows
 nephro = "Nephro, Captain of the Guard" # first boss of the game
-platoon_pathfinder = "Platoon Pathfinder" # miniboss that drops the pristine pearl for the duchess
+platoon_pathfinder = "Polluted Platoon Pathfinder" # miniboss that drops the pristine pearl for the duchess
 magista = "Magista, Tyrant of Slacktide" # boss of slacktide, also known as the duchess
+pagurus = "Pagurus, The Ravenous" #The big bad of the sands between
+lycanthrope = "Diseased Lycanthrope" 
+carbonara_connessuer = "Curdled Carbonara Connesseur"
+heikea = "Heikea, Intimidation Crab"
+topoda = "Grovekeeper Topoda"
+consortium = "The Consortium"
+sludge_steamroller = "Scuttling Sludge Steamroller"
+ceviche_sisters = "Ceviche Sisters"
+voltai = "Voltai, The Accumulator"
+roland = "Roland, Venture Crabitalist"
+petroch = "Inkerton, Crab Hunter"
+inkerton = "Inkerton, Crab Hunter"
+camtscha = "Camtscha, The Bleached King"
+praya_dubia = "Praya Dubia, The Ocean's Agony"
+firth = "Firth, The Crab Who Stole The Whorl"
