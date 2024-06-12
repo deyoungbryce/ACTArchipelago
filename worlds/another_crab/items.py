@@ -44,8 +44,10 @@ item_table: Dict[str, ACTItemData] = {
     iname.bobber: ACTItemData(ItemClassification.useful, 1, 21, "Stowaways"),
     iname.chum: ACTItemData(ItemClassification.useful, 1, 22, "Stowaways"),
     iname.cockle: ACTItemData(ItemClassification.useful, 1, 23, "Stowaways"),
+    iname.cockle_plus: ACTItemData(ItemClassification.useful, 1, 113, "Stowaways"), #missed on first pass oops
     iname.contact_lens: ACTItemData(ItemClassification.useful, 1, 24, "Stowaways"),
     iname.cotton_ball: ACTItemData(ItemClassification.useful, 1, 25, "Stowaways"),
+    iname.earthworm: ACTItemData(ItemClassification.useful, 1, 114, "Stowaways"), #missed on first pass oops
     iname.fredrick: ACTItemData(ItemClassification.useful, 1, 26, "Stowaways"),
     iname.fruit_sticker: ACTItemData(ItemClassification.useful, 1, 27, "Stowaways"),
     iname.fruit_sticker_plus: ACTItemData(ItemClassification.useful, 1, 28, "Stowaways"),
@@ -111,7 +113,7 @@ item_table: Dict[str, ACTItemData] = {
     #iname.carclaw: ACTItemData(ItemClassification.filler, 1, 86, "Currency"),
 
     # consumable
-    #iname.barbed_hook: ACTItemData(ItemClassification.filler, 1, 87, "Consumable"),
+    iname.barbed_hook: ACTItemData(ItemClassification.filler, 1, 87, "Consumable"),
 
     # constume
     #iname.plastic_poncho: ACTItemData(ItemClassification.filler, 1, 88, "Costume"),
@@ -142,8 +144,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.spectral_tentacle: ACTItemData(ItemClassification.progression, 1, 111, "Adapations"),
     iname.urchin_toss: ACTItemData(ItemClassification.progression, 1, 112, "Adapations"),
 
-    # consumables
-    iname.barbed_hook: ACTItemData(ItemClassification.filler, 1, 113, "Consumables")
+
 }
 
 #item_name_to_id: Dict[str, int] = {name: id for name, id in item_table.items()}
