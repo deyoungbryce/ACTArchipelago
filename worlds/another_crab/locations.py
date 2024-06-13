@@ -18,7 +18,7 @@ class ACTLocationData(NamedTuple):
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
-    #Last used number: 73
+    #Last used number: 86
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
@@ -46,7 +46,9 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.camtscha: ACTLocationData(rname.central_shallows,60,"Central Shallows"),
     #lname.praya_dubia: ACTLocationData(rname.central_shallows,61,"Central Shallows"),
     #lname.firth: ACTLocationData(rname.central_shallows,62,"Central Shallows"),
-    
+
+
+
     
     # currency item locations
 
@@ -80,6 +82,15 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_reefsedge_thimblecrab: ACTLocationData(rname.reefs_edge, 67, "Reef's Edge"), #1f5a8d6b-10ab-4e4e-b240-284e2ec2c77a-2_A-NCTradeRoute
     lname.hairclaw_reefsedge_sign: ACTLocationData(rname.reefs_edge, 71, "Reef's Edge"), #b478df52-084c-4c14-8a55-215fdbaeaffe-2_A-NCTradeRoute
 
+    lname.breadclaw_newcarcinia_entrance: ACTLocationData(rname.new_carcinia, 74, "New Carcinia"), #fb5e2e88-b498-4af4-b7a6-4f176eb4016c-2_B-NCCity
+    lname.breadclaw_newcarcinia_hammerhead: ACTLocationData(rname.new_carcinia, 76, "New Carcinia"), #e26a7cee-15af-4f6c-b6fb-253f8dfac6e4-2_B-NCCity
+    lname.breadclaw_newcarcinia_bottomalley: ACTLocationData(rname.new_carcinia, 79, "New Carcinia"), #4058fdd6-84f5-4f1e-b8f1-3dcccb288aa2-2_B-NCCity
+    lname.breadclaw_newcarcinia_prawnalley: ACTLocationData(rname.new_carcinia, 80, "New Carcinia"), #d538af5f-81e0-452c-8800-756bb635a16b-2_B-NCCity
+    lname.chipclaw_newcarcinia_leg: ACTLocationData(rname.new_carcinia, 81, "New Carcinia"), #4f62e34e-df79-4e33-99bb-b65844e50304-2_B-NCCity
+    lname.breadclaw_newcarcinia_tallbuilding: ACTLocationData(rname.new_carcinia, 82, "New Carcinia"), #0e59ec85-36b5-4750-baf4-cc9899525ca6-2_B-NCCity
+    lname.breadclaw_newcarcinia_shortbuilding: ACTLocationData(rname.new_carcinia, 83, "New Carcinia"), #c91a3fa0-f774-4e5f-a43e-90dd9a1d5e3a-2_B-NCCity
+    lname.chipclaw_newcarcinia_prawnshop: ACTLocationData(rname.new_carcinia, 84, "New Carcinia"), #d2b95a55-ec16-48cc-bce4-c7e39a16a78a-2_B-NCCity
+
     # upgrade item locations
     lname.bloodstar_shallows_help: ACTLocationData(rname.central_shallows, 24, "Central Shallows"), #AUTO NEEDS TO DO QUEST SCRIPT
     lname.bloodstar_shallows_parkour: ACTLocationData(rname.central_shallows, 25, "Central Shallows"),#ff9d47b6-7f55-4ad2-a110-e7c4492d87c1-2_B-ShallowsBigSand
@@ -98,6 +109,8 @@ location_table: Dict[str, ACTLocationData] = {
     lname.barbedhook_reefsedge_seahorses: ACTLocationData(rname.reefs_edge, 66, "Reef's Edge"), #08434b00-0100-4ea1-8f2a-f1567b84bdf2-2_A-NCTradeRoute
     lname.barbedhook_reefsedge_shortcut: ACTLocationData(rname.reefs_edge, 69, "Reef's Edge"), #2b4849b0-2798-4600-8db1-c5d6bf6952b1-2_A-NCTradeRoute
     lname.barbedhook_reefsedge_cliff: ACTLocationData(rname.reefs_edge, 72, "Reef's Edge"), #76ad26b0-4305-498c-8510-4940ad569210-2_A-NCTradeRoute
+
+    lname.barbedhook_newcarcinia_citycenter: ACTLocationData(rname.new_carcinia, 78, "New Carcinia"), #c3b90e59-5289-4ca3-8639-a5c90d656403-2_B-NCCity
 
     # stowaway locations
     lname.siphonophore_shallows_westwall: ACTLocationData(rname.central_shallows, 31, "Central Shallows"),#4d4ac114-06e4-400f-b888-b500a7348cc9-2_B-ShallowsBigSand
@@ -120,10 +133,16 @@ location_table: Dict[str, ACTLocationData] = {
     lname.seastarplus_reefsedge_pole: ACTLocationData(rname.reefs_edge, 70, "Reef's Edge"), #3473ed8f-db06-4bb7-9932-862f92258542-2_A-NCTradeRoute
     lname.whelkplus_reefsedge_sponge: ACTLocationData(rname.reefs_edge, 73, "Reef's Edge"), #5e8a3fb6-f3b1-42a0-a8b8-10b57b340138-2_A-NCTradeRoute
 
-    # costume locations
-    lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"),#7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand
+    lname.limpet_newcarcinia_entrance: ACTLocationData(rname.new_carcinia, 75, "New Carcinia"), #e7b4c4fc-6208-4326-847e-ee34113f7fe0-2_B-NCCity
+    lname.rustynail_newcarcinia_hammerhead: ACTLocationData(rname.new_carcinia, 77, "New Carcinia"), #f2105767-2544-4acc-9703-a47fbe97c3dc-2_B-NCCity
 
-    # adaptation locations
+    lname.sanddollar_newcarcinia_hammerhead: ACTLocationData(rname.new_carcinia, 86,"New Carcinia"), #a1194e18-4659-4ac9-aa73-744a6df42fe3-2_B-NCCity
+
+    # costume locations
+    lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"), #7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand
+
+    # non-boss adaptation locations
+    lname.urchin_toss_quest: ACTLocationData(rname.new_carcinia, 85,"New Carcinia"),#
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 }
 
