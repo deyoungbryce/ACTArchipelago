@@ -7,7 +7,7 @@ from .names import region_names as rname
 class ACTLocation(Location):
     game: str = "Another Crabs Treasure"
 
-location_base_id = 483021700
+location_base_id: int = 483021700
 
 class ACTLocationData(NamedTuple):
     region: str
@@ -47,9 +47,7 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.praya_dubia: ACTLocationData(rname.central_shallows,61,"Central Shallows"),
     #lname.firth: ACTLocationData(rname.central_shallows,62,"Central Shallows"),
     
-    
     # currency item locations
-
     lname.breadclaw_caveofrespite_ledge: ACTLocationData(rname.starting_cave, 4,"Cave of Respite"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     lname.breadclaw_shallows_southsandal: ACTLocationData(rname.central_shallows, 5, "Central Shallows"),#0171a152-809a-47cf-9fcc-60ddb61511bb-2_B-ShallowsBigSand
@@ -126,6 +124,7 @@ location_table: Dict[str, ACTLocationData] = {
     # adaptation locations
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 }
+
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + data.location_id_offset for name, data in location_table.items()}
 

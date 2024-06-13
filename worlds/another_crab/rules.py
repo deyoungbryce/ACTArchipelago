@@ -1,18 +1,12 @@
 from typing import TYPE_CHECKING
-
 from worlds.generic.Rules import set_rule
 from BaseClasses import CollectionState
+
 from .options import ACTGameOptions
 from .names import location_names as lname
 from .names import item_names as iname
 if TYPE_CHECKING:
     from . import ACTWorld
-
-def has_grapple(state: CollectionState, player: int) -> bool:
-    return state.has("Fishing Line", player)
-
-def has_rwave(state: CollectionState, player: int)  -> bool:
-    return state.has(lname.royal_wave_reward, player)
 
 def set_region_rules(world: "ACTWorld") -> None:
     multiworld = world.multiworld
