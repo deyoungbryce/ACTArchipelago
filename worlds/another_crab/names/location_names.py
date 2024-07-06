@@ -90,6 +90,15 @@ hairclaw_postpag_ecentral = "Hairclaw (Post Pagurus - East of Central Vista)"
 chipclaw_postpag_nwpropane = "Chipclaw (Post Pagurus - Preserver North-West of Propane)"
 paperclaw_postpag_schain = "Paperclaw (Post Pagurus - South of Chains)"
 
+clothesclaw_ridge_neridge = "Clothesclaw (Secluded Ridge - North East Secluded Ridge)"
+paperclaw_ridge_nearoverlook = "Paperclaw (Secluded Ridge - Hidden Crab near Ridge Overlook)"
+clothesclaw_ridge_broom = "Clothesclaw (Secluded Ridge - Near Broom)"
+breadclaw_ridge_south = "Breadclaw (Secluded Ridge - Southern Path)"
+clothesclaw_ridge_overlookfish = "Clothesclaw (Secluded Ridge - Fishing on Ridge Overlook)"
+chipclaw_ridge_southfish = "Chipclaw [Currency] (Fishing South of Ridge Overlook)"
+
+stapleclaw_trashbin_eelfish = "Stapleclaw (Trashbin Plateau - Eelectrocute Grapple Path Fishing)"
+
 # upgrade item locations
 bloodstar_shallows_help = "Bloodstar Limb (Central Shallows - Help a Crab)" # the bloodstar limb acquired from helping the surrounded crab in the shallows
 bloodstar_shallows_parkour = "Bloodstar Limb (Central Shallows - Parkour on Small Islands)"
@@ -112,6 +121,11 @@ tacklepouch_sandsbetween_eelnorthchain = "Tackle Pouch (The Sands Between - Eele
 kelpsprout_sandsbetween_southeelside = "Hearkelp Sprout (The Sands Between - South Eelectrocute Path, Green Coral Side Path)"
 
 bloodstar_postpag_anchorswarm = "Bloodstar Limb (Post Pagurus - Crab Swarm Near Anchor)"
+
+stainlessrelic_ridge_overlook = "Stainless Relic (Secluded Ridge - Plate on Ridge Overlook)"
+kelpsprout_ridge_eelend = "Heartkelp Sprout (Secluded Ridge - End of Eelectrocute Path, Near Bobbit)"
+oldworldwhorl_ridge_ncliff = "Old World Whorl (Secluded Ridge - North Cliff Clam)"
+oldworldwhorl_ridge_eelclam = "Old World Whorl (Secluded Ridge - Eelectrocute Clam)"
 
 # consumable item locations
 barbedhook_reefsedge_undercoral = "Barbed Hook (Reef's Edge - Under Coral Near Shot Glass Crab)"
@@ -141,6 +155,12 @@ barbedhook_postpag_neeelpath = "Barbed Hook (Post Pagurus - Fence Near North-Eas
 barbedhook_postpag_ridgeentrance = "Barbed Hook (Post Pagurus - Near Secluded Ridge Entrance)"
 barbedhook_postpag_wplayground = "Barbed Hook (Post Pagurus - West of Playground)"
 barbedhook_postpag_swcentral = "Barbed Hook (Post Pagurus - South-West of Central Vista)"
+
+barbedhook_ridge_near = "Barbed Hook (Secluded Ridge - Near Secluded Ridge Moon Snail Shell)"
+barbedhook_ridge_overlookpath = "Barbed Hook (Secluded Ridge - Path to Ridge Overlook)"
+sharkegg_ridge_broomspire = "Shark Egg (Secluded Ridge - Broom Spire Peak)"
+
+barbedhook_trashbin_eelgrapple = "Barbed Hook (Trashbin Plateau - Eelectrocute Grapple Path)"
 
 # stowaway item locations
 siphonophore_shallows_westwall = "Siphonophore (Central Shallows - Along West Wall)" # siphonophore stowaway found in the shallow
@@ -202,12 +222,25 @@ whelkplusplus_sandsbetween_southeelpeak = "Whelk++ (The Sands Between - South Ee
 salpplus_sandsbetween_groveeel = "Salp+ (The Sands Between - Eelectrocute Path Near Grove Small Island)"
 usedbandage_sandsbetween_groveeel = "Used Bandage (The Sands Between - Eelectrocute Path Near Grove)"
 
+limpet_ridge_ncliffkelp = "Limpet (Secluded Ridge - North Cliff Hidden in Kelp)"
+sanddollar_ridge_broom = "Sanddollar (Secluded Ridge - Near Broom)"
+musselplus_ridge_togo = "Mussel+ (Secluded Ridge - Western Cliff To Go Box)"
+siphonophoreplus_ridge_pitfall = "Siphonophore+ (Secluded Ridge - Pitfall)"
+anemoneplus_ridge_eel = "Anemone+ (Secluded Ridge - Eelectrocute)"
+cockle_ridge_eelfish = "Cockle (Secluded Ridge - Fishing on Eelectrocute Path)"
+bobber_ridge_broomspire = "Bobber (Secluded Ridge - Broom Spire Climb)"
+
+cockle_trashbin_peak = "Cockle (Trashbin Plateau - Peak)"
+sinker_trashbin_peak = "Sinker (Trashbin Plateau - Peak)"
+smallbattery_trashbin_mantis = "Small Battery (Trashbin Plateau - Mantis Block)"
+googlyeye_trashbin_pineapple = "Googly Eye (Trashbin Plateau - Pineapple)"
 
 
 
 # costume locations
 captain_costume_pickup = "Captain Costume (Central Shallows - Near Nephro Spawn)"
 clown_costume_pickup = "Clown Costume (The Sands Between - Path of the Clown)"
+sunlight_costume_pickup = "Sunlight (Secluded Ridge - Southern Bonfire)"
 
 # adaptation locations
 royal_wave_reward = "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)"

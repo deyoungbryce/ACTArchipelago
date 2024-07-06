@@ -18,7 +18,7 @@ class ACTLocationData(NamedTuple):
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
-    #Last used number: 185
+    #Last used number: 212
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
@@ -132,6 +132,15 @@ location_table: Dict[str, ACTLocationData] = {
     lname.chipclaw_postpag_nwpropane: ACTLocationData(rname.post_pag, 182, "The Sands Between - Post Pagurus"), #45af0c47-a8e0-498f-8345-9c9ddabbd6b3-2_A-OOGroveRadius
     lname.paperclaw_postpag_schain: ACTLocationData(rname.post_pag, 185, "The Sands Between - Post Pagurus"), #16dfae13-103f-45eb-9661-3e6463a2b805-2_A-OOGroveRadius
 
+    lname.clothesclaw_ridge_neridge: ACTLocationData(rname.secluded_ridge, 189, "The Sands Between - Secluded Ridge"), #e2803d8a-feea-45a7-addf-3330748d9e4b-2_A-OOGroveRadius
+    lname.paperclaw_ridge_nearoverlook: ACTLocationData(rname.secluded_ridge, 193, "The Sands Between - Secluded Ridge"), #f6db9d48-5df1-4a7f-9f17-b760901954c9-2_A-OOGroveRadius
+    lname.clothesclaw_ridge_broom: ACTLocationData(rname.secluded_ridge, 195, "The Sands Between - Secluded Ridge"), #3f8d4c85-202f-42dc-9105-434d601d1d75-2_A-OOGroveRadius
+    lname.breadclaw_ridge_south: ACTLocationData(rname.secluded_ridge, 197, "The Sands Between - Secluded Ridge"), #d1883b57-b339-4c31-826a-e76a3de0ee4b-2_A-OOGroveRadius
+    lname.clothesclaw_ridge_overlookfish: ACTLocationData(rname.secluded_ridge, 206, "The Sands Between - Secluded Ridge"), #4f737f9e-a952-490c-b54d-1f74735af9cc-2_A-OOGroveRadius
+    lname.chipclaw_ridge_southfish: ACTLocationData(rname.secluded_ridge, 207, "The Sands Between - Secluded Ridge"), #82043889-30eb-45f4-8f87-45dd2f5d69ed-2_A-OOGroveRadius
+
+    lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plataeu"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
+
     ##### upgrade item locations
     lname.bloodstar_shallows_help: ACTLocationData(rname.central_shallows, 24, "Central Shallows"), #AUTO NEEDS TO DO QUEST SCRIPT
     lname.bloodstar_shallows_parkour: ACTLocationData(rname.central_shallows, 25, "Central Shallows"),#ff9d47b6-7f55-4ad2-a110-e7c4492d87c1-2_B-ShallowsBigSand
@@ -154,6 +163,11 @@ location_table: Dict[str, ACTLocationData] = {
     lname.kelpsprout_sandsbetween_southeelside: ACTLocationData(rname.sands_between, 151, "The Sands Between"), #a7c60b04-8f1b-4833-a6f4-d472e79748c5-2_A-OOGroveRadius
 
     lname.bloodstar_postpag_anchorswarm: ACTLocationData(rname.post_pag, 169, "The Sands Between - Post Pagurus"), #29e54e45-4248-4a3d-96bf-ddf5cf6046c7-2_A-OOGroveRadius
+
+    lname.stainlessrelic_ridge_overlook: ACTLocationData(rname.secluded_ridge, 186, "The Sands Between - Secluded Ridge"), #c56be461-0e5c-406e-8af0-83021f2f2fb6-2_A-OOGroveRadius
+    lname.kelpsprout_ridge_eelend: ACTLocationData(rname.secluded_ridge, 188, "The Sands Between - Secluded Ridge"), #d56339c0-fc26-4f53-a289-2c00b6f7ab38-2_A-OOGroveRadius
+    lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 190, "The Sands Between - Secluded Ridge"), #8e381b9e-ab7a-44ad-81c3-19157c97e0c6-2_A-OOGroveRadius
+    lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 205, "The Sands Between - Secluded Ridge"), #80e66e11-8e9a-4896-9db1-f8cd4a25fefc-2_A-OOGroveRadius
 
     ##### consumable item locations
     lname.barbedhook_reefsedge_undercoral: ACTLocationData(rname.reefs_edge, 65, "Reef's Edge"), #c44729ce-4c25-4059-8432-212381ca6835-2_A-NCTradeRoute
@@ -183,6 +197,12 @@ location_table: Dict[str, ACTLocationData] = {
     lname.barbedhook_postpag_ridgeentrance: ACTLocationData(rname.post_pag, 181, "The Sands Between - Post Pagurus"), #9ecea6b6-f3db-48f8-a753-6644bbbf1aaf-2_A-OOGroveRadius
     lname.barbedhook_postpag_wplayground: ACTLocationData(rname.post_pag, 183, "The Sands Between - Post Pagurus"), #ecea05b3-9908-4b63-b422-d999b78c87e1-2_A-OOGroveRadius
     lname.barbedhook_postpag_swcentral: ACTLocationData(rname.post_pag, 184, "The Sands Between - Post Pagurus"), #7563f2eb-e052-4107-b787-de2f67a40f2f-2_A-OOGroveRadius
+
+    lname.barbedhook_ridge_near: ACTLocationData(rname.secluded_ridge, 187, "The Sands Between - Secluded Ridge"), #97a24ab6-20a3-4f21-b0af-55bf243f33f0-2_A-OOGroveRadius
+    lname.barbedhook_ridge_overlookpath: ACTLocationData(rname.secluded_ridge, 192, "The Sands Between - Secluded Ridge"), #d9ee8d70-3493-4e7b-91b3-b42278ff0ad4-2_A-OOGroveRadius
+    lname.sharkegg_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 212, "The Sands Between - Secluded Ridge"), #dcc6b99e-1d47-481f-86ca-e14a5743f460-2_A-OOGroveRadius
+
+    lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plataeu"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
 
     ##### stowaway locations
     lname.siphonophore_shallows_westwall: ACTLocationData(rname.central_shallows, 31, "Central Shallows"),#4d4ac114-06e4-400f-b888-b500a7348cc9-2_B-ShallowsBigSand
@@ -243,12 +263,26 @@ location_table: Dict[str, ACTLocationData] = {
     lname.salpplus_sandsbetween_groveeel: ACTLocationData(rname.sands_between, 167,"The Sands Between"), #7faef89f-c78a-4002-9454-c20bf5098229-2_A-OOGroveRadius
     lname.usedbandage_sandsbetween_groveeel: ACTLocationData(rname.sands_between, 168,"The Sands Between"), #3123f8ec-3548-41f5-a777-c10268e06b8b-2_A-OOGroveRadius
 
+    lname.limpet_ridge_ncliffkelp: ACTLocationData(rname.secluded_ridge, 191, "The Sands Between - Secluded Ridge"), #fcb1f0bb-2ebf-449c-b5fd-ebb7d515c7af-2_A-OOGroveRadius
+    lname.sanddollar_ridge_broom: ACTLocationData(rname.secluded_ridge, 194, "The Sands Between - Secluded Ridge"), #42686eee-4b9f-4d44-a52d-569d2c814f13-2_A-OOGroveRadius
+    lname.musselplus_ridge_togo: ACTLocationData(rname.secluded_ridge, 196, "The Sands Between - Secluded Ridge"), #a59b9d02-9711-48e3-8296-e2164c79f1f2-2_A-OOGroveRadius
+    lname.siphonophoreplus_ridge_pitfall: ACTLocationData(rname.secluded_ridge, 203, "The Sands Between - Secluded Ridge"), #e2a1e3e1-8ee4-4539-ab81-98c4d6d99630-2_A-OOGroveRadius
+    lname.anemoneplus_ridge_eel: ACTLocationData(rname.secluded_ridge, 204, "The Sands Between - Secluded Ridge"), #1b6f2070-3ff2-4f48-b061-0a41990013e1-2_A-OOGroveRadius
+    lname.cockle_ridge_eelfish: ACTLocationData(rname.secluded_ridge, 208, "The Sands Between - Secluded Ridge"), #d32ade52-c34e-4cb7-957c-df605339ee4c-2_A-OOGroveRadius
+    lname.bobber_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 211, "The Sands Between - Secluded Ridge"), #fc2cf7ed-6ff6-40bb-987a-936da0afa93b-2_A-OOGroveRadius
+
+    lname.cockle_trashbin_peak: ACTLocationData(rname.secluded_ridge, 199, "The Sands Between - Trashbin Plataeu"), #ca4c297f-e9fd-4a78-b89a-811d2394406b-2_A-OOGroveRadius
+    lname.sinker_trashbin_peak: ACTLocationData(rname.secluded_ridge, 200, "The Sands Between - Trashbin Plataeu"), #36611427-18cc-45f3-ad50-a51cc02ccb1d-2_A-OOGroveRadius
+    lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plataeu"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
+    lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plataeu"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
+
     ##### costume locations
     lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"), #7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand
     lname.clown_costume_pickup: ACTLocationData(rname.sands_between, 140,"The Sands Between"), #cd2d0535-6c06-4530-bf60-afbffc2d5086-2_A-OOGroveRadius
+    lname.sunlight_costume_pickup: ACTLocationData(rname.secluded_ridge, 198, "The Sands Between - Secluded Ridge"), #35aa72f2-fa50-4efc-b600-b597382ed877-2_A-OOGroveRadius
 
     ##### non-boss adaptation locations
-    lname.urchin_toss_quest: ACTLocationData(rname.new_carcinia, 85,"New Carcinia"), #
+    lname.urchin_toss_quest: ACTLocationData(rname.new_carcinia, 85,"New Carcinia"), #AUTO NEEDS TO MAKE A CUSTOM SCRIPT
     lname.bobbit_trap_pickup: ACTLocationData(rname.sands_between, 109,"The Sands Between"), #3bb06349-c151-4333-8305-ba0eb7512bc3-2_A-OOGroveRadius
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 }
