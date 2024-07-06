@@ -20,10 +20,20 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.slacktide_after: {
         rname.reefs_edge
     },
-    rname.reefs_edge: set(),
-    rname.new_carcinia_lower: set(),
-    rname.new_carcinia_upper: set(),
-    rname.sands_between: set(),
+    rname.reefs_edge: {
+        rname.new_carcinia_lower,
+        rname.new_carcinia_upper
+    },
+    rname.new_carcinia_lower: {rname.sands_between},
+    rname.new_carcinia_upper: {rname.sands_between},
+    rname.sands_between: {
+        rname.post_pag,
+        rname.secluded_ridge,
+        rname.expired_grove,
+        rname.flotsam_vale
+    },
+    rname.post_pag: set(),
+    rname.secluded_ridge: set(),
     rname.expired_grove: set(),
     rname.flotsam_vale: set(),
     rname.pinbarge: set(),
