@@ -99,6 +99,24 @@ chipclaw_ridge_southfish = "Chipclaw [Currency] (Fishing South of Ridge Overlook
 
 stapleclaw_trashbin_eelfish = "Stapleclaw (Trashbin Plateau - Eelectrocute Grapple Path Fishing)"
 
+breadclaw_lowergrove_takeout = "Breadclaw (Lower Expired Grove - East Takeout Container)"
+breadclaw_lowergrove_tiretop = "Breadclaw (Lower Expired Grove - Near Tire Archway)"
+chipclaw_lowergrove_plastic = "Chipclaw (Lower Expired Grove - Plastic Silverware Near Entrance)"
+clothesclaw_lowergrove_choccymilk = "Clothesclaw (Lower Expired Grove - Chocolate Milk Carton)"
+breadclaw_lowergrove_insidetire = "Breadclaw (Lower Expired Grove - Inside Tire Archway)"
+chipclaw_lowergrove_sniper = "Chipclaw (Lower Expired Grove - East Sniper Ledge)"
+hairclaw_lowergrove_milkurchins = "Hairclaw (Lower Expired Grove - Milk Carton Urchins)"
+breadclaw_lowergrove_smallhall = "Breadclaw (Lower Expired Grove - Small Connecting Hallway)"
+chipclaw_lowergrove_apples = "Chipclaw (Lower Expired Grove - Rotten Apple Cores)"
+chipclaw_lowergrove_sodacans = "Chipclaw (Lower Expired Grove - Shopping Cart Soda Cans)"
+hairclaw_lowergrove_moonshine = "Hairclaw (Lower Expired Grove - Shopping Cart Moonshine)"
+chipclaw_lowergrove_circlerock = "Chipclaw (Lower Expired Grove - Circular Rock Past Shopping Cart)"
+clothesclaw_lowergrove_alcove = "Clothesclaw (Lower Expired Grove - Gunk River Alcove Near Waterfall)"
+hairclaw_lowergrove_sniper = "Hairclaw (Lower Expired Grove - Elevated Sniper Platform)"
+breadclaw_lowergrove_amongus = "Breadclaw (Lower Expired Grove - Among Us Fries)"
+breadclaw_lowergrove_oildrum = "Breadclaw (Lower Expired Grove - Small Platform Next to Oil Drum)"
+breadclaw_lowergrove_oilgrapple = "Breadclaw (Lower Expired Grove - Grapple Near Top of Oil Drum)"
+
 # upgrade item locations
 bloodstar_shallows_help = "Bloodstar Limb (Central Shallows - Help a Crab)" # the bloodstar limb acquired from helping the surrounded crab in the shallows
 bloodstar_shallows_parkour = "Bloodstar Limb (Central Shallows - Parkour on Small Islands)"
@@ -126,6 +144,9 @@ stainlessrelic_ridge_overlook = "Stainless Relic (Secluded Ridge - Plate on Ridg
 kelpsprout_ridge_eelend = "Heartkelp Sprout (Secluded Ridge - End of Eelectrocute Path, Near Bobbit)"
 oldworldwhorl_ridge_ncliff = "Old World Whorl (Secluded Ridge - North Cliff Clam)"
 oldworldwhorl_ridge_eelclam = "Old World Whorl (Secluded Ridge - Eelectrocute Clam)"
+
+oldworldwhorl_lowergrove_southclam = "Old World Whorl (Lower Expired Grove - South Clam)"
+bloodstar_lowergrove_waterfall = "Bloodstar Limb (Lower Expired Grove - Behind Gunk Waterfall)"
 
 # consumable item locations
 barbedhook_reefsedge_undercoral = "Barbed Hook (Reef's Edge - Under Coral Near Shot Glass Crab)"
@@ -161,6 +182,22 @@ barbedhook_ridge_overlookpath = "Barbed Hook (Secluded Ridge - Path to Ridge Ove
 sharkegg_ridge_broomspire = "Shark Egg (Secluded Ridge - Broom Spire Peak)"
 
 barbedhook_trashbin_eelgrapple = "Barbed Hook (Trashbin Plateau - Eelectrocute Grapple Path)"
+
+barbedhook_lowergrove_sniper = "Barbed Hook (Lower Expired Grove - Next to Sniper Crab)"
+barbedhook_lowergrove_riverledge = "Barbed Hook (Lower Expired Grove - Ledge Near Gunk River)"
+barbedhook_lowergrove_riversand = "Barbed Hook (Lower Expired Grove - In Sand Near Gunk River)"
+barbedhook_lowergrove_lichenthrope = "Barbed Hook (Lower Expired Grove - Behind Diseased Lichenthrope)"
+barbedhook_lowergrove_lichenthropeeast = "Barbed Hook (Lower Expired Grove - Ledge East of Lichenthrope)"
+barbedhook_lowergrove_sodacans = "Barbed Hook (Lower Expired Grove - Crushed Soda Cans)"
+barbedhook_lowergrove_acrossriver = "Barbed Hook (Lower Expired Grove - Ledge Across Gunk River)"
+barbedhook_lowergrove_afternets = "Barbed Hook (Lower Expired Grove - Ledge After Grapple Nets)"
+barbedhook_lowergrove_cartledge = "Barbed Hook (Lower Expired Grove - Ledge After Shopping Cart)"
+barbedhook_lowergrove_cartledgebottle = "Barbed Hook (Lower Expired Grove - Bottles on Ledge After Shopping Cart)"
+barbedhook_lowergrove_paperplate = "Barbed Hook (Lower Expired Grove - Paper Plate Near River)"
+barbedhook_lowergrove_oildrum = "Barbed Hook (Lower Expired Grove - Main Pathway Around Oil Drum)"
+barbedhook_lowergrove_canopy = "Barbed Hook  (Lower Expired Grove - Carton Canopy)"
+barbedhook_lowergrove_drumtop = "Barbed Hook (Lower Expired Grove - Near Top of Oil Drum)"
+
 
 # stowaway item locations
 siphonophore_shallows_westwall = "Siphonophore (Central Shallows - Along West Wall)" # siphonophore stowaway found in the shallow
@@ -235,7 +272,12 @@ sinker_trashbin_peak = "Sinker (Trashbin Plateau - Peak)"
 smallbattery_trashbin_mantis = "Small Battery (Trashbin Plateau - Mantis Block)"
 googlyeye_trashbin_pineapple = "Googly Eye (Trashbin Plateau - Pineapple)"
 
-
+barnacle_lowergrove_colander = "Barnacle (Lower Expired Grove - On Top of Colander)"
+seastar_lowergrove_eastrock = "Seastar (Lower Expired Grove - East Circular Rock)"
+pufferquill_lowergrove_sponges = "Puffer Quill (Lower Expired Grove - Cross Sponge Islands)"
+limpet_lowergrove_sodacan = "Limpet (Lower Expired Grove - Soda Can Stepping Stones)"
+lumpsucker_lowergrove_canopy = "Lumpsucker (Lower Expired Grove - Carton Canopy)"
+sharktooth_lowergrove_pizza = "Shark Tooth (Lower Expired Grove - Under Pizza Box)"
 
 # costume locations
 captain_costume_pickup = "Captain Costume (Central Shallows - Near Nephro Spawn)"
@@ -253,9 +295,9 @@ nephro = "Nephro, Captain of the Guard" # first boss of the game
 platoon_pathfinder = "Polluted Platoon Pathfinder" # miniboss that drops the pristine pearl for the duchess
 magista = "Magista, Tyrant of Slacktide" # boss of slacktide, also known as the duchess
 pagurus = "Pagurus, The Ravenous" #The big bad of the sands between
-lycanthrope = "Diseased Lycanthrope" 
-carbonara_connessuer = "Curdled Carbonara Connesseur"
-heikea = "Heikea, Intimidation Crab"
+lichenthrope = "Diseased Lichenthrope" # the first miniboss of the grove
+carbonara_connoisseur = "Curdled Carbonara Connoisseur" # behind the gunk waterfall
+heikea = "Heikea, Intimidation Crab" # drops a map piece
 topoda = "Grovekeeper Topoda"
 consortium = "The Consortium"
 sludge_steamroller = "Scuttling Sludge Steamroller"

@@ -1,18 +1,20 @@
 from itertools import groupby
 from typing import Dict, List, Set, NamedTuple
 from BaseClasses import ItemClassification, Item
+
 from .names import item_names as iname
 
 class ACTItem(Item):
     game: str = "Another Crabs Treasure"
 
-item_base_id = 483021700
+item_base_id: int = 483021700
 
 class ACTItemData(NamedTuple):
     classification: ItemClassification
     quantity_in_item_pool: int
     item_id_offset: int
     item_group: str = ""
+
 
 # a lot of quantities here will need to be adjusted later
 item_table: Dict[str, ACTItemData] = {

@@ -11,8 +11,8 @@ from .names import location_names as lname
 
 
 class ACTWeb(WebWorld):
-    theme = "ocean"
-    game = "Another Crab's Treasure"
+    theme: str = "ocean"
+    game: str = "Another Crab's Treasure"
 
 class ACTWorld(World):
     """
@@ -67,13 +67,6 @@ class ACTWorld(World):
             region = self.multiworld.get_region(location_table[location_name].region, self.player)
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
-
-        # to be used later
-        '''victory_region = self.multiworld.get_region("Fort Slacktide - After Destruction", self.player)
-        victory_location = ACTLocation(self.player, "Royal Wave Adaptation (Fort Slacktide - Defeat Magista)", None, victory_region)
-        victory_location.place_locked_item(ACTItem("Victory", ItemClassification.progression, None, self.player))
-        self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
-        victory_region.locations.append(victory_location)'''
 
         self.multiworld.completion_condition[self.player] = \
             lambda state: state.can_reach(spot = lname.royal_wave_reward, resolution_hint="Location", player = self.player)
