@@ -18,7 +18,7 @@ class ACTLocationData(NamedTuple):
 location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
-    #Last used number: 255
+    #Last used number: 251
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
@@ -32,9 +32,9 @@ location_table: Dict[str, ACTLocationData] = {
     lname.magista: ACTLocationData(rname.slacktide_after, 44, "Fort Slacktide - After Destruction"),
     lname.royal_shellsplitter: ACTLocationData(rname.central_shallows, 47, "Central Shallows"),
     lname.pagurus: ACTLocationData(rname.sands_between, 48, "Sands Between"),
-    lname.lichenthrope: ACTLocationData(rname.expired_grove_lower, 253, "Expired Grove Lower"), #must fix region name and location group before re-adding
-    lname.carbonara_connoisseur: ACTLocationData(rname.expired_grove_lower, 254, "Expired Grove Lower"),
-    lname.heikea: ACTLocationData(rname.expired_grove_lower, 255, "Expired Grove Lower"),
+    lname.lichenthrope: ACTLocationData(rname.expired_grove_lower, 49, "Expired Grove Lower"), #must fix region name and location group before re-adding
+    lname.carbonara_connoisseur: ACTLocationData(rname.expired_grove_lower, 50, "Expired Grove Lower"),
+    lname.heikea: ACTLocationData(rname.expired_grove_lower, 51, "Expired Grove Lower"),
     #lname.topoda: ACTLocationData(rname.central_shallows, 52, "Central Shallows"),
     #lname.consortium: ACTLocationData(rname.central_shallows, 53, "Central Shallows"),
     #lname.sludge_steamroller: ACTLocationData(rname.central_shallows, 54, "Central Shallows"),
@@ -47,20 +47,6 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.praya_dubia: ACTLocationData(rname.central_shallows, 61, "Central Shallows"),
     #lname.firth: ACTLocationData(rname.central_shallows, 62, "Central Shallows"),
     
-    
-
-
-    
-    ##### currency item locations
-
-    lname.breadclaw_caveofrespite_ledge: ACTLocationData(rname.starting_cave, 4,"Cave of Respite"), #73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
-    lname.chipclaw_caveofrespite_forkroomfishing: ACTLocationData(rname.starting_cave, 120,"Cave of Respite"), #d985ffba-0ece-414d-8161-fa65241dd2b1-2_B-ShallowsBigSand
-    lname.mussel_caveofrespite_crabfightfishing: ACTLocationData(rname.starting_cave, 121,"Cave of Respite"), #d1af097b-c6c9-44a4-9ced-4a09a973c0d5-2_B-ShallowsBigSand
-    lname.clothesclaw_caveofrespite_entrancefishing: ACTLocationData(rname.starting_cave, 122,"Cave of Respite"), #0ac3fa03-5aab-4f12-86e4-8e9dfde8c04f-2_B-ShallowsBigSand
-    lname.sanddollar_caveofrespite_pathfishing: ACTLocationData(rname.starting_cave, 123,"Cave of Respite"), #9ef4b1f3-5a80-408c-962a-b3fed8c68770-2_B-ShallowsBigSand
-
-
-
     
     ##### currency item locations
 
@@ -130,7 +116,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.hairclaw_sandsbetween_anchorfish: ACTLocationData(rname.sands_between, 156, "The Sands Between"), #cab91803-4006-456d-95c7-6ec17d90c26a-2_A-OOGroveRadius
     lname.chipclaw_sandsbetween_northeastchainfish: ACTLocationData(rname.sands_between, 157, "The Sands Between"), #b0bf9c58-ff96-404c-bd1b-361fb1711b64-2_A-OOGroveRadius
     lname.clothesclaw_sandsbetween_propanefish: ACTLocationData(rname.sands_between, 158, "The Sands Between"), #17b29697-5b33-4568-a311-2dbfac60317a-2_A-OOGroveRadius
-    lname.clothesclaw_sandsbetween_anchorcentralfish: ACTLocationData(rname.sands_between, 160, "The Sands Between"), #15cf7503-de68-4475-b39c-fe687f85c448-2_A-OOGroveRadius
+    lname.clothesclaw_sandsbetween_anchorcentralfish: ACTLocationData(rname.sands_between, 160, "The Sands Between"), #628bf319-c5f3-448b-8ec0-71a173246a09-2_A-OOGroveRadius
     lname.breadclaw_sandsbetween_nailfish: ACTLocationData(rname.sands_between, 162, "The Sands Between"), #98c3bf98-c4bd-4c67-8678-0464e7095970-2_A-OOGroveRadius
     lname.breadclaw_sandsbetween_palletfish: ACTLocationData(rname.sands_between, 163, "The Sands Between"), #69ac316d-8d42-48a4-8d55-4ec4d6429c7c-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_southeelfish: ACTLocationData(rname.sands_between, 164, "The Sands Between"), #38edc1a4-dea8-4000-8683-6cda7f6ba3bc-2_A-OOGroveRadius
