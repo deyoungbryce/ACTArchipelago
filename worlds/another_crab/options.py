@@ -1,14 +1,14 @@
 from dataclasses import dataclass
 from Options import Toggle, Range, Choice, PerGameCommonOptions
 
-class DeathLink(Toggle):
-    """Enables Death Link"""
-    display_name: str = "Death Link"
-    default: bool = False
-
 class RandomizeFork(Toggle):
     """If enabled, the fork is added to the item pool. If disabled, the fork is left in its default location"""
     display_name: str = "Randomize Fork"
+    default: bool = False
+
+class RandomizeCostumes(Toggle):
+    """If enabled, shuffles costumes into the item pool"""
+    display_name: str = "Randomize Costumes"
     default: bool = False
 
 class MicroplasticMultiplier(Range):
@@ -18,7 +18,14 @@ class MicroplasticMultiplier(Range):
     range_end: float = 100
     default: int = 1
 
+class DeathLink(Toggle):
+    """Enables Death Link"""
+    display_name: str = "Death Link"
+    default: bool = False
+
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
     randomizeFork: RandomizeFork
+    randomizeCostumes: RandomizeCostumes
     microplasticMultiplier: MicroplasticMultiplier
+    deathlink: DeathLink

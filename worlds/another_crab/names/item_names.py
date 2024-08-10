@@ -135,3 +135,5 @@ shell_access = "Acquire Any Shell"
 # ---- Fake Items - for the purpose of logic rules ----
 spin_attack = "Spin Attack" # r1 air attack that allows for more distance and height for jumps
 pagurus_allergy = "Pagurus Allergy" #used for later when we randomize pagurus's allergy
+
+# traps

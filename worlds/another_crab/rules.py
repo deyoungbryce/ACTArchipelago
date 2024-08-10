@@ -5,6 +5,7 @@ from BaseClasses import CollectionState
 from .options import ACTGameOptions
 from .names import location_names as lname
 from .names import item_names as iname
+from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
@@ -14,6 +15,9 @@ def set_region_rules(world: "ACTWorld") -> None:
     #options = world.options
 
     multiworld.get_entrance("Central Shallows -> Moon Snail's Cave", player).access_rule = \
+        lambda state: state.has(iname.fishing_line, player)
+    
+    multiworld.get_entrance("Fort Slacktide - After Destruction -> Reef's Edge", player).access_rule = \
         lambda state: state.has(iname.fishing_line, player)
     
 def set_location_rules(world: "ACTWorld") -> None:

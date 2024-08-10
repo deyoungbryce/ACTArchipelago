@@ -146,18 +146,17 @@ item_table: Dict[str, ACTItemData] = {
     iname.spectral_tentacle: ACTItemData(ItemClassification.progression, 1, 111, "Adapations"),
     iname.urchin_toss: ACTItemData(ItemClassification.progression, 1, 112, "Adapations"),
 
+    # traps
+    #iname.trap_example: ACTItemData(ItemClassification.trap, ~, ~, "Traps")
 
 }
 
-#item_name_to_id: Dict[str, int] = {name: id for name, id in item_table.items()}
 item_name_to_id: Dict[str, int] = {name: item_base_id + data.item_id_offset for name, data in item_table.items()}
-
-filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
-
 
 def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
+filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group != "Costume"]
 
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""

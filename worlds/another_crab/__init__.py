@@ -1,8 +1,8 @@
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import Region
+from BaseClasses import Region, ItemClassification
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, ACTItem
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, get_item_group, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
@@ -49,6 +49,8 @@ class ACTWorld(World):
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
                 ACT_items.append(ACT_item)
+
+        available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
         self.multiworld.itempool += ACT_items
 
