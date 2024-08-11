@@ -37,11 +37,11 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.post_pag: set(),
     rname.secluded_ridge: set(),
     rname.grove_main: {
-        rname.grove_topoda
+        rname.grove_village
     },
-    rname.grove_topoda: set(),
+    rname.grove_village: set(),
     rname.flotsam_vale: {
-        rname.grove_topoda,
+        rname.grove_village,
         rname.scuttleport
     },
     rname.scuttleport: set(),

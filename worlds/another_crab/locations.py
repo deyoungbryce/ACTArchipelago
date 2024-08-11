@@ -32,10 +32,10 @@ location_table: Dict[str, ACTLocationData] = {
     lname.magista: ACTLocationData(rname.slacktide_after, 44, "Fort Slacktide - After Destruction"),
     lname.royal_shellsplitter: ACTLocationData(rname.central_shallows, 47, "Central Shallows"),
     lname.pagurus: ACTLocationData(rname.sands_between, 48, "Sands Between"),
-    lname.lichenthrope: ACTLocationData(rname.expired_grove_lower, 253, "Expired Grove Lower"), #must fix region name and location group before re-adding
-    lname.carbonara_connoisseur: ACTLocationData(rname.expired_grove_lower, 254, "Expired Grove Lower"),
-    lname.heikea: ACTLocationData(rname.expired_grove_lower, 255, "Expired Grove Lower"),
-    #lname.topoda: ACTLocationData(rname.central_shallows, 52, "Central Shallows"),
+    lname.lichenthrope: ACTLocationData(rname.grove_main, 253, "Expired Grove Main"), #must fix region name and location group before re-adding
+    lname.carbonara_connoisseur: ACTLocationData(rname.grove_main, 254, "Expired Grove Main"),
+    lname.heikea: ACTLocationData(rname.grove_main, 255, "Expired Grove Main"),
+    lname.topoda: ACTLocationData(rname.central_shallows, 52, "Central Shallows"),
     #lname.consortium: ACTLocationData(rname.central_shallows, 53, "Central Shallows"),
     #lname.sludge_steamroller: ACTLocationData(rname.central_shallows, 54, "Central Shallows"),
     #lname.ceviche_sisters: ACTLocationData(rname.central_shallows, 55, "Central Shallows"),
@@ -153,23 +153,23 @@ location_table: Dict[str, ACTLocationData] = {
 
     lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plataeu"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
 
-    lname.breadclaw_lowergrove_takeout: ACTLocationData(rname.expired_grove_lower, 219, "Expired Grove Lower"), #4933d4b0-a56a-4472-b9a6-4469fd335fa4-2_A-GroveForestLow
-    lname.breadclaw_lowergrove_tiretop: ACTLocationData(rname.expired_grove_lower, 224, "Expired Grove Lower"), #da04ed8f-2d99-48f9-8412-67748d983d2b-2_A-GroveForestLow
-    lname.chipclaw_lowergrove_plastic: ACTLocationData(rname.expired_grove_lower, 225, "Expired Grove Lower"), #902c2deb-1b51-4226-9fd0-1c76bea668c3-2_A-GroveForestLow
-    lname.clothesclaw_lowergrove_choccymilk: ACTLocationData(rname.expired_grove_lower, 226, "Expired Grove Lower"), #e38ef2da-daaf-4312-bf7f-2e0a97d3d67b-2_A-GroveForestLow
-    lname.breadclaw_lowergrove_insidetire: ACTLocationData(rname.expired_grove_lower, 227, "Expired Grove Lower"), #def84515-cfc0-4124-a1e1-81f6953b0c06-2_A-GroveForestLow
-    lname.chipclaw_lowergrove_sniper: ACTLocationData(rname.expired_grove_lower, 245, "Expired Grove Lower"), #070b84a6-7a8b-4d88-8216-f55882856713-2_A-GroveForestLow
-    lname.hairclaw_lowergrove_milkurchins: ACTLocationData(rname.expired_grove_lower, 246, "Expired Grove Lower"), #e78f03e8-2827-45d7-8cfa-cbaa0f17cd3d-2_A-GroveForestLow
-    lname.breadclaw_lowergrove_smallhall: ACTLocationData(rname.expired_grove_lower, 231, "Expired Grove Lower"), #be378f83-9ec2-4a3b-85b2-9a7499e6d693-2_A-GroveForestLow
-    lname.chipclaw_lowergrove_apples: ACTLocationData(rname.expired_grove_lower, 232, "Expired Grove Lower"), #faa3c9ce-87c7-4f6d-b07e-be334c3bc447-2_A-GroveForestLow
-    lname.chipclaw_lowergrove_sodacans: ACTLocationData(rname.expired_grove_lower, 233, "Expired Grove Lower"), #25737275-a222-4a6e-af6b-0c66c197cab7-2_A-GroveForestLow
-    lname.hairclaw_lowergrove_moonshine: ACTLocationData(rname.expired_grove_lower, 234, "Expired Grove Lower"), #fd557b69-ddba-4b14-bd80-f0cb0d786203-2_A-GroveForestLow
-    lname.chipclaw_lowergrove_circlerock: ACTLocationData(rname.expired_grove_lower, 238, "Expired Grove Lower"), #1b74ef4f-528c-484b-9a5f-abbb3434f133-2_A-GroveForestLow
-    lname.clothesclaw_lowergrove_alcove: ACTLocationData(rname.expired_grove_lower, 239, "Expired Grove Lower"), #f99a120b-43c2-4e65-91fd-71cbfbf3e8f7-2_A-GroveForestLow
-    lname.hairclaw_lowergrove_sniper: ACTLocationData(rname.expired_grove_lower, 240, "Expired Grove Lower"), #8f4a1f33-e567-4c84-b34b-739353b3ba08-2_A-GroveForestLow
-    lname.breadclaw_lowergrove_amongus: ACTLocationData(rname.expired_grove_lower, 243, "Expired Grove Lower"), #c859129f-cc29-4624-a161-fdeffa00d0ca-2_B-GroveForestHigh
-    lname.breadclaw_lowergrove_oildrum: ACTLocationData(rname.expired_grove_lower, 244, "Expired Grove Lower"), #b85cb09c-f1d7-4396-85cb-fde4dc845acd-2_B-GroveForestHigh
-    lname.breadclaw_lowergrove_oilgrapple: ACTLocationData(rname.expired_grove_lower, 249, "Expired Grove Lower"), #bc18b92b-a6c6-420c-9095-e15c34c2f921-2_B-GroveForestHigh
+    lname.breadclaw_grovemain_takeout: ACTLocationData(rname.grove_main, 219, "Expired Grove Main"), #4933d4b0-a56a-4472-b9a6-4469fd335fa4-2_A-GroveForestLow
+    lname.breadclaw_grovemain_tiretop: ACTLocationData(rname.grove_main, 224, "Expired Grove Main"), #da04ed8f-2d99-48f9-8412-67748d983d2b-2_A-GroveForestLow
+    lname.chipclaw_grovemain_plastic: ACTLocationData(rname.grove_main, 225, "Expired Grove Main"), #902c2deb-1b51-4226-9fd0-1c76bea668c3-2_A-GroveForestLow
+    lname.clothesclaw_grovemain_choccymilk: ACTLocationData(rname.grove_main, 226, "Expired Grove Main"), #e38ef2da-daaf-4312-bf7f-2e0a97d3d67b-2_A-GroveForestLow
+    lname.breadclaw_grovemain_insidetire: ACTLocationData(rname.grove_main, 227, "Expired Grove Main"), #def84515-cfc0-4124-a1e1-81f6953b0c06-2_A-GroveForestLow
+    lname.chipclaw_grovemain_sniper: ACTLocationData(rname.grove_main, 245, "Expired Grove Main"), #070b84a6-7a8b-4d88-8216-f55882856713-2_A-GroveForestLow
+    lname.hairclaw_grovemain_milkurchins: ACTLocationData(rname.grove_main, 246, "Expired Grove Main"), #e78f03e8-2827-45d7-8cfa-cbaa0f17cd3d-2_A-GroveForestLow
+    lname.breadclaw_grovemain_smallhall: ACTLocationData(rname.grove_main, 231, "Expired Grove Main"), #be378f83-9ec2-4a3b-85b2-9a7499e6d693-2_A-GroveForestLow
+    lname.chipclaw_grovemain_apples: ACTLocationData(rname.grove_main, 232, "Expired Grove Main"), #faa3c9ce-87c7-4f6d-b07e-be334c3bc447-2_A-GroveForestLow
+    lname.chipclaw_grovemain_sodacans: ACTLocationData(rname.grove_main, 233, "Expired Grove Main"), #25737275-a222-4a6e-af6b-0c66c197cab7-2_A-GroveForestLow
+    lname.hairclaw_grovemain_moonshine: ACTLocationData(rname.grove_main, 234, "Expired Grove Main"), #fd557b69-ddba-4b14-bd80-f0cb0d786203-2_A-GroveForestLow
+    lname.chipclaw_grovemain_circlerock: ACTLocationData(rname.grove_main, 238, "Expired Grove Main"), #1b74ef4f-528c-484b-9a5f-abbb3434f133-2_A-GroveForestLow
+    lname.clothesclaw_grovemain_alcove: ACTLocationData(rname.grove_main, 239, "Expired Grove Main"), #f99a120b-43c2-4e65-91fd-71cbfbf3e8f7-2_A-GroveForestLow
+    lname.hairclaw_grovemain_sniper: ACTLocationData(rname.grove_main, 240, "Expired Grove Main"), #8f4a1f33-e567-4c84-b34b-739353b3ba08-2_A-GroveForestLow
+    lname.breadclaw_grovemain_amongus: ACTLocationData(rname.grove_main, 243, "Expired Grove Main"), #c859129f-cc29-4624-a161-fdeffa00d0ca-2_B-GroveForestHigh
+    lname.breadclaw_grovemain_oildrum: ACTLocationData(rname.grove_main, 244, "Expired Grove Main"), #b85cb09c-f1d7-4396-85cb-fde4dc845acd-2_B-GroveForestHigh
+    lname.breadclaw_grovemain_oilgrapple: ACTLocationData(rname.grove_main, 249, "Expired Grove Main"), #bc18b92b-a6c6-420c-9095-e15c34c2f921-2_B-GroveForestHigh
 
     ##### upgrade item locations
     lname.bloodstar_shallows_help: ACTLocationData(rname.central_shallows, 24, "Central Shallows"), #AUTO NEEDS TO DO QUEST SCRIPT
@@ -199,8 +199,8 @@ location_table: Dict[str, ACTLocationData] = {
     lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 190, "The Sands Between - Secluded Ridge"), #8e381b9e-ab7a-44ad-81c3-19157c97e0c6-2_A-OOGroveRadius
     lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 205, "The Sands Between - Secluded Ridge"), #80e66e11-8e9a-4896-9db1-f8cd4a25fefc-2_A-OOGroveRadius
 
-    lname.oldworldwhorl_lowergrove_southclam: ACTLocationData(rname.expired_grove_lower, 217, "Expired Grove Lower"), #09b60c18-2172-41bb-9588-a3e764559b15-2_B-GroveForestHigh
-    lname.bloodstar_lowergrove_waterfall: ACTLocationData(rname.expired_grove_lower, 229, "Expired Grove Lower"), #f1d3eafe-c252-4768-abcd-7f459e734d35-2_A-GroveForestLow
+    lname.oldworldwhorl_grovemain_southclam: ACTLocationData(rname.grove_main, 217, "Expired Grove Main"), #09b60c18-2172-41bb-9588-a3e764559b15-2_B-GroveForestHigh
+    lname.bloodstar_grovemain_waterfall: ACTLocationData(rname.grove_main, 229, "Expired Grove Main"), #f1d3eafe-c252-4768-abcd-7f459e734d35-2_A-GroveForestLow
 
     ##### consumable item locations
     lname.barbedhook_reefsedge_undercoral: ACTLocationData(rname.reefs_edge, 65, "Reef's Edge"), #c44729ce-4c25-4059-8432-212381ca6835-2_A-NCTradeRoute
@@ -237,20 +237,20 @@ location_table: Dict[str, ACTLocationData] = {
 
     lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plataeu"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
 
-    lname.barbedhook_lowergrove_sniper: ACTLocationData(rname.secluded_ridge, 214, "Expired Grove Lower"), #8fd70034-2415-4934-975b-2303d159f567-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_riverledge: ACTLocationData(rname.secluded_ridge, 215, "Expired Grove Lower"), #0860891c-3db6-4e51-8c0b-58b09ac8ece0-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_riversand: ACTLocationData(rname.secluded_ridge, 216, "Expired Grove Lower"), #2465aea2-9800-49e5-9e7e-d751ca2b3612-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_lichenthrope: ACTLocationData(rname.secluded_ridge, 221, "Expired Grove Lower"), #35455018-8cf6-48db-ba76-4ffbca84b0a8-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_lichenthropeeast: ACTLocationData(rname.secluded_ridge, 222, "Expired Grove Lower"), #5a106f4d-8139-44da-9cdf-8d0bd70c6bf3-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_sodacans: ACTLocationData(rname.secluded_ridge, 223, "Expired Grove Lower"), #10a99891-923e-4bab-8057-b6d5781cb35d-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_acrossriver: ACTLocationData(rname.secluded_ridge, 228, "Expired Grove Lower"), #50f9f7d1-0e70-4333-b8b3-fbc46f04f3ea-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_afternets: ACTLocationData(rname.secluded_ridge, 230, "Expired Grove Lower"), #e7382e22-3232-4380-a734-bef8eb9a2a76-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_cartledge: ACTLocationData(rname.secluded_ridge, 235, "Expired Grove Lower"), #dc13eb69-ac98-4de9-9fe0-7f16a03d4ebb-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_cartledgebottle: ACTLocationData(rname.secluded_ridge, 237, "Expired Grove Lower"), #a5b6f3f6-6e1c-4934-9006-26da6cee47f4-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_paperplate: ACTLocationData(rname.secluded_ridge, 241, "Expired Grove Lower"), #776881ba-f61b-4400-8cf5-f11fb11b6f94-2_B-GroveForestHigh
-    lname.barbedhook_lowergrove_oildrum: ACTLocationData(rname.secluded_ridge, 242, "Expired Grove Lower"), #12c73a88-beef-4bfb-a2d1-c159c91d8304-2_B-GroveForestHigh
-    lname.barbedhook_lowergrove_canopy: ACTLocationData(rname.expired_grove_lower, 248, "Expired Grove Lower"), #101eff6d-e09a-471d-86fd-cdc587012c32-2_A-GroveForestLow
-    lname.barbedhook_lowergrove_drumtop: ACTLocationData(rname.secluded_ridge, 250, "Expired Grove Lower"), #3a1e7a2c-5111-4360-b168-cc5e84088b6a-2_B-GroveForestHigh
+    lname.barbedhook_grovemain_sniper: ACTLocationData(rname.secluded_ridge, 214, "Expired Grove Main"), #8fd70034-2415-4934-975b-2303d159f567-2_A-GroveForestLow
+    lname.barbedhook_grovemain_riverledge: ACTLocationData(rname.secluded_ridge, 215, "Expired Grove Main"), #0860891c-3db6-4e51-8c0b-58b09ac8ece0-2_A-GroveForestLow
+    lname.barbedhook_grovemain_riversand: ACTLocationData(rname.secluded_ridge, 216, "Expired Grove Main"), #2465aea2-9800-49e5-9e7e-d751ca2b3612-2_A-GroveForestLow
+    lname.barbedhook_grovemain_lichenthrope: ACTLocationData(rname.secluded_ridge, 221, "Expired Grove Main"), #35455018-8cf6-48db-ba76-4ffbca84b0a8-2_A-GroveForestLow
+    lname.barbedhook_grovemain_lichenthropeeast: ACTLocationData(rname.secluded_ridge, 222, "Expired Grove Main"), #5a106f4d-8139-44da-9cdf-8d0bd70c6bf3-2_A-GroveForestLow
+    lname.barbedhook_grovemain_sodacans: ACTLocationData(rname.secluded_ridge, 223, "Expired Grove Main"), #10a99891-923e-4bab-8057-b6d5781cb35d-2_A-GroveForestLow
+    lname.barbedhook_grovemain_acrossriver: ACTLocationData(rname.secluded_ridge, 228, "Expired Grove Main"), #50f9f7d1-0e70-4333-b8b3-fbc46f04f3ea-2_A-GroveForestLow
+    lname.barbedhook_grovemain_afternets: ACTLocationData(rname.secluded_ridge, 230, "Expired Grove Main"), #e7382e22-3232-4380-a734-bef8eb9a2a76-2_A-GroveForestLow
+    lname.barbedhook_grovemain_cartledge: ACTLocationData(rname.secluded_ridge, 235, "Expired Grove Main"), #dc13eb69-ac98-4de9-9fe0-7f16a03d4ebb-2_A-GroveForestLow
+    lname.barbedhook_grovemain_cartledgebottle: ACTLocationData(rname.secluded_ridge, 237, "Expired Grove Main"), #a5b6f3f6-6e1c-4934-9006-26da6cee47f4-2_A-GroveForestLow
+    lname.barbedhook_grovemain_paperplate: ACTLocationData(rname.secluded_ridge, 241, "Expired Grove Main"), #776881ba-f61b-4400-8cf5-f11fb11b6f94-2_B-GroveForestHigh
+    lname.barbedhook_grovemain_oildrum: ACTLocationData(rname.secluded_ridge, 242, "Expired Grove Main"), #12c73a88-beef-4bfb-a2d1-c159c91d8304-2_B-GroveForestHigh
+    lname.barbedhook_grovemain_canopy: ACTLocationData(rname.grove_main, 248, "Expired Grove Main"), #101eff6d-e09a-471d-86fd-cdc587012c32-2_A-GroveForestLow
+    lname.barbedhook_grovemain_drumtop: ACTLocationData(rname.secluded_ridge, 250, "Expired Grove Main"), #3a1e7a2c-5111-4360-b168-cc5e84088b6a-2_B-GroveForestHigh
 
     ##### stowaway locations
     lname.siphonophore_shallows_westwall: ACTLocationData(rname.central_shallows, 31, "Central Shallows"),#4d4ac114-06e4-400f-b888-b500a7348cc9-2_B-ShallowsBigSand
@@ -324,12 +324,12 @@ location_table: Dict[str, ACTLocationData] = {
     lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plataeu"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
     lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plataeu"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
 
-    lname.barnacle_lowergrove_colander: ACTLocationData(rname.expired_grove_lower, 213, "Expired Grove Lower"), #74aa4107-6a5a-4868-ae54-942e4421be3f-2_A-GroveForestLow
-    lname.seastar_lowergrove_eastrock: ACTLocationData(rname.expired_grove_lower, 218, "Expired Grove Lower"), #17cb1eed-8d88-4464-b33b-215c837035f6-2_A-GroveForestLow
-    lname.pufferquill_lowergrove_sponges: ACTLocationData(rname.expired_grove_lower, 220, "Expired Grove Lower"), #c6a56f3d-c134-41cd-83b7-4a755fa32284-2_A-GroveForestLow
-    lname.limpet_lowergrove_sodacan: ACTLocationData(rname.expired_grove_lower, 236, "Expired Grove Lower"), #093c4972-ff5e-4ba6-b9a8-136411e1017f-2_A-GroveForestLow
-    lname.lumpsucker_lowergrove_canopy: ACTLocationData(rname.expired_grove_lower, 247, "Expired Grove Lower"), #3789e56d-69b5-4d6c-adb1-6454b101840d-2_A-GroveForestLow
-    lname.sharktooth_lowergrove_pizza: ACTLocationData(rname.expired_grove_lower, 251, "Expired Grove Lower"), #8e34f6a5-5844-4767-ab15-4fbaf6c147dc-2_B-GroveForestHigh
+    lname.barnacle_grovemain_colander: ACTLocationData(rname.grove_main, 213, "Expired Grove Main"), #74aa4107-6a5a-4868-ae54-942e4421be3f-2_A-GroveForestLow
+    lname.seastar_grovemain_eastrock: ACTLocationData(rname.grove_main, 218, "Expired Grove Main"), #17cb1eed-8d88-4464-b33b-215c837035f6-2_A-GroveForestLow
+    lname.pufferquill_grovemain_sponges: ACTLocationData(rname.grove_main, 220, "Expired Grove Main"), #c6a56f3d-c134-41cd-83b7-4a755fa32284-2_A-GroveForestLow
+    lname.limpet_grovemain_sodacan: ACTLocationData(rname.grove_main, 236, "Expired Grove Main"), #093c4972-ff5e-4ba6-b9a8-136411e1017f-2_A-GroveForestLow
+    lname.lumpsucker_grovemain_canopy: ACTLocationData(rname.grove_main, 247, "Expired Grove Main"), #3789e56d-69b5-4d6c-adb1-6454b101840d-2_A-GroveForestLow
+    lname.sharktooth_grovemain_pizza: ACTLocationData(rname.grove_main, 251, "Expired Grove Main"), #8e34f6a5-5844-4767-ab15-4fbaf6c147dc-2_B-GroveForestHigh
 
     ##### costume locations
     lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"), #7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand

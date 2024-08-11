@@ -26,6 +26,6 @@ slacktide_after = "Fort Slacktide - After Destruction" # slacktide after the pla
 post_pag = "The Sands Between - Post Pagurus" # after the pagurus map piece is returned
 secluded_ridge = "The Sands Between - Secluded Ridge & Trashbin Plateau" # area in sands that requires mantis punch to access
 grove_main = "Expired Grove - Main" # grove up to heikea
-grove_topoda = "Expired Grove - Topoda" # grove path to topoda
+grove_village = "Expired Grove - Village" # grove path to topoda
 vale_main = "Flotsame Vale - Main" # flotsam vale before getting all map pieces
 scuttleport = "Scuttleport" # part of the flotsam vale region, but specifically the area where the player finds voltai
