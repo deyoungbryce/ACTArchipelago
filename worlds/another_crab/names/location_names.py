@@ -271,6 +271,7 @@ limpet_snailcave_jelly = "Limpet (Moon Snail's Cave - Ride the First Moon Jelly)
 mussel_slacktide_fortentrance =  "Mussel (Slacktide - Southwest Fort Entrance)" # mussel at the entrance of slacktide after it is corrupted
 anemone_slacktide_fortwall = "Anemone (Slacktide - South Fort Wall)" # anemone found on top of the fort wall toward the south
 whelk_slacktide_turrettop = "Whelk (Slacktide - Center Castle Turret Top)" # whelk found after climbing up the castle turret in the center of slacktide
+rustynail_slacktide_bigurchin = "Rusty Nail (Slacktide - Big Urchin Staircase Grapple Point)"
 
 seastar_reefsedge_crabs = "Seastar (Reef's Edge - Surrounded by Crabs)"
 seastarplus_reefsedge_pole = "Sea Star+ (Reef's Edge - Top of Large Hammer Crab Pole)"
@@ -279,7 +280,7 @@ whelkplus_reefsedge_sponge = "Whelk+ (Reef's Edge - Near Orange Coral and Sponge
 limpet_newcarcinia_entrance = "Breadclaw (New Carcinia - Top of Cardboard Buildings Near Entrance)"
 rustynail_newcarcinia_hammerhead = "(New Carcinia - On Top of Hammerhead Toolbox)"
 
-sanddollar_newcarcinia_hammerhead = "Sand Dollar (New Carcinia - Flat Coral Near Above Hammerhead)"
+sanddollar_newcarcinia_hammerhead = "Sand Dollar (New Carcinia - Flat Coral Near/Above Hammerhead)"
 
 phytoplankton_sandsbetween_centralvista = "Phytoplankton (The Sands Between - Central Vista Center Tunnel)"
 anemone_sandsbetween_centralvista = "Anemone (The Sands Between - Central Vista Top)"

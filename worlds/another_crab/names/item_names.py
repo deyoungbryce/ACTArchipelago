@@ -97,7 +97,7 @@ paperclaw = "Paperclaw" # 5000 microplastics
 stapleclaw = "Stapleclaw" # 10000 microplastics
 carclaw = "Carclaw" # 20000 microplastics
 
-#consumables
+# consumables
 barbed_hook = "Barbed Hook" # apparently some of these are just laying around on the ground by default
 
 # costumes
@@ -136,4 +136,5 @@ shell_access = "Acquire Any Shell"
 spin_attack = "Spin Attack" # r1 air attack that allows for more distance and height for jumps
 pagurus_allergy = "Pagurus Allergy" #used for later when we randomize pagurus's allergy
 
-# traps
+
+# ---- Traps ----
