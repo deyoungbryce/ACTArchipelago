@@ -137,27 +137,47 @@ item_table: Dict[str, ACTItemData] = {
     #iname.clown: ACTItemData(ItemClassification.filler, 1, 104, "Costume"),
 
     # adaptations
-    iname.royal_wave: ACTItemData(ItemClassification.progression, 1, 105, "Adapations"),
-    iname.bobbit_trap: ACTItemData(ItemClassification.progression, 1, 106, "Adapations"),
-    iname.bubble_bullet: ACTItemData(ItemClassification.progression, 1, 107, "Adapations"),
+    iname.royal_wave: ACTItemData(ItemClassification.useful, 1, 105, "Adapations"),
+    iname.bobbit_trap: ACTItemData(ItemClassification.useful, 1, 106, "Adapations"),
+    iname.bubble_bullet: ACTItemData(ItemClassification.useful, 1, 107, "Adapations"),
     iname.eelectrocute: ACTItemData(ItemClassification.progression, 1, 108, "Adapations"),
-    iname.mantis_punch: ACTItemData(ItemClassification.progression, 1, 109, "Adapations"),
-    iname.snail_sanctum: ACTItemData(ItemClassification.progression, 1, 110, "Adapations"),
-    iname.spectral_tentacle: ACTItemData(ItemClassification.progression, 1, 111, "Adapations"),
-    iname.urchin_toss: ACTItemData(ItemClassification.progression, 1, 112, "Adapations"),
+    iname.mantis_punch: ACTItemData(ItemClassification.useful, 1, 109, "Adapations"),
+    iname.snail_sanctum: ACTItemData(ItemClassification.useful, 1, 110, "Adapations"),
+    iname.spectral_tentacle: ACTItemData(ItemClassification.useful, 1, 111, "Adapations"),
+    iname.urchin_toss: ACTItemData(ItemClassification.useful, 1, 112, "Adapations"),
 
+    iname.parry: ACTItemData(ItemClassification.useful, 1, 113, "Skills"),
+    iname.riposte: ACTItemData(ItemClassification.useful, 1, 114, "Skills"),
+    iname.natural_defenses: ACTItemData(ItemClassification.useful, 1, 115, "Skills"),
+    iname.aggravation: ACTItemData(ItemClassification.useful, 1, 116, "Skills"),
+    iname.self_repair: ACTItemData(ItemClassification.useful, 1, 117, "Skills"),
+    iname.kintsugi: ACTItemData(ItemClassification.useful, 1, 118, "Skills"),
+    iname.skewer: ACTItemData(ItemClassification.useful, 1, 119, "Skills"),
+    iname.plunge: ACTItemData(ItemClassification.useful, 1, 120, "Skills"),
+    iname.scrap_hammer: ACTItemData(ItemClassification.useful, 1, 121, "Skills"),
+    iname.dispatch: ACTItemData(ItemClassification.useful, 1, 122, "Skills"),
+    iname.spearfishing: ACTItemData(ItemClassification.useful, 1, 123, "Skills"),
+    iname.wave_breaker: ACTItemData(ItemClassification.useful, 1, 124, "Skills"),
+    iname.streamline: ACTItemData(ItemClassification.useful, 1, 125, "Skills"),
+    iname.housewarming: ACTItemData(ItemClassification.useful, 1, 126, "Skills"),
+    iname.circle_of_life: ACTItemData(ItemClassification.useful, 1, 127, "Skills"),
+    iname.elusive_prey: ACTItemData(ItemClassification.useful, 1, 128, "Skills"),
+    iname.ebb_and_flow: ACTItemData(ItemClassification.useful, 1, 129, "Skills"),
+    iname.umami_training1: ACTItemData(ItemClassification.useful, 1, 130, "Skills"),
+    iname.umami_training2: ACTItemData(ItemClassification.useful, 1, 131, "Skills"),
+    iname.umami_training3: ACTItemData(ItemClassification.useful, 1, 132, "Skills"),
+
+    # traps
+    #iname.trap_example: ACTItemData(ItemClassification.trap, ~, ~, "Traps")
 
 }
 
-#item_name_to_id: Dict[str, int] = {name: id for name, id in item_table.items()}
 item_name_to_id: Dict[str, int] = {name: item_base_id + data.item_id_offset for name, data in item_table.items()}
-
-filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
-
 
 def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
+filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group != "Costume"]
 
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""

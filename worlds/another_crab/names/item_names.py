@@ -97,7 +97,7 @@ paperclaw = "Paperclaw" # 5000 microplastics
 stapleclaw = "Stapleclaw" # 10000 microplastics
 carclaw = "Carclaw" # 20000 microplastics
 
-#consumables
+# consumables
 barbed_hook = "Barbed Hook" # apparently some of these are just laying around on the ground by default
 
 # costumes
@@ -129,9 +129,36 @@ snail_sanctum = "Snail Sanctum" # obtained from defeating petroch
 spectral_tentacle = "Spectral Tentacle" # obtained from defeating the consortium
 urchin_toss = "Urchin Toss" #obtained from hugging the urchin in new carcinia
 
+# skills
+parry = "Parry"
+riposte = "Riposte"
+natural_defenses = "Natural Defenses"
+aggravation = "Aggravation"
+self_repair = "Self-Repair"
+kintsugi = "Kintsugi"
+skewer = "Skewer"
+plunge = "Plunge"
+scrap_hammer = "Scrap Hammer"
+dispatch = "Dispatch"
+spearfishing = "Spearfishing"
+wave_breaker = "Wave Breaker"
+streamline = "Streamline"
+housewarming = "Housewarming"
+circle_of_life = "Circle of Life"
+elusive_prey = "Elusive Prey"
+skeddadle = "Skeddadle"
+ebb_and_flow = "Ebb and Flow"
+umami_training1 = "Umami Training 1"
+umami_training2 = "Umami Training 2"
+umami_training3 = "Umami Training 3"
+
+
 # ---- Event Items ----
 shell_access = "Acquire Any Shell"
 
 # ---- Fake Items - for the purpose of logic rules ----
 spin_attack = "Spin Attack" # r1 air attack that allows for more distance and height for jumps
 pagurus_allergy = "Pagurus Allergy" #used for later when we randomize pagurus's allergy
+
+
+# ---- Traps ----

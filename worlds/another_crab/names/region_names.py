@@ -11,23 +11,21 @@ snail_cave = "Moon Snail's Cave" # where the player learns about shell spells
 reefs_edge = "Reef's Edge" # area between slacktide and new carcinia
 new_carcinia = "New Carcinia" # the main city where most of the main story takes place
 sands_between = "The Sands Between" # the large area that connects new carcinia, the expired grove, and flotsam vale
-expired_grove_lower = "Expired Grove Lower" # expired grove, everything before heikea
-expired_grove_upper = "Expired Grove Upper" # expired grove, everything after heikea and the area where topoda is found
+expired_grove = "Expired Grove" # expired grove
 flotsam_vale = "Flotsam Vale" # rolands business district where we find the map piece in the mailbox and take the ship to fight roland
 pinbarge = "Pinbarge" # where we fight roland and get dumped into the unfathom (there are also some item checks here)
 unfathom = "The Unfathom" # where we are dumped after fighting roland and end up fighting inkerton
 bleached_city = "The Bleached City" # the ancient city where we fight camtscha
 drain_bottom = "Bottom of The Drain" # adding this and trash island even though there aren't any item checks - for if we want to do boss checks or all bosses goal
 trash_island = "Trash Island"
+carcinia_end = "Carcinia End" # adding this because it will probably needed if we want the win condition to be picking up kril's shell
 
 # sub regions
-new_carcinia_upper = "New Carcinia Upper Crust" # the upper portion of new carcinia where the treasure hunt begins
-new_carcinia_lower = "New Carcinia Lower Crust" # the lower portion of new carcinia
 slacktide_before = "Fort Slacktide - Before Destruction" # slacktide before the player gets the pearl and slacktide goes crazy
 slacktide_after = "Fort Slacktide - After Destruction" # slacktide after the player gets the pearl and slacktide goes crazy
 post_pag = "The Sands Between - Post Pagurus" # after the pagurus map piece is returned
-secluded_ridge = "The Sands Between - Secluded Ridge & Trashbin Plateau" # area in sands that requires mantis punch to access
+secluded_ridge = "Secluded Ridge & Trashbin Plateau" # area in sands that requires mantis punch to access
 grove_main = "Expired Grove - Main" # grove up to heikea
-grove_topoda = "Expired Grove - Topoda" # grove path to topoda
+grove_village = "Expired Grove - Village" # grove path to topoda
 vale_main = "Flotsame Vale - Main" # flotsam vale before getting all map pieces
 scuttleport = "Scuttleport" # part of the flotsam vale region, but specifically the area where the player finds voltai
