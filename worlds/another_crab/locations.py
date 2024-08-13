@@ -19,7 +19,7 @@ location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
 
-    #Last used number: 317
+    #Last used number: 337
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
@@ -393,6 +393,28 @@ location_table: Dict[str, ACTLocationData] = {
     lname.urchin_toss_quest: ACTLocationData(rname.new_carcinia, 85,"New Carcinia"), #AUTO NEEDS TO MAKE A CUSTOM SCRIPT
     lname.bobbit_trap_pickup: ACTLocationData(rname.sands_between, 109,"The Sands Between"), #3bb06349-c151-4333-8305-ba0eb7512bc3-2_A-OOGroveRadius
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
+
+    ##### skill locations
+    lname.parry_skill: ACTLocationData(rname.snail_cave, 318, "Moon Snail Skills"),
+    lname.riposte_skill: ACTLocationData(rname.snail_cave, 319, "Moon Snail Skills"),
+    lname.natural_defenses_skill: ACTLocationData(rname.snail_cave, 320, "Moon Snail Skills"),
+    lname.aggravation_skill: ACTLocationData(rname.snail_cave, 321, "Moon Snail Skills"),
+    lname.self_repair_skill: ACTLocationData(rname.snail_cave, 322, "Moon Snail Skills"),
+    lname.kintsugi_skill: ACTLocationData(rname.snail_cave, 323, "Moon Snail Skills"),
+    lname.skewer_skill: ACTLocationData(rname.snail_cave, 324, "Moon Snail Skills"),
+    lname.plunge_skill: ACTLocationData(rname.snail_cave, 325, "Moon Snail Skills"),
+    lname.scrap_hammer_skill: ACTLocationData(rname.snail_cave, 326, "Moon Snail Skills"),
+    lname.dispatch_skill: ACTLocationData(rname.snail_cave, 327, "Moon Snail Skills"),
+    lname.spearfishing_skill: ACTLocationData(rname.snail_cave, 328, "Moon Snail Skills"),
+    lname.wave_breaker_skill: ACTLocationData(rname.snail_cave, 329, "Moon Snail Skills"),
+    lname.streamline_skill: ACTLocationData(rname.snail_cave, 330, "Moon Snail Skills"),
+    lname.housewarming_skill: ACTLocationData(rname.snail_cave, 331, "Moon Snail Skills"),
+    lname.circle_of_life_skill: ACTLocationData(rname.snail_cave, 332, "Moon Snail Skills"),
+    lname.elusive_prey_skill: ACTLocationData(rname.snail_cave, 333, "Moon Snail Skills"),
+    lname.ebb_and_flow_skill: ACTLocationData(rname.snail_cave, 334, "Moon Snail Skills"),
+    lname.umami_training1_skill: ACTLocationData(rname.snail_cave, 335, "Moon Snail Skills"),
+    lname.umami_training2_skill: ACTLocationData(rname.snail_cave, 336, "Moon Snail Skills"),
+    lname.umami_training3_skill: ACTLocationData(rname.snail_cave, 337, "Moon Snail Skills"),
 }
 
 

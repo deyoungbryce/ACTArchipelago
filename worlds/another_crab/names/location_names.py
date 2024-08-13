@@ -33,7 +33,6 @@ clothesclaw_shallows_southwestfort = "Clothesclaw (Fort Slacktide - Small Tower 
 breadclaw_shallows_sunkentower = "Breadclaw (Central Shallows - Sunken Tower near Flip-Flop Bridge)"
 breadclaw_shallows_slacktidesouthfish = "Breadclaw (Central Shallows - Fishing South of Slacktide Entrance)"
 
-
 breadclaw_slacktide_crates = "Breadclaw (Fort Slacktide - Sand Crates and Barrels" # the breadclaw near the line of people waiting to meet the duchess
 breadclaw_slacktide_training = "Breadclaw (Fort Slacktide - On South Training Area Wall)"
 
@@ -118,7 +117,7 @@ breadclaw_grovemain_oildrum = "Breadclaw (Expired Grove Main - Small Platform Ne
 breadclaw_grovemain_oilgrapple = "Breadclaw (Expired Grove Main - Grapple Near Top of Oil Drum)"
 clothesclaw_grovemain_mantisfish = "Clothesclaw (Expired Grove Main - Fishing Near Mantis Block)"
 hairclaw_grovemain_fishing = "Hairclaw (Expired Grove Main - Hidden Fishing Near Milk Carton)"
-clothesclaw_grovemain_river = "Clothesclaw (Expired Grove Main - River Fishing Near Carbonara Waterfall)"
+clothesclaw_grovemain_riverfish = "Clothesclaw (Expired Grove Main - River Fishing Near Carbonara Waterfall)"
 
 breadclaw_grovevillage_oildrum = "Breadclaw (Expired Grove Village - After Oil Drum)"
 breadclaw_grovevillage_bottle1 = "Breadclaw (Expired Grove Village - In Bottle Near Cart Mantis Block 1)"
@@ -375,3 +374,25 @@ inkerton = "Inkerton, Crab Hunter"
 camtscha = "Camtscha, The Bleached King"
 praya_dubia = "Praya Dubia, The Ocean's Agony"
 firth = "Firth, The Crab Who Stole The Whorl"
+
+# skill locations
+parry_skill = "Parry Skill (Moon Snail)"
+riposte_skill = "Riposte Skill (Moon Snail)"
+natural_defenses_skill = "Natural Defenses (Moon Snail)"
+aggravation_skill = "Aggravation Skill (Moon Snail)"
+self_repair_skill = "Self-Repair Skill (Moon Snail)"
+kintsugi_skill = "Kintsugi Skill (Moon Snail)"
+skewer_skill = "Skewer Skill (Moon Snail)"
+plunge_skill = "Plunge Skill (Moon Snail)"
+scrap_hammer_skill = "Scrap Hammer Skill (Moon Snail)"
+dispatch_skill = "Dispatch Skill (Moon Snail)"
+spearfishing_skill = "Spearfishing Skill (Moon Snail)"
+wave_breaker_skill = "Wave Breaker Skill (Moon Snail)"
+streamline_skill = "Streamline Skill (Moon Snail)"
+housewarming_skill = "Housewarming Skill (Moon Snail)"
+circle_of_life_skill = "Circle of Life Skill (Moon Snail)"
+elusive_prey_skill = "Elusive Prey Skill (Moon Snail)"
+ebb_and_flow_skill = "Ebb and Flow Skill (Moon Snail)"
+umami_training1_skill = "Umami Training 1 Skill (Moon Snail)"
+umami_training2_skill = "Umami Training 2 Skill (Moon Snail)"
+umami_training3_skill = "Umami Training 3 Skill (Moon Snail)"
