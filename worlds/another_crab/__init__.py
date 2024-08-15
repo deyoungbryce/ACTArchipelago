@@ -2,7 +2,7 @@ from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, get_item_group, ACTItem
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
@@ -41,6 +41,8 @@ class ACTWorld(World):
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
+        remove_costumes = self.options.removeCostumes
+        costume_list = costume_items
         #self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
@@ -49,13 +51,14 @@ class ACTWorld(World):
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
                 ACT_items.append(ACT_item)
+                if remove_costumes:
+                    ACT_items
 
         available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
         self.multiworld.itempool += ACT_items
 
     def create_regions(self):
-        player = self.player
 
         for region_name in ACT_regions:
             region = Region(region_name, self.player, self.multiworld)
@@ -77,6 +80,6 @@ class ACTWorld(World):
         set_region_rules(self)
         set_location_rules(self)
 
-    # to be used later if we add locations that don't already have items assigned to them
+    # can probably be removed?
     def get_filler_item_name(self) -> str:
         return self.random.choice(filler_items)
