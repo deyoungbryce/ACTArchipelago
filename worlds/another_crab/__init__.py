@@ -52,7 +52,7 @@ class ACTWorld(World):
                 ACT_item: ACTItem = self.create_item(item)
                 ACT_items.append(ACT_item)
                 if remove_costumes:
-                    ACT_items
+                    ACT_items.remove(costume_list)
 
         available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 

@@ -323,7 +323,7 @@ def set_location_rules(world: "ACTWorld") -> None:
    set_rule(multiworld.get_location(lname.barbedhook_trashbin_eelgrapple, player),
              lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
     
-# ---- Expired Grove Lower ----
+# ---- Expired Grove Main ----
  # grapple
    set_rule(multiworld.get_location(lname.chipclaw_grovemain_sniper, player),
              lambda state: state.has(iname.fishing_line, player))

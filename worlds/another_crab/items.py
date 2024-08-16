@@ -118,7 +118,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.barbed_hook: ACTItemData(ItemClassification.filler, 1, 87, "Consumable"),
     iname.shark_egg: ACTItemData(ItemClassification.filler, 1, 133, "Consumable"),
 
-    # constume
+    # costume
     #iname.plastic_poncho: ACTItemData(ItemClassification.filler, 1, 88, "Costume"),
     iname.captain_costume: ACTItemData(ItemClassification.filler, 1, 89, "Costume"),
     #iname.dr_kril: ACTItemData(ItemClassification.filler, 1, 90, "Costume"),
