@@ -376,6 +376,8 @@ praya_dubia = "Praya Dubia, The Ocean's Agony"
 firth = "Firth, The Crab Who Stole The Whorl"
 
 # skill locations
+shelleport_skill = "Shelleport Skill (Moon Snail)"
+skedaddle_skill = "Skedaddle Skill (Moon Snail)"
 parry_skill = "Parry Skill (Moon Snail)"
 riposte_skill = "Riposte Skill (Moon Snail)"
 natural_defenses_skill = "Natural Defenses (Moon Snail)"

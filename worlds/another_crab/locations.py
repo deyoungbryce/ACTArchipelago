@@ -395,6 +395,8 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 
     ##### skill locations
+    lname.shelleport_skill: ACTLocationData(rname.snail_cave, 254, "Moon Snail Skills"),
+    lname.skedaddle_skill: ACTLocationData(rname.snail_cave, 255, "Moon Snail Skills"),
     lname.parry_skill: ACTLocationData(rname.snail_cave, 318, "Moon Snail Skills"),
     lname.riposte_skill: ACTLocationData(rname.snail_cave, 319, "Moon Snail Skills"),
     lname.natural_defenses_skill: ACTLocationData(rname.snail_cave, 320, "Moon Snail Skills"),
