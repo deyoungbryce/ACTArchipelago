@@ -336,6 +336,37 @@ location_table: Dict[str, ACTLocationData] = {
     lname.stainlessrelic_grovevillage_clam: ACTLocationData(rname.grove_village, 307, "Expired Grove Village"), #269526ef-6bb0-42cf-a93d-e2cac970e424-2_E-Cliffs
     lname.oldworldwhorl_grovevillage_topoda: ACTLocationData(rname.grove_village, 316, "Expired Grove Village"), #8b9b3b77-b95f-46a2-adfd-ca962e8f0cef-2_E-Cliffs
 
+    lname.bloodstar_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 344, "Flotsame Vale"), #45cca266-a175-4020-9dd7-e0b844421aff-2_B-LowSwamp
+    lname.oldworldwhorl_flotsamvale_cavepath: ACTLocationData(rname.flotsam_vale, 354, "Flotsame Vale"), #53cea11a-cfb6-4894-8e18-375ea895caed-2_A-HighSwamp
+    lname.oldworldwhorl_flotsamvale_snail: ACTLocationData(rname.flotsam_vale, 357, "Flotsame Vale"), #32f43e6e-a382-4938-b068-f1eab35a0269-2_A-HighSwamp
+    lname.bloodstar_flotsamvale_craneclam: ACTLocationData(rname.flotsam_vale, 397, "Flotsame Vale"), #977f86dc-aeb1-471f-bb86-4db41bcbfc2c-2_A-HighSwamp
+    lname.tacklepouch_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 403, "Flotsame Vale"), #b6c01d3a-31e3-457d-b53f-ecf0ff3b7e9f-2_B-LowSwamp
+
+    lname.stainlessrelic_scuttleport_clam: ACTLocationData(rname.scuttleport, 438, "Scuttleport"), #95c7f334-5083-4ee8-bbcb-65033ca154f5-2_C-Facilities
+    lname.bloodstar_scuttleport_magrailclam: ACTLocationData(rname.scuttleport, 469, "Scuttleport"), #f5ed972d-9d53-45b3-93b0-a389464d8941-2_C-Facilities
+    lname.stainlessrelic_scuttleport_magrail: ACTLocationData(rname.scuttleport, 470, "Scuttleport"), #83173b8a-6a13-44f0-b3be-f81c8830eb06-2_C-Facilities
+    lname.stainlessrelic_scuttleport_propanebridge: ACTLocationData(rname.scuttleport, 481, "Scuttleport"), #300de773-3757-4ee9-9e43-03bb1ca51410-2_C-Facilities
+    lname.oldworldwhorl_scuttleport_eelectrocute: ACTLocationData(rname.scuttleport, 483, "Scuttleport"), #1af5fbc8-b8d7-47e7-a66d-480feb0c2594-2_C-Facilities
+
+    lname.bloodstar_unfathom_eastpath: ACTLocationData(rname.unfathom, 494, "The Unfathom"), #81a413d0-b588-49c7-9210-86d193c7eb6c-2_B-DarkCanyon
+    lname.bloodstar_unfathom_shortcut: ACTLocationData(rname.unfathom, 494, "The Unfathom"), #baba3ba3-395a-4547-b060-ddaf0e9fe966-2_B-DarkCanyon
+
+    lname.stainlessrelic_plains_sponges: ACTLocationData(rname.plains, 518, "Abyssal Plains"), #e1d2aa11-415c-46c1-8a81-0ab60bb39847-2_C-HermitCave
+    lname.stainlessrelic_plains_snipers: ACTLocationData(rname.plains, 520, "Abyssal Plains"), #f6f1900f-540b-4068-8c1a-7ca8e3f820d9-2_D-SilentFlats
+    lname.oldworldwhorl_plains_shortcut: ACTLocationData(rname.plains, 532, "Abyssal Plains"), #163cdd5b-be02-42e9-852c-0b657db299d8-2_D-SilentFlats
+    lname.bloodstar_plains_shortcutclam: ACTLocationData(rname.plains, 534, "Abyssal Plains"), #214419e5-f322-4971-adaa-6f68e62ea0a9-2_D-SilentFlats
+    lname.kelpsprout_plains_grappleclam: ACTLocationData(rname.plains, 535, "Abyssal Plains"), #2cb43e11-10dd-49af-8c42-f43ae2742bce-2_C-HermitCave
+    lname.tacklepouch_plains_grapplesnail: ACTLocationData(rname.plains, 536, "Abyssal Plains"), #dac6390a-11b4-411e-9c6e-a406ef5ae503-2_D-SilentFlats
+
+    lname.oldworldwhorl_oldocean_ledgeclam: ACTLocationData(rname.old_ocean, 541, "The Old Ocean"), #f1d07afa-7684-4c41-ba1b-e3563cee1302-2_A-BleachedCopse
+    lname.bloodstar_oldocean_brokenbridge: ACTLocationData(rname.old_ocean, 556, "The Old Ocean"), #8a4445f5-aaa4-4f73-9aec-adffed944b03-2_A-BleachedCopse
+    lname.bloodstar_oldocean_citygates: ACTLocationData(rname.old_ocean, 568, "The Old Ocean"), #76bb55d0-f301-42d2-8933-28613fa84d2f-2_B-GrandCourtyard
+    lname.stainlessrelic_oldocean_citywall: ACTLocationData(rname.old_ocean, 572, "The Old Ocean"), #081787e6-513e-4428-847d-618a5a4323dc-2_B-GrandCourtyard
+    lname.kelpsprout_oldocean_parkourclam: ACTLocationData(rname.old_ocean, 576, "The Old Ocean"), #1705f88a-fcd1-4229-928f-61f0e4aca852-2_B-GrandCourtyard
+    lname.stainlessrelic_oldocean_styrofoamclam: ACTLocationData(rname.old_ocean, 581, "The Old Ocean"), #e8ce25b8-c39a-4892-8573-e390fffc68d9-2_B-GrandCourtyard
+    lname.bloodstar_oldocean_easternbuilding: ACTLocationData(rname.old_ocean, 593, "The Old Ocean"), #c0807176-a8e5-4d89-bded-872bfb4660aa-2_B-GrandCourtyard
+    lname.oldworldwhorl_oldocean_easternclam: ACTLocationData(rname.old_ocean, 602, "The Old Ocean"), #b373a831-6880-4823-9ba4-c69a72c6e01f-2_B-GrandCourtyard
+
     ##### consumable item locations
     lname.barbedhook_reefsedge_undercoral: ACTLocationData(rname.reefs_edge, 65, "Reef's Edge"), #c44729ce-4c25-4059-8432-212381ca6835-2_A-NCTradeRoute
     lname.barbedhook_reefsedge_seahorses: ACTLocationData(rname.reefs_edge, 66, "Reef's Edge"), #08434b00-0100-4ea1-8f2a-f1567b84bdf2-2_A-NCTradeRoute
