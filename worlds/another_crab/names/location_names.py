@@ -175,6 +175,12 @@ clothesclaw_flotsamvale_northshorefish = "Clothesclaw (Flotsam Vale - North Gunk
 clothesclaw_flotsamvale_southfish = "Clothesclaw (Flotsam Vale - Gunk Lake FIshing South of Sludge Steamroller)"
 hairclaw_flotsamvale_APfish = "Hairclaw (Flotsam Vale - Gunk Lake Fishing Outside Air Pocket Cave)"
 chipclaw_flotsamvale_consortiumfish = "Chipclaw (Flotsam Vale - Fishing Past Consortium)"
+paperclaw_flotsamvale_uppervale = "Paperclaw (Flotsam Vale - Near Upper Flotsam Vale)"
+breadclaw_flotsamvale_gunkfish = "Breadclaw (Flotsam Vale - Gunk Fishing on Docks)"
+clothesclaw_flotsamvale_gunkfish = "Clothesclaw (Flotsam Vale - Gunk Fishing on Docks)"
+hairclaw_flotsamvale_gunkfish = "Hairclaw (Flotsam Vale - Gunk Fishing Near Bridge)"
+chipclaw_flotsamvale_gunkfish = "Chipclaw (Flotsam Vale - Gunk Fishing Under Middle Tower)"
+
 
 breadclaw_scuttleport_cubby = "Breadclaw (Scuttleport - Cubby in First Room)"
 clothesclaw_scuttleport_cubby = "Clothesclaw (Scuttleport - Cubby in First Room)"
@@ -403,7 +409,8 @@ barbedhook_flotsamvale_northbeach = "Barbed Hook (Flotsam Vale - Beach North of 
 barbedhook_flotsamvale_butaneisland = "Barbed Hook (Flotsam Vale - Butane Tank Island East of Main Entrance)"
 barbedhook_flotsamvale_snailshell = "Barbed Hook (Flotsam Vale - Upper Flotsam Vale Near Snail Shell)"
 barbedhook_flotsamvale_wooddeck = "Barbed Hook (Flotsam Vale - Wooden Deck Above Propane Tank)"
-barbedhook_flotsamvale_woodplatform = "Barbed Hook (Flotsam Vale - Wooden Platform Above Sludge Steamroller)"
+barbedhook_flotsamvale_woodplatform1 = "Barbed Hook (Flotsam Vale - Wooden Platform Above Sludge Steamroller 1)"
+barbedhook_flotsamvale_woodplatform2 = "Barbed Hook (Flotsam Vale - Wooden Platform Above Sludge Steamroller 2)"
 barbedhook_flotsamvale_westbutane = "Barbed Hook (Flotsam Vale - Butane Tanks South of Sludge Steamroller)"
 barbedhook_flotsamvale_mailbox = "Barbed Hook (Flotsam Vale - Butane Tanks Southwest of Mailbox)"
 barbedhook_flotsamvale_APunder1 = "Barbed Hook (Flotsam Vale - Air Pocket Cave Underwater 1)"
@@ -416,6 +423,10 @@ barbedhook_flotsamvale_consortiumcage = "Barbed Hook (Flotsam Vale - Top of Cage
 barbedhook_flotsamvale_consortium = "Barbed Hook (Flotsam Vale - In Front of Consortium)"
 barbedhook_flotsamvale_snailfish = "Barbed Hook (Flotsam Vale - Upper Flotsam Vale Fishing Near Snail Shell)"
 barbedhook_flotsamvale_westfish = "Barbed Hook (Flotsam Vale - Dunk Lake Fishing West of Sludge Steamroller)"
+barbedhook_flotsamvale_behindcubby = "Barbed Hook (Flotsam Vale - Behind Cubby)"
+barbedhook_flotsamvale_gunkfish = "Barbed Hook (Flotsam Vale - Gunk Fishing Near Dock)"
+barbedhook_flotsamvale_sludgefish = "Barbed Hook (Flotsam Vale - Gunk Fishing Near Sludge Steamroller)"
+
 
 barbedhook_scuttleport_cubby = "Barbed Hook (Scuttleport - Cubby in First Room)"
 barbedhook_scuttleport_magnet = "Barbed Hook (Scuttleport - Platform Next to First Magnet)"
@@ -436,8 +447,8 @@ barbedhook_scuttleport_propaneroof2 = "Barbed Hook (Scuttleport - Rooftop Past P
 barbedhook_pinbarge1 = "Barbed Hook (Pinbarge 1)"
 barbedhook_pinbarge2 = "Barbed Hook (Pinbarge 2)"
 
-barbedhook_unfathom_mimic = "Barbed Hook (Left of First Mimic)"
-barbedhook_unfathom_mimichill = "Barbed Hook (On a Hill After First Mimic)"
+barbedhook_unfathom_mimic = "Barbed Hook (The Unfathom - Left of First Mimic)"
+barbedhook_unfathom_mimichill = "Barbed Hook (The Unfathom - On a Hill After First Mimic)"
 
 barbedhook_oldocean_northwesthouse = "Barbed Hook (The Old Ocean - Styrofoam House Northwest of Snail Shell)"
 barbedhook_oldocean_southhouse = "Barbed Hook (The Old Ocean - Styrofoam House South of Second Island)"
@@ -569,6 +580,10 @@ mussel_flotsamvale_elevatedfish = "Mussel (Flotsam Vale - Elevated Island Fishin
 siphonophoreplus_flotsamvale_waterfall = "Siphonophore+ (Flotsam Vale - Fishing Near Waterfall)"
 whelk_flotsamvale_westfish = "Whelk (Flotsam Vale - West Gunk Lake Fishing)"
 anemoneplus_flotsamvale_northwestfish = "Anemone+ (Flotsam Vale - Gunk Lake Fishing Northwest of Sludge Steamroller)"
+turtleshell_flotsamvale_gunkfish = "Turtle Shell Shard (Flotsam Vale - Gunk Fishing by Priest)"
+lilisopod_flotsamvale_gunkfish = "Lil' Isopod (Flotsam Vale - Gunk Fishing on Docks)"
+rustynail_flotsamvale_gunkfish = "Rusty Nail (Flotsam Vale - Gunk Fishing Near Blue Tower)"
+barnacle_flotsamvale_gunkfish = "Barnacle (Flotsam Vale - Gunk Fishing Near Middle Tower)"
 
 googlyeye_scuttleport_cubbies = "Googly Eye (Scuttleport - Top of Cubbies in First Room)"
 seastar_scuttleport_cubbies = "Seastar (Scuttleport - Top of Cubbies in First Room)"
@@ -663,6 +678,8 @@ praya_dubia = "Praya Dubia, The Ocean's Agony"
 firth = "Firth, The Crab Who Stole The Whorl"
 
 # skill locations
+shelleport_skill = "Shelleport Skill (Moon Snail)"
+skedaddle_skill = "Skedaddle Skill (Moon Snail)"
 parry_skill = "Parry Skill (Moon Snail)"
 riposte_skill = "Riposte Skill (Moon Snail)"
 natural_defenses_skill = "Natural Defenses (Moon Snail)"

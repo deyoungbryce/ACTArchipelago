@@ -19,7 +19,7 @@ location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
 
-    #Last used number: 337
+    #Last used number: 617
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
@@ -34,20 +34,20 @@ location_table: Dict[str, ACTLocationData] = {
     lname.magista: ACTLocationData(rname.slacktide_after, 44, "Fort Slacktide - After Destruction"),
     lname.royal_shellsplitter: ACTLocationData(rname.central_shallows, 47, "Central Shallows"),
     lname.pagurus: ACTLocationData(rname.sands_between, 48, "Sands Between"),
-    lname.lichenthrope: ACTLocationData(rname.grove_main, 253, "Expired Grove Main"), #must fix region name and location group before re-adding
-    lname.carbonara_connoisseur: ACTLocationData(rname.grove_main, 254, "Expired Grove Main"),
-    lname.heikea: ACTLocationData(rname.grove_main, 255, "Expired Grove Main"),
-    lname.topoda: ACTLocationData(rname.central_shallows, 52, "Central Shallows"),
-    #lname.consortium: ACTLocationData(rname.central_shallows, 53, "Central Shallows"),
-    #lname.sludge_steamroller: ACTLocationData(rname.central_shallows, 54, "Central Shallows"),
-    #lname.ceviche_sisters: ACTLocationData(rname.central_shallows, 55, "Central Shallows"),
-    #lname.voltai: ACTLocationData(rname.central_shallows, 56, "Central Shallows"),
-    #lname.roland: ACTLocationData(rname.central_shallows, 57, "Central Shallows"),
-    #lname.petroch: ACTLocationData(rname.central_shallows, 58, "Central Shallows"),
-    #lname.inkerton: ACTLocationData(rname.central_shallows, 59, "Central Shallows"),
-    #lname.camtscha: ACTLocationData(rname.central_shallows, 60, "Central Shallows"),
-    #lname.praya_dubia: ACTLocationData(rname.central_shallows, 61, "Central Shallows"),
-    #lname.firth: ACTLocationData(rname.central_shallows, 62, "Central Shallows"),
+    lname.lichenthrope: ACTLocationData(rname.grove_main, 49, "Expired Grove Main"), #must fix region name and location group before re-adding
+    lname.carbonara_connoisseur: ACTLocationData(rname.grove_main, 50, "Expired Grove Main"),
+    lname.heikea: ACTLocationData(rname.grove_main, 51, "Expired Grove Main"),
+    lname.topoda: ACTLocationData(rname.grove_village, 52, "Expired Grove Village"),
+    lname.consortium: ACTLocationData(rname.flotsam_vale, 53, "Flotsam Vale"),
+    lname.sludge_steamroller: ACTLocationData(rname.flotsam_vale, 54, "Flotsam Vale"),
+    lname.ceviche_sisters: ACTLocationData(rname.flotsam_vale, 55, "Flotsam Vale"),
+    lname.voltai: ACTLocationData(rname.scuttleport, 56, "Scuttleport"),
+    lname.roland: ACTLocationData(rname.pinbarge, 57, "Pinbarge"),
+    lname.petroch: ACTLocationData(rname.unfathom, 58, "The Unfathom"),
+    lname.inkerton: ACTLocationData(rname.plains, 59, "Abyssal Plains"),
+    lname.camtscha: ACTLocationData(rname.old_ocean, 60, "The Old Ocean"),
+    lname.praya_dubia: ACTLocationData(rname.drain_bottom, 61, "Bottom of The Drain"),
+    lname.firth: ACTLocationData(rname.trash_island, 62, "Trash Island"),
     
     ##### currency item locations
 
@@ -217,6 +217,11 @@ location_table: Dict[str, ACTLocationData] = {
     lname.clothesclaw_flotsamvale_southfish: ACTLocationData(rname.flotsam_vale, 419, "Flotsam Vale"), #4cce8eec-cc51-43c3-b629-768b62a16314-2_A-HighSwamp
     lname.hairclaw_flotsamvale_APfish: ACTLocationData(rname.flotsam_vale, 422, "Flotsam Vale"), #df4a99c6-a331-4b68-8ab3-33840fa40519-2_A-HighSwamp
     lname.chipclaw_flotsamvale_consortiumfish: ACTLocationData(rname.flotsam_vale, 423, "Flotsam Vale"), #2fd08de6-99fb-45f8-95e3-d32832180314-2_B-LowSwamp
+    lname.paperclaw_flotsamvale_uppervale: ACTLocationData(rname.flotsam_vale, 606, "Flotsam Vale"), #99e59ba9-3c41-4133-bf7e-d09bc1957f04-2_A-HighSwamp
+    lname.breadclaw_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 608, "Flotsam Vale"), #669e8494-68f1-4de8-8814-6b41a0a69d18-2_A-HighSwamp
+    lname.clothesclaw_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 610, "Flotsam Vale"), #b4a9c83a-b0c6-4606-a785-16f4ff33d66e-2_A-HighSwamp
+    lname.hairclaw_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 614, "Flotsam Vale"), #6db7743b-1b30-49c4-983a-bb8256959022-2_A-HighSwamp
+    lname.chipclaw_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 615, "Flotsam Vale"), #70b7c84e-2c02-47c4-9e49-a58c78856f9d-2_C-Facilities
 
     lname.breadclaw_scuttleport_cubby: ACTLocationData(rname.scuttleport, 424, "Scuttleport"), #b5875ab1-4e89-4ba5-a9ea-6eca950d51f0-2_A-HighSwamp
     lname.clothesclaw_scuttleport_cubby: ACTLocationData(rname.scuttleport, 425, "Scuttleport"), #8f06cd49-3b2b-4883-b7a5-a421b38870ba-2_A-HighSwamp
@@ -439,6 +444,65 @@ location_table: Dict[str, ACTLocationData] = {
     lname.barbedhook_grovevillage_hammer: ACTLocationData(rname.grove_village, 305, "Expired Grove Village"), #235b691b-0f18-4f35-bd8a-7536e12fabfe-2_E-Cliffs
     lname.barbedhook_grovevillage_dock: ACTLocationData(rname.grove_village, 309, "Expired Grove Village"), #aff46c65-7a4a-4b1c-a0ca-840af3898f26-2_C-Village
 
+    lname.barbedhook_flotsamvale_entranceledge: ACTLocationData(rname.flotsam_vale, 338, "Flotsam Vale"), #17ac32ac-f0fc-4613-9e02-5ffdf4eecb63-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_entrancerocks: ACTLocationData(rname.flotsam_vale, 339, "Flotsam Vale"), #7aa4931c-e44f-4531-9b5e-eb1a01418fdd-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_northbeach: ACTLocationData(rname.flotsam_vale, 343, "Flotsam Vale"), #60c9e9de-af79-4068-a7bf-7005ac760f4b-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_butaneisland: ACTLocationData(rname.flotsam_vale, 349, "Flotsam Vale"), #c3ff376c-5f53-4401-a52a-1515dba2a2a3-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_snailshell: ACTLocationData(rname.flotsam_vale, 356, "Flotsam Vale"), #2fd87610-e95f-4b28-9521-d3b59fb718f0-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_wooddeck: ACTLocationData(rname.flotsam_vale, 358, "Flotsam Vale"), #125b1086-fa58-45bf-a42f-e715781feffa-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_woodplatform1: ACTLocationData(rname.flotsam_vale, 362, "Flotsam Vale"), #cf30643f-5b43-4e94-af5d-c879e6531d14-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_woodplatform2: ACTLocationData(rname.flotsam_vale, 364, "Flotsam Vale"), #ecbaf918-3632-496e-9598-a9e5da91f495-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_westbutane: ACTLocationData(rname.flotsam_vale, 370, "Flotsam Vale"), #0337dc3e-fcf7-4f30-8759-bef7afeb04ca-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_mailbox: ACTLocationData(rname.flotsam_vale, 378, "Flotsam Vale"), #90422b9d-ec1b-4be4-a606-54f196dc1f1e-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_APunder1: ACTLocationData(rname.flotsam_vale, 385, "Flotsam Vale"), #442a694b-ba12-4f08-ad49-f2a5697d3c19-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_APunder2: ACTLocationData(rname.flotsam_vale, 387, "Flotsam Vale"), #8480a51d-bd34-43bb-a348-a3bf69040248-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_APabove: ACTLocationData(rname.flotsam_vale, 391, "Flotsam Vale"), #54f7c579-6ea7-402d-b1eb-9ee67d2bbe9a-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_shippingsnail: ACTLocationData(rname.flotsam_vale, 398, "Flotsam Vale"), #1abd8a20-f2cc-488b-8e0a-00b12c305667-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_shippingbutane: ACTLocationData(rname.flotsam_vale, 399, "Flotsam Vale"), #a76a0b9b-6307-4b71-be91-da385c17a977-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_trashpile: ACTLocationData(rname.flotsam_vale, 402, "Flotsam Vale"), #a0549711-5560-4b9c-99d5-65e13911413a-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_consortiumcage: ACTLocationData(rname.flotsam_vale, 405, "Flotsam Vale"), #7e76017e-13fa-4a96-a1f8-6d881b20b372-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_consortium: ACTLocationData(rname.flotsam_vale, 408, "Flotsam Vale"), #b81ed4dc-3b3e-420d-99e9-d676c88fc120-2_B-LowSwamp
+    lname.barbedhook_flotsamvale_snailfish: ACTLocationData(rname.flotsam_vale, 413, "Flotsam Vale"), #cdf2769f-deb3-43dc-841f-a4c1c0081833-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_westfish: ACTLocationData(rname.flotsam_vale, 420, "Flotsam Vale"), #698a076c-2661-4731-90c4-211d8b1414c6-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_behindcubby: ACTLocationData(rname.flotsam_vale, 605, "Flotsam Vale"), #5b786881-414b-41d4-97ea-b3a850d3633a-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 611, "Flotsam Vale"), #3b49cdc6-b609-49b0-a1c2-57307a398920-2_A-HighSwamp
+    lname.barbedhook_flotsamvale_sludgefish: ACTLocationData(rname.flotsam_vale, 612, "Flotsam Vale"), #a6a69a65-21fa-4bdd-8940-e1f1f6c226a0-2_A-HighSwamp
+
+    lname.barbedhook_scuttleport_cubby: ACTLocationData(rname.scuttleport, 429, "Scuttleport"), #a91e708c-89a8-4ef0-bf21-870cd56e652e-2_A-HighSwamp
+    lname.barbedhook_scuttleport_magnet: ACTLocationData(rname.scuttleport, 434, "Scuttleport"), #f738e9de-5eb9-41c1-8358-48a6d51a9fff-2_C-Facilities
+    lname.barbedhook_scuttleport_sorting: ACTLocationData(rname.scuttleport, 439, "Scuttleport"), #5eefb844-f267-416a-ba6e-c1b8ec945cfa-2_C-Facilities
+    lname.barbedhook_scuttleport_magnetdropoff1: ACTLocationData(rname.scuttleport, 442, "Scuttleport"), #631f983b-ebc5-4fa3-aedc-38fd4d1efffb-2_C-Facilities
+    lname.barbedhook_scuttleport_trashisland: ACTLocationData(rname.scuttleport, 445, "Scuttleport"), #497aa1a9-1ffa-4ea1-ad17-32fa6654db2e-2_C-Facilities
+    lname.barbedhook_scuttleport_magnetdropoff2: ACTLocationData(rname.scuttleport, 448, "Scuttleport"), #e449f43b-dc05-4e13-8f8c-b93adf0e97fa-2_C-Facilities
+    lname.barbedhook_scuttleport_trashblock: ACTLocationData(rname.scuttleport, 453, "Scuttleport"), #de7097a4-7028-454b-98e6-c61a03557736-2_C-Facilities
+    lname.barbedhook_scuttleport_magrail1: ACTLocationData(rname.scuttleport, 459, "Scuttleport"), #301e305f-fc4c-4bd5-a839-ca1ea6435c13-2_C-Facilities
+    lname.barbedhook_scuttleport_magrail2: ACTLocationData(rname.scuttleport, 460, "Scuttleport"), #0710d989-547d-43e3-b8e0-70c634c08441-2_C-Facilities
+    lname.barbedhook_scuttleport_magrailroof: ACTLocationData(rname.scuttleport, 465, "Scuttleport"), #0732b3f4-78b7-4584-8459-fab762bd98c5-2_C-Facilities
+    lname.barbedhook_scuttleport_magrail3: ACTLocationData(rname.scuttleport, 471, "Scuttleport"), #60db4097-9756-47cc-994c-506ce4069cab-2_C-Facilities
+    lname.barbedhook_scuttleport_propanebridge: ACTLocationData(rname.scuttleport, 474, "Scuttleport"), #53d359e0-d707-4585-8d8f-75bf20cdf165-2_C-Facilities
+    lname.barbedhook_scuttleport_afterbridge: ACTLocationData(rname.scuttleport, 476, "Scuttleport"), #a4d7a5e4-2374-4a0c-8f5d-421b07ae6e2d-2_C-Facilities
+    lname.barbedhook_scuttleport_propaneroof1: ACTLocationData(rname.scuttleport, 477, "Scuttleport"), #df0d5a5c-5391-425d-b250-5c26553f2bfb-2_C-Facilities
+    lname.barbedhook_scuttleport_propaneroof2: ACTLocationData(rname.scuttleport, 478, "Scuttleport"), #7f30ac6a-2e29-4ccb-9fd2-eb2491741c6c-2_C-Facilities
+    
+    lname.barbedhook_pinbarge1: ACTLocationData(rname.pinbarge, 485, "Pinbarge"), #8edddc0a-8caf-48a1-975e-4167e728a4c3-1_A-PinBargeRunup
+    lname.barbedhook_pinbarge2: ACTLocationData(rname.pinbarge, 489, "Pinbarge"), #898633d3-36c1-4f61-88b5-8cd4ca33ec2b-2_B-PinBargeArena
+
+    lname.barbedhook_unfathom_mimic: ACTLocationData(rname.unfathom, 492, "The Unfathom"), #98535001-699c-4e64-a07d-74e610f04528-2_B-DarkCanyon
+    lname.barbedhook_unfathom_mimichill: ACTLocationData(rname.unfathom, 493, "The Unfathom"), #54a8f869-ff96-45b2-93de-fb1eeeec313f-2_B-DarkCanyon
+
+    lname.barbedhook_oldocean_northwesthouse: ACTLocationData(rname.old_ocean, 542, "The Old Ocean"), #14d445d2-f997-458d-a285-123bf009c223-2_A-BleachedCopse
+    lname.barbedhook_oldocean_southhouse: ACTLocationData(rname.old_ocean, 550, "The Old Ocean"), #c9b315b7-28de-4efb-9d0c-608e9629a9a7-2_A-BleachedCopse
+    lname.barbedhook_oldocean_secondisland: ACTLocationData(rname.old_ocean, 552, "The Old Ocean"), #2e322c37-6011-41eb-ac2b-7fb67d0d85b1-2_A-BleachedCopse
+    lname.barbedhook_oldocean_brokenbridge1: ACTLocationData(rname.old_ocean, 554, "The Old Ocean"), #765f4cdd-d7a5-4954-be69-99ed7c68913b-2_A-BleachedCopse
+    lname.barbedhook_oldocean_brokenbridge2: ACTLocationData(rname.old_ocean, 557, "The Old Ocean"), #6a75e525-e399-482b-b21f-42ae8ae63a17-2_A-BleachedCopse
+    lname.barbedhook_oldocean_entrance: ACTLocationData(rname.old_ocean, 564, "The Old Ocean"), #f94fbed4-a90c-46e8-a6a3-343f81728eba-2_B-GrandCourtyard
+    lname.barbedhook_oldocean_citygates: ACTLocationData(rname.old_ocean, 565, "The Old Ocean"), #20dffb0a-e6b1-4c00-8f25-d66aefedcc22-2_B-GrandCourtyard
+    lname.sharkegg_oldocean_citygates: ACTLocationData(rname.old_ocean, 570, "The Old Ocean"), #f8ef34b2-f3b7-44d6-84b6-63749adc075f-2_B-GrandCourtyard
+    lname.barbedhook_oldocean_chitan: ACTLocationData(rname.old_ocean, 573, "The Old Ocean"), #b2789002-2749-482b-b64e-4cbba29c6a08-2_B-GrandCourtyard
+    lname.barbedhook_oldocean_eastsnail: ACTLocationData(rname.old_ocean, 584, "The Old Ocean"), #082d38e1-09cc-496a-9909-ffe96cc80cb8-2_B-GrandCourtyard
+    lname.barbedhook_oldocean_easternbuilding: ACTLocationData(rname.old_ocean, 591, "The Old Ocean"), #824a5720-5565-4804-9838-a674ebd3b1f1-2_B-GrandCourtyard
+    lname.barbedhook_oldocean_middlebuilding: ACTLocationData(rname.old_ocean, 595, "The Old Ocean"), #56826edb-20cf-4f5a-bd85-4c4e71ca3fee-2_B-GrandCourtyard
+
     ##### stowaway locations
     lname.siphonophore_shallows_westwall: ACTLocationData(rname.central_shallows, 31, "Central Shallows"),#4d4ac114-06e4-400f-b888-b500a7348cc9-2_B-ShallowsBigSand
     lname.seastar_shallows_eastledge: ACTLocationData(rname.central_shallows, 32, "Central Shallows"), #e9a5a6cf-2a19-4db5-bb0d-d85b260f3e2b-2_B-ShallowsBigSand
@@ -532,11 +596,98 @@ location_table: Dict[str, ACTLocationData] = {
     lname.mussel_grovevillage_dock: ACTLocationData(rname.grove_village, 310, "Expired Grove Village"), #3f1f877c-e5ac-40d1-93b7-2245282b0669-2_C-Village
     lname.earthworm_grovevillage_dock: ACTLocationData(rname.grove_village, 313, "Expired Grove Village"), #725998d5-172d-4408-9f70-0f9264a6a6fd-2_C-Village
 
+    lname.anemone_flotsamvale_butaneisland: ACTLocationData(rname.flotsam_vale, 346, "Flotsam Vale"), #76b9b9ce-875c-4136-a6da-dabdfc70d40e-2_B-LowSwamp
+    lname.rustynail_flotsamvale_brokenbutane: ACTLocationData(rname.flotsam_vale, 350, "Flotsam Vale"), #d656b2e6-15ec-4e24-bebb-94c1ed7f6c30-2_B-LowSwamp
+    lname.sinker_flotsamvale_woodplatform: ACTLocationData(rname.flotsam_vale, 360, "Flotsam Vale"), #19c7932e-9133-4dbc-bc25-9f71aa29c271-2_A-HighSwamp
+    lname.mussel_flotsamvale_woodplatform: ACTLocationData(rname.flotsam_vale, 363, "Flotsam Vale"), #e5b02de1-7cb7-4a4d-98a9-369c44302cac-2_A-HighSwamp
+    lname.rustynail_flotsamvale_steamroller: ACTLocationData(rname.flotsam_vale, 367, "Flotsam Vale"), #f8d826c0-7319-4f95-ab90-bf28a7218dfb-2_A-HighSwamp
+    lname.limpet_flotsamvale_trashpile: ACTLocationData(rname.flotsam_vale, 368, "Flotsam Vale"), #855a1efa-0f38-4e6b-a68d-24a991dcac42-2_A-HighSwamp
+    lname.fruitsticker_flotsamvale_westbutane: ACTLocationData(rname.flotsam_vale, 371, "Flotsam Vale"), #0ad3895d-4612-4856-a6ed-7a7b48f2c36f-2_A-HighSwamp
+    lname.seacucumber_flotsamvale_westbutane: ACTLocationData(rname.flotsam_vale, 372, "Flotsam Vale"), #5ccf4e25-ff98-4a9a-9e31-2eea57589809-2_A-HighSwamp
+    lname.lumpsucker_flotsamvale_shorcut: ACTLocationData(rname.flotsam_vale, 375, "Flotsam Vale"), #a569d9f6-d930-4a9b-8041-8eb8621532ac-2_A-HighSwamp
+    lname.oyster_flotsamvale_butanemailbox: ACTLocationData(rname.flotsam_vale, 377, "Flotsam Vale"), #235d8af5-0add-4509-b33c-dd3e3dbd27ff-2_A-HighSwamp
+    lname.seastar_flotsamvale_butanemailbox: ACTLocationData(rname.flotsam_vale, 379, "Flotsam Vale"), #2f19d3b2-03ae-4fbe-8821-2dd01f007d11-2_A-HighSwamp
+    lname.anemone_flotsamvale_APunder: ACTLocationData(rname.flotsam_vale, 382, "Flotsam Vale"), #cce99207-a255-4e12-ba19-51b5048ac64b-2_A-HighSwamp
+    lname.cockle_flotsamvale_APabove: ACTLocationData(rname.flotsam_vale, 390, "Flotsam Vale"), #aeb3f185-eb51-4e68-a0cc-6dafc4b48a11-2_A-HighSwamp
+    lname.sanddollar_flotsamvale_APabove: ACTLocationData(rname.flotsam_vale, 392, "Flotsam Vale"), #812367fb-0264-4113-9da5-104ba61d368b-2_A-HighSwamp
+    lname.anemoneplus_flotsamvale_APunder: ACTLocationData(rname.flotsam_vale, 393, "Flotsam Vale"), #35d5823c-2da6-48c4-b8f1-074221917090-2_A-HighSwamp
+    lname.anothercrab_flotsamvale_mailbox: ACTLocationData(rname.flotsam_vale, 395, "Flotsam Vale"), #daf9fa57-89d6-481f-8a6d-c32c9e8ecb5a-2_A-HighSwamp
+    lname.sponge_flotsamvale_cranegrapple: ACTLocationData(rname.flotsam_vale, 407, "Flotsam Vale"), #2cb7f595-94fa-4b7b-a7c6-602808292c48-2_A-HighSwamp
+    lname.seastarplus_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 410, "Flotsam Vale"), #89d10f86-fcf2-483a-b145-f1576682520c-2_A-HighSwamp
+    lname.lamprey_flotsamvale_islandfish: ACTLocationData(rname.flotsam_vale, 411, "Flotsam Vale"), #5a5395f1-e087-4a30-b3ea-b055fd328d40-2_B-LowSwamp
+    lname.mussel_flotsamvale_elevatedfish: ACTLocationData(rname.flotsam_vale, 412, "Flotsam Vale"), #e863acfd-d4ee-4d2b-a868-6fe2420f1eda-2_B-LowSwamp
+    lname.siphonophoreplus_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 414, "Flotsam Vale"), #491e2dc3-ab0b-4da4-b36d-a3c2e60ea2a3-2_B-LowSwamp
+    lname.whelk_flotsamvale_westfish: ACTLocationData(rname.flotsam_vale, 416, "Flotsam Vale"), #aecd0ac5-352e-4ae3-ae6a-3b810e8588d6-2_B-LowSwamp
+    lname.anemoneplus_flotsamvale_northwestfish: ACTLocationData(rname.flotsam_vale, 421, "Flotsam Vale"), #f29c22d3-4459-4d21-b76d-dbdd514fe09a-2_A-HighSwamp
+    lname.turtleshell_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 609, "Flotsam Vale"), #584ec079-5ecc-409b-bcac-7197b1d04a1c-2_A-HighSwamp
+    lname.lilisopod_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 613, "Flotsam Vale"), #6709552a-af26-4b87-a69e-97830fd645be-2_A-HighSwamp
+    lname.rustynail_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 616, "Flotsam Vale"), #fa0535e3-55e1-4879-ac12-9327d5858b1a-2_C-Facilities
+    lname.barnacle_flotsamvale_gunkfish: ACTLocationData(rname.flotsam_vale, 617, "Flotsam Vale"), #c376ad88-aa83-4923-9652-13fd98a67a19-2_C-Facilities
+
+    lname.googlyeye_scuttleport_cubbies: ACTLocationData(rname.scuttleport, 427, "Scuttleport"), #5736e238-67d5-4215-823d-a0c3b3d60b2a-2_A-HighSwamp
+    lname.seastar_scuttleport_cubbies: ACTLocationData(rname.scuttleport, 428, "Scuttleport"), #69c1d4c5-c467-4127-a12a-6277376c47f0-2_A-HighSwamp
+    lname.sanddollar_scuttleport_magnet: ACTLocationData(rname.scuttleport, 432, "Scuttleport"), #14992c5b-3377-4664-9309-3f44a31b1ae5-2_C-Facilities
+    lname.mussel_scuttleport_magnetfish: ACTLocationData(rname.scuttleport, 433, "Scuttleport"), #6c265bf5-d319-4a6b-8ddf-ad803b9bdde6-2_C-Facilities
+    lname.limpet_scuttleport_electricboxes: ACTLocationData(rname.scuttleport, 437, "Scuttleport"), #34e41971-5cef-4947-b6ff-6b1e4da0f2d6-2_C-Facilities
+    lname.rubberband_scuttleport_magnetdropoff: ACTLocationData(rname.scuttleport, 440, "Scuttleport"), #f1ce3edd-314d-4cf7-ae79-fdb5cf0a7ac0-2_C-Facilities
+    lname.limpet_scuttleport_magnet: ACTLocationData(rname.scuttleport, 441, "Scuttleport"), #1a376ec2-e1bf-44a3-bc18-0ec8d4252b0d-2_C-Facilities
+    lname.anemoneplus_scuttleport_magnetdropoff: ACTLocationData(rname.scuttleport, 443, "Scuttleport"), #b0c6c00b-fcbb-4884-83c7-cf655211e599-2_C-Facilities
+    lname.lumpsucker_scuttleport_trashisland: ACTLocationData(rname.scuttleport, 444, "Scuttleport"), #555557dd-239a-40da-a89f-82d0cc6adc65-2_C-Facilities
+    lname.sinkerplusplus_scuttleport_clam: ACTLocationData(rname.scuttleport, 451, "Scuttleport"), #f2466d53-7e70-4d19-9c12-cb9da07a72fe-2_C-Facilities
+    lname.seastar_scuttleport_survivorcamp: ACTLocationData(rname.scuttleport, 455, "Scuttleport"), #17a5b692-c56b-4f43-8ca2-b2909ef9c446-2_C-Facilities
+    lname.pufferquill_scuttleport_survivorcamp: ACTLocationData(rname.scuttleport, 456, "Scuttleport"), #08bbdb7b-63dd-4e3d-9499-fc77548c3bd9-2_C-Facilities
+    lname.turtleshell_scuttleport_survivorcamp: ACTLocationData(rname.scuttleport, 458, "Scuttleport"), #0e380f83-dc56-468f-aa76-30f049c33fd8-2_C-Facilities
+    lname.rustynailplus_scuttleport_magrail: ACTLocationData(rname.scuttleport, 464, "Scuttleport"), #b515d67d-b4fa-4282-a872-9c351d087c85-2_C-Facilities
+    lname.barnacleplus_scuttleport_propanebridge: ACTLocationData(rname.scuttleport, 479, "Scuttleport"), #a16b7348-4d15-4bfb-9a0c-ee2f8994deea-2_C-Facilities
+    lname.salp_scuttleport_propanebridge: ACTLocationData(rname.scuttleport, 480, "Scuttleport"), #09d1270f-cab8-45dd-af56-0c7220ad9e98-2_C-Facilities
+    lname.musselplus_scuttleport_voltai: ACTLocationData(rname.scuttleport, 482, "Scuttleport"), #d8ad97ae-8fa3-4a76-98ef-6cf635627776-2_C-Facilities
+
+    lname.barnacle_pinbarge: ACTLocationData(rname.pinbarge, 484, "Pinbarge"), #98b0e1e4-2548-4b28-948d-b3a05147286a-2_A-PinBargeRunup
+    lname.musselplus_pinbarge: ACTLocationData(rname.pinbarge, 487, "Pinbarge"), #29dab0bb-a195-47d3-b553-ebc5a4f03154-2_A-PinBargeRunup
+
+    lname.musselplus_unfathom_telephone: ACTLocationData(rname.unfathom, 491, "The Unfathom"), #87b99366-1eb6-4cd3-af8e-a454cc3c0172-2_B-DarkCanyon
+    lname.seastarplus_unfathom_glowstick: ACTLocationData(rname.unfathom, 496, "The Unfathom"), #bf3b5664-5805-403b-af6f-98f4557c532b-2_B-DarkCanyon
+    lname.lanternfish_unfathom_styrofoam: ACTLocationData(rname.unfathom, 503, "The Unfathom"), #9de638f7-ee53-4b14-8b12-8880c9a11631-2_B-DarkCanyon
+    lname.lampreyplus_unfathom_pinbargeclam: ACTLocationData(rname.unfathom, 509, "The Unfathom"), #fa136387-6988-46e4-9915-fc0a6f11ec6a-2_B-DarkCanyon
+    lname.limpet_unfathom_pinbarge: ACTLocationData(rname.unfathom, 510, "The Unfathom"), #ecc7eed3-27e2-4168-8f6e-6733375b7c99-2_B-DarkCanyon
+    lname.siphonophoreplus_unfathom_shortcut: ACTLocationData(rname.unfathom, 512, "The Unfathom"), #75e64603-4664-467d-b2d4-579448396fd4-2_B-DarkCanyon
+    lname.salp_unfathom_glowstickfish: ACTLocationData(rname.unfathom, 517, "The Unfathom"), #e9fe66b6-b7db-492a-9b64-66f19bfda0c1-2_B-DarkCanyon
+    lname.barnacleplus_unfathom_pinbargefish: ACTLocationData(rname.unfathom, 504, "The Unfathom"), #8ed2ebbb-d383-43ab-8530-f3c1cd714763-2_B-DarkCanyon
+
+    lname.sinkerplus_plains_petroch: ACTLocationData(rname.plains, 519, "Abyssal Plains"), #41d32998-d9d9-4b64-bedd-23889b575ec4-2_C-HermitCave
+    lname.pufferquill_plains_inkerton: ACTLocationData(rname.plains, 523, "Abyssal Plains"), #ce72bf4f-67a6-4ce9-b094-08abfd7fb973-2_D-SilentFlats
+    lname.rustynailplus_plains_shortcut: ACTLocationData(rname.plains, 525, "Abyssal Plains"), #a348d1db-7fb6-460a-b327-a09b3effacd9-2_D-SilentFlats
+    lname.limpetplus_plains_inkerton: ACTLocationData(rname.plains, 526, "Abyssal Plains"), #a36e3443-c030-4021-8022-df892e62328b-2_D-SilentFlats
+    lname.whelkplus_plains_shortcut: ACTLocationData(rname.plains, 527, "Abyssal Plains"), #b3cc9d26-0b24-438b-ba96-084ba135230a-2_D-SilentFlats
+    lname.zooplanktonplus_plains_shortcut: ACTLocationData(rname.plains, 528, "Abyssal Plains"), #42a14e36-7015-455e-a2b9-95fc02893e1f-2_D-SilentFlats
+    lname.salpplus_plains_entrance: ACTLocationData(rname.plains, 529, "Abyssal Plains"), #09879ffa-ec2f-4723-b157-6efbef8f364b-2_D-SilentFlats
+    lname.anothercrab_plains_shortcutclam: ACTLocationData(rname.plains, 530, "Abyssal Plains"), #689ac44f-d0f2-4c33-9aad-686823303bff-2_D-SilentFlats
+    lname.seacucumber_plains_entrance: ACTLocationData(rname.plains, 531, "Abyssal Plains"), #82554ff8-c8f1-42b3-8018-f84f5ec94c55-2_D-SilentFlats
+    lname.fruitsticker_plains_entrance: ACTLocationData(rname.plains, 533, "Abyssal Plains"), #fda1ad5d-5abb-4351-b682-8e91036ccddd-2_D-SilentFlats
+
+    lname.sanddollar_oldocean_ledge: ACTLocationData(rname.plains, 544, "The Old Ocean"), #5f0809f4-5a0f-4b4d-be76-1386bc665a16-2_A-BleachedCopse
+    lname.barnacleplusplus_oldocean_styrofoam: ACTLocationData(rname.plains, 545, "The Old Ocean"), #19a53c5e-497f-4e5e-a947-6a065747c92a-2_A-BleachedCopse
+    lname.seastarplusplus_oldocean_entranceclam: ACTLocationData(rname.plains, 561, "The Old Ocean"), #6df4f101-e0f2-4147-94e8-54235e8b803f-2_B-GrandCourtyard
+    lname.spongeplus_oldocean_entrance: ACTLocationData(rname.plains, 563, "The Old Ocean"), #9cd5413b-91c2-421a-92de-8a703922f888-2_B-GrandCourtyard
+    lname.sanddollar_oldocean_citywall: ACTLocationData(rname.plains, 571, "The Old Ocean"), #b27f8f08-2a6d-4f78-8ef5-ca01d2b968ef-2_B-GrandCourtyard
+    lname.usedbandageplus_oldocean_citywall: ACTLocationData(rname.plains, 579, "The Old Ocean"), #5988e9dd-dc40-4f00-af63-66da9db0e7b4-2_B-GrandCourtyard
+    lname.cockleplus_oldocean_snaileast: ACTLocationData(rname.plains, 582, "The Old Ocean"), #3e336fbb-9830-4772-a1b3-55dc039380dd-2_B-GrandCourtyard
+    lname.anothercrab_oldocean_elevator: ACTLocationData(rname.plains, 588, "The Old Ocean"), #b7757de2-ce70-474e-a332-cef609bdf42f-2_B-GrandCourtyard
+    lname.sanddollar_oldocean_easternbuilding: ACTLocationData(rname.plains, 592, "The Old Ocean"), #4babc398-17b9-4197-958e-c6bebc12a6c6-2_B-GrandCourtyard
+    lname.phytoplanktonplus_oldocean_clam: ACTLocationData(rname.plains, 600, "The Old Ocean"), #a9ac0a98-889e-4138-a62b-0d59f63af118-2_B-GrandCourtyard
+    lname.musselplusplus_oldocean_woodplank: ACTLocationData(rname.plains, 601, "The Old Ocean"), #df538a5c-9108-4210-8b9d-89e777116ec4-2_B-GrandCourtyard
+    lname.whelkplusplus_oldocean_mantis: ACTLocationData(rname.plains, 604, "The Old Ocean"), #21387127-4e04-4017-bb58-3aafb9537876-2_B-GrandCourtyard
+
     ##### costume locations
     lname.captain_costume_pickup: ACTLocationData(rname.central_shallows, 43, "Central Shallows"), #7c307763-a7b4-4e81-88d6-e1baf1b04608-2_B-ShallowsBigSand
     lname.clown_costume_pickup: ACTLocationData(rname.sands_between, 140,"The Sands Between"), #cd2d0535-6c06-4530-bf60-afbffc2d5086-2_A-OOGroveRadius
     lname.sunlight_costume_pickup: ACTLocationData(rname.secluded_ridge, 198, "The Sands Between - Secluded Ridge"), #35aa72f2-fa50-4efc-b600-b597382ed877-2_A-OOGroveRadius
     lname.intern_costume_pickup: ACTLocationData(rname.grove_village, 296, "Expired Grove Village"), #4ba7f2ff-ff35-4d74-b5ac-d9c59fe1c94d-2_C-Village
+    lname.cowfishboy_costume_pickup: ACTLocationData(rname.flotsam_vale, 348, "Flotsam Vale"), #b1f8794b-d43d-41b9-827a-75bb4c7a57bf-NickGym
+    lname.bluecollar_costume_pickup: ACTLocationData(rname.scuttleport, 430, "Scuttleport"), #f37cb96e-df05-4aed-b2b5-7d8d5af32483-NickGym
+    lname.krillionaire_costume_pickup: ACTLocationData(rname.unfathom, 490, "The Unfathom"), #c762c7f8-33b6-4701-9f4c-7ad7938a5d11-2_B-DarkCanyon
+    lname.exiledflame_costume_pickup: ACTLocationData(rname.unfathom, 507, "The Unfathom"), #1b7cb531-3a0a-4957-ab59-da5c9f1da705-2_B-DarkCanyon
+    lname.drkril_costume_pickup: ACTLocationData(rname.old_ocean, 551, "The Old Ocean"), #d5fed7e0-cd33-4a81-9688-1e7ca948139f-2_A-BleachedCopse
 
     ##### non-boss adaptation locations
     lname.urchin_toss_quest: ACTLocationData(rname.new_carcinia, 85,"New Carcinia"), #AUTO NEEDS TO MAKE A CUSTOM SCRIPT
@@ -544,6 +695,8 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.royal_wave_reward: ACTLocationData(rname.slacktide_after, x, "Fort Slacktide - After Destruction") #Redundant, overlaps with Magista
 
     ##### skill locations
+    lname.shelleport_skill: ACTLocationData(rname.snail_cave, 254, "Moon Snail Skills"),
+    lname.skedaddle_skill: ACTLocationData(rname.snail_cave, 255, "Moon Snail Skills"),
     lname.parry_skill: ACTLocationData(rname.snail_cave, 318, "Moon Snail Skills"),
     lname.riposte_skill: ACTLocationData(rname.snail_cave, 319, "Moon Snail Skills"),
     lname.natural_defenses_skill: ACTLocationData(rname.snail_cave, 320, "Moon Snail Skills"),
