@@ -164,7 +164,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_grovevillage_oildrum: ACTLocationData(rname.grove_village, 268, "Expired Grove Village"), #66a4a627-ad3a-45d6-aaf1-1e505dac0495-2_B-GroveForestHigh
     lname.breadclaw_grovevillage_bottle1: ACTLocationData(rname.grove_village, 269, "Expired Grove Village"), #a6e719fc-65b0-4c3a-830e-43065a819c7d-2_B-GroveForestHigh
     lname.breadclaw_grovevillage_bottle2: ACTLocationData(rname.grove_village, 270, "Expired Grove Village"), #507a5ca4-3de6-4d85-ba51-04c1e42c891e-2_B-GroveForestHigh
-    lname.chipclaw_grovevillage_netorbs: ACTLocationData(rname.grove_village, 269, "Expired Grove Village"), #df0386e0-99ee-478a-873d-b40e973fc16b-2_D-Caves
+    lname.chipclaw_grovevillage_netorbs: ACTLocationData(rname.grove_village, 253, "Expired Grove Village"), #df0386e0-99ee-478a-873d-b40e973fc16b-2_D-Caves
     lname.hairclaw_grovevillage_river: ACTLocationData(rname.grove_village, 272, "Expired Grove Village"), #ec08fee3-e62f-45ee-9fbe-9101522d4f30-2_B-GroveForestHigh
     lname.chipclaw_grovevillage_NWcarton: ACTLocationData(rname.grove_village, 276, "Expired Grove Village"), #84c9cc27-0876-4e4d-a9e2-c28f06abdfc3-2_C-Village
     lname.chipclaw_grovevillage_SEcarton: ACTLocationData(rname.grove_village, 281, "Expired Grove Village"), #c83c8f42-474a-4dd4-bbae-99df2ad1681a-2_C-Village
