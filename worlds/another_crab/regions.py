@@ -49,9 +49,12 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.unfathom
     },
     rname.unfathom: {
-        rname.bleached_city
+        rname.plains
     },
-    rname.bleached_city: {
+    rname.plains: {
+        rname.old_ocean
+    },
+    rname.old_ocean: {
         rname.drain_bottom
     },
     rname.drain_bottom: {

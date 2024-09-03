@@ -116,8 +116,9 @@ item_table: Dict[str, ACTItemData] = {
 
     # consumable
     iname.barbed_hook: ACTItemData(ItemClassification.filler, 1, 87, "Consumable"),
+    iname.shark_egg: ACTItemData(ItemClassification.filler, 1, 133, "Consumable"),
 
-    # constume
+    # costume
     #iname.plastic_poncho: ACTItemData(ItemClassification.filler, 1, 88, "Costume"),
     iname.captain_costume: ACTItemData(ItemClassification.filler, 1, 89, "Costume"),
     #iname.dr_kril: ACTItemData(ItemClassification.filler, 1, 90, "Costume"),
@@ -178,6 +179,8 @@ def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
 filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group != "Costume"]
+
+costume_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group == "Costume"]
 
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""

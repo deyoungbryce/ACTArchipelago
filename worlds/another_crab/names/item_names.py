@@ -99,6 +99,7 @@ carclaw = "Carclaw" # 20000 microplastics
 
 # consumables
 barbed_hook = "Barbed Hook" # apparently some of these are just laying around on the ground by default
+shark_egg = "Shark Egg"
 
 # costumes
 plastic_poncho = "Plastic Poncho" # given to the player when they pick up the fork

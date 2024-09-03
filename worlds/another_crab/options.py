@@ -6,9 +6,9 @@ class RandomizeFork(Toggle):
     display_name: str = "Randomize Fork"
     default: bool = False
 
-class RandomizeCostumes(Toggle):
-    """If enabled, shuffles costumes into the item pool"""
-    display_name: str = "Randomize Costumes"
+class RemoveCostumes(Toggle):
+    """If enabled, removes costumes from the item pool"""
+    display_name: str = "Remove Costumes"
     default: bool = False
 
 class MicroplasticMultiplier(Range):
@@ -26,6 +26,6 @@ class DeathLink(Toggle):
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
     randomizeFork: RandomizeFork
-    randomizeCostumes: RandomizeCostumes
+    removeCostumes: RemoveCostumes
     microplasticMultiplier: MicroplasticMultiplier
     deathlink: DeathLink
