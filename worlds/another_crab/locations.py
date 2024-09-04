@@ -22,7 +22,7 @@ location_table: Dict[str, ACTLocationData] = {
     #Last used number: 617
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
-    #lname.fork_pickup: ACTLocationData("Cave of Respite", 1,"Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
+    lname.fork_pickup: ACTLocationData(rname.starting_cave, 1, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
     lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide - Before Destruction"),

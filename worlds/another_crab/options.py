@@ -1,10 +1,23 @@
 from dataclasses import dataclass
 from Options import Toggle, Range, Choice, PerGameCommonOptions
 
-class RandomizeFork(Toggle):
-    """If enabled, the fork is added to the item pool. If disabled, the fork is left in its default location"""
+class ForkLocation(Choice):
+    """Choose where the Fork(weapon) location is set.
+    Available Options: vanilla_location, shuffled, shuffled_early"""
     display_name: str = "Randomize Fork"
-    default: bool = False
+    vanilla_location = 0
+    shuffled = 1
+    shuffled_early = 2
+    default = 0
+
+class ShelleportLocation(Choice):
+    """Choose where the Shelleport (fast travel) skill location will be
+    Available Options: shuffled, starting_items, vanilla_location"""
+    display_name: str = "Shelleport Location"
+    shuffled = 0
+    starting_items = 1
+    vanilla_location = 2
+    default = 0
 
 class RemoveCostumes(Toggle):
     """If enabled, removes costumes from the item pool"""
@@ -25,7 +38,8 @@ class DeathLink(Toggle):
 
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
-    randomizeFork: RandomizeFork
+    forkLocation: ForkLocation
+    shelleportLocation: ShelleportLocation
     removeCostumes: RemoveCostumes
     microplasticMultiplier: MicroplasticMultiplier
     deathlink: DeathLink

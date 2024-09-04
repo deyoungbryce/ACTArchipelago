@@ -7,7 +7,7 @@ from .locations import location_table, location_name_groups, location_name_to_id
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
-from .names import location_names as lname
+from .names import location_names as lname, item_names as iname, region_names as rname
 
 
 class ACTWeb(WebWorld):
@@ -41,18 +41,32 @@ class ACTWorld(World):
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
-        remove_costumes = self.options.removeCostumes
         costume_list = costume_items
         #self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
+        if self.options.forkLocation:
+            fork = self.create_item(iname.fork)
+            if self.options.forkLocation == "vanilla_location":
+                self.multiworld.get_location(lname.fork_pickup, self.player).place_locked_item(fork)
+            items_to_create[iname.fork] = 0
+
+        if self.options.shelleportLocation:
+            shelleport = self.create_item(iname.shelleport)
+            if self.options.shelleportLocation == "starting_items":
+                self.multiworld.push_precollected(shelleport)
+            elif self.options.shelleportLocation == "vanilla_location":
+                self.multiworld.get_location(lname.shelleport_skill, self.player).place_locked_item(shelleport)
+            items_to_create[iname.shelleport] = 0
+
+        if self.options.removeCostumes:
+            items_to_create[costume_list] = 0
+
         for item, quantity in items_to_create.items():
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
                 ACT_items.append(ACT_item)
-                if remove_costumes:
-                    ACT_items.remove(costume_list)
 
         available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
