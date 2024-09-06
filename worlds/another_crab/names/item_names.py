@@ -131,6 +131,7 @@ spectral_tentacle = "Spectral Tentacle" # obtained from defeating the consortium
 urchin_toss = "Urchin Toss" #obtained from hugging the urchin in new carcinia
 
 # skills
+shelleport = "Shelleport"
 parry = "Parry"
 riposte = "Riposte"
 natural_defenses = "Natural Defenses"
