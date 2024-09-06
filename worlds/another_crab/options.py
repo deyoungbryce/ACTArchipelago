@@ -11,12 +11,20 @@ class ForkLocation(Choice):
     default = 0
 
 class ShelleportLocation(Choice):
-    """Choose where the Shelleport (fast travel) skill location will be
+    """Choose where the Shelleport (fast travel) skill location is set
     Available Options: shuffled, starting_items, vanilla_location"""
     display_name: str = "Shelleport Location"
     shuffled = 0
     starting_items = 1
     vanilla_location = 2
+    default = 0
+
+class FishingLineLocation(Choice):
+    """Choose where the Fishing Line (grapple) location is set
+    Available Options: shuffled, vanilla_location"""
+    display_name:str = "Fishing Line Location"
+    shuffled = 0
+    vanilla_location = 1
     default = 0
 
 class RemoveCostumes(Toggle):
@@ -40,6 +48,7 @@ class DeathLink(Toggle):
 class ACTGameOptions(PerGameCommonOptions):
     forkLocation: ForkLocation
     shelleportLocation: ShelleportLocation
+    fishinglinelocation: FishingLineLocation
     removeCostumes: RemoveCostumes
     microplasticMultiplier: MicroplasticMultiplier
     deathlink: DeathLink

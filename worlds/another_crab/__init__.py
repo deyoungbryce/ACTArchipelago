@@ -60,6 +60,12 @@ class ACTWorld(World):
                 self.multiworld.get_location(lname.shelleport_skill, self.player).place_locked_item(shelleport)
             items_to_create[iname.shelleport] = 0
 
+        if self.options.fishinglinelocation:
+            fishing_line = self.create_item(iname.fishing_line)
+            if self.options.fishinglinelocation == "vanilla_location":
+                self.multiworld.get_location(lname.fishing_line, self.player).place_locked_item(fishing_line)
+            items_to_create[iname.fishing_line] = 0
+
         if self.options.removeCostumes:
             items_to_create[costume_list] = 0
 
