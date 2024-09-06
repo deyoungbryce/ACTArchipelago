@@ -94,7 +94,7 @@ class ACTWorld(World):
             region.locations.append(location)
 
         self.multiworld.completion_condition[self.player] = \
-            lambda state: state.can_reach(spot = lname.royal_wave_reward, resolution_hint="Location", player = self.player)
+            lambda state: state.can_reach(spot = lname.home_shell, resolution_hint="Location", player = self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)

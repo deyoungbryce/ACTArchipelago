@@ -8,6 +8,7 @@ pristine_pearl = "Pristine Pearl" # reward for defeating platoon pathfinder
 map_piece_vale = "Map Piece - Flotsam Vale" # the map piece found in the mailbox in flotsam vale
 map_piece_heikea_arena = "Map Piece - Heikea" # the map piece in heikea's boss arena after defeating them
 map_piece_pagurus_defeat = "Map Piece - Pagurus" # the map piece obtained after defeating pagurus
+home_shell = "Home Shell" # kril's shell, completion location
 
 # currency item locations
 breadclaw_caveofrespite_ledge = "Breadclaw (Cave of Respite - Ledge)" # the first breadclaw the player has access to, in the cave of respite
@@ -172,7 +173,7 @@ chipclaw_flotsamvale_consortiumgrapple = "Chipclaw (Flotsam Vale - Past Consorti
 clothesclaw_flotsamvale_northfish = "Clothesclaw (Flotsam Vale - North Gunk Lake Fishing)"
 breadclaw_flotsamvale_westfish = "Breadclaw (Flotsam Vale - West Gunk Lake Fishing Near Shore)"
 clothesclaw_flotsamvale_northshorefish = "Clothesclaw (Flotsam Vale - North Gunk Lake Fihsing Near Shore)"
-clothesclaw_flotsamvale_southfish = "Clothesclaw (Flotsam Vale - Gunk Lake FIshing South of Sludge Steamroller)"
+clothesclaw_flotsamvale_southfish = "Clothesclaw (Flotsam Vale - Gunk Lake Fishing South of Sludge Steamroller)"
 hairclaw_flotsamvale_APfish = "Hairclaw (Flotsam Vale - Gunk Lake Fishing Outside Air Pocket Cave)"
 chipclaw_flotsamvale_consortiumfish = "Chipclaw (Flotsam Vale - Fishing Past Consortium)"
 paperclaw_flotsamvale_uppervale = "Paperclaw (Flotsam Vale - Near Upper Flotsam Vale)"

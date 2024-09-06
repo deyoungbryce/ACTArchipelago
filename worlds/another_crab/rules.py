@@ -459,3 +459,103 @@ def set_location_rules(world: "ACTWorld") -> None:
  # mantis punch
    set_rule(multiworld.get_location(lname.oldworldwhorl_grovevillage_topoda, player),
              lambda state: state.has(iname.mantis_punch, player))
+   
+# ---- Flotsam Vale ----
+
+ # spearfishing
+   set_rule(multiworld.get_location(lname.lamprey_flotsamvale_islandfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.mussel_flotsamvale_elevatedfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barbedhook_flotsamvale_snailfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.siphonophoreplus_flotsamvale_waterfall, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.clothesclaw_flotsamvale_northfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.whelk_flotsamvale_westfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.breadclaw_flotsamvale_westfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.clothesclaw_flotsamvale_northshorefish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.clothesclaw_flotsamvale_southfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barbedhook_flotsamvale_westfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.anemoneplus_flotsamvale_northwestfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.hairclaw_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.breadclaw_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.turtleshell_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.clothesclaw_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barbedhook_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barbedhook_flotsamvale_sludgefish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.lilisopod_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.hairclaw_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.chipclaw_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.rustynail_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barnacle_flotsamvale_gunkfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+ # grapple + spearfishing
+   set_rule(multiworld.get_location(lname.chipclaw_flotsamvale_consortiumfish, player),
+             lambda state: state.has_all(iname.spearfishing, iname.fishing_line, player))
+   
+# ---- Scuttleport ----
+
+ # grapple + eelectrocute (will add metal shell later)
+   set_rule(multiworld.get_location(lname.oldworldwhorl_scuttleport_eelectrocute, player),
+             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+   
+# ---- The Unfathom ----
+
+ # spearfishing
+   set_rule(multiworld.get_location(lname.salp_unfathom_glowstickfish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+   set_rule(multiworld.get_location(lname.barnacleplus_unfathom_pinbargefish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+# ---- Abyssal Plains ----
+
+ # spearfishing
+   set_rule(multiworld.get_location(lname.stapleclaw_plains_fish, player),
+             lambda state: state.has(iname.spearfishing, player))
+   
+# ---- The Old Ocean ----
+
+ # mantis punch
+   set_rule(multiworld.get_location(lname.whelkplusplus_oldocean_mantis, player),
+             lambda state: state.has(iname.mantis_punch, player))
