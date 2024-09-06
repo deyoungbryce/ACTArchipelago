@@ -18,7 +18,7 @@ unfathom = "The Unfathom" # where we are dumped after fighting roland and end up
 old_ocean = "The Old Ocean" # the ancient city where we fight camtscha
 drain_bottom = "Bottom of The Drain" # adding this and trash island even though there aren't any item checks - for if we want to do boss checks or all bosses goal
 trash_island = "Trash Island"
-carcinia_end = "Carcinia End" # adding this because it will probably needed if we want the win condition to be picking up kril's shell
+carcinia_ruins = "New Carcinia Ruins" # adding this because it will probably needed if we want the win condition to be picking up kril's shell
 
 # sub regions
 slacktide_before = "Fort Slacktide - Before Destruction" # slacktide before the player gets the pearl and slacktide goes crazy
