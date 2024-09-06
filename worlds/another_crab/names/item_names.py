@@ -104,6 +104,7 @@ shark_egg = "Shark Egg"
 # costumes
 plastic_poncho = "Plastic Poncho" # given to the player when they pick up the fork
 captain_costume = "Captain" # costume found by where nephro spawns
+clown = "Clown"
 dr_kril = "Dr. Kril"
 exiled_flame = "Exiled Flame" # found near pinbarge wreckage surrounded by bones
 blackout_poncho = "Blackout Poncho" # shellfish desires: 2500 microplastics
