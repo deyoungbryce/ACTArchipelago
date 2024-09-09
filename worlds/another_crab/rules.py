@@ -24,7 +24,7 @@ def set_region_rules(world: "ACTWorld") -> None:
       lambda state: state.has(iname.mantis_punch, player)
     
    multiworld.get_entrance("Flotsam Vale -> Scuttleport", player).access_rule = \
-      lambda state: state.has_all(iname.map_piece_fv, iname.map_piece_heikea, iname.map_piece_pagurus, player)
+      lambda state: state.has_all({iname.map_piece_fv, iname.map_piece_heikea, iname.map_piece_pagurus}, player)
     
    multiworld.get_entrance("Flotsam Vale -> Pinbarge", player).access_rule = \
       lambda state: state.has(iname.eelectrocute, player)
@@ -93,8 +93,8 @@ def set_location_rules(world: "ACTWorld") -> None:
    set_rule(multiworld.get_location(lname.bloodstar_slacktide_clam, player),
              lambda state: state.has(iname.fishing_line, player))
     
-   set_rule(multiworld.get_location(lname.royal_wave_reward, player),
-             lambda state: state.has(iname.fishing_line, player))
+   #set_rule(multiworld.get_location(lname.royal_wave_reward, player),
+   #          lambda state: state.has(iname.fishing_line, player))
     
  # spearfishing
    set_rule(multiworld.get_location(lname.breadclaw_slacktide_roofhiddenfish, player),
@@ -223,20 +223,20 @@ def set_location_rules(world: "ACTWorld") -> None:
 
  # spearfishing + eelectrocute
    set_rule(multiworld.get_location(lname.hairclaw_sandsbetween_southeelfish, player),
-             lambda state: state.has_all(iname.spearfishing, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.spearfishing, iname.eelectrocute}, player))
     
    set_rule(multiworld.get_location(lname.chipclaw_sandsbetween_anchoreelhiddenfish, player),
-             lambda state: state.has_all(iname.spearfishing, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.spearfishing, iname.eelectrocute}, player))
 
  # grapple + eelectrocute
    set_rule(multiworld.get_location(lname.whelkplusplus_sandsbetween_southeelpeak, player),
-             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.fishing_line, iname.eelectrocute}, player))
     
    set_rule(multiworld.get_location(lname.salpplus_sandsbetween_groveeel, player),
-             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.fishing_line, iname.eelectrocute}, player))
     
    set_rule(multiworld.get_location(lname.usedbandage_sandsbetween_groveeel, player),
-             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.fishing_line, iname.eelectrocute}, player))
 
  # post-pag
    set_rule(multiworld.get_location(lname.bloodstar_postpag_anchorswarm, player),
@@ -314,14 +314,14 @@ def set_location_rules(world: "ACTWorld") -> None:
 
  # spearfishing + eelectrocute
    set_rule(multiworld.get_location(lname.mussel_shallows_southwestcastlefish, player),
-             lambda state: state.has(iname.spearfishing, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.spearfishing, iname.eelectrocute}, player))
     
    set_rule(multiworld.get_location(lname.mussel_shallows_southwestcastlefish, player),
-             lambda state: state.has(iname.spearfishing, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.spearfishing, iname.eelectrocute}, player))
 
  # grapple + eelectrocute
    set_rule(multiworld.get_location(lname.barbedhook_trashbin_eelgrapple, player),
-             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.fishing_line, iname.eelectrocute}, player))
     
 # ---- Expired Grove Main ----
  # grapple
@@ -531,13 +531,13 @@ def set_location_rules(world: "ACTWorld") -> None:
    
  # grapple + spearfishing
    set_rule(multiworld.get_location(lname.chipclaw_flotsamvale_consortiumfish, player),
-             lambda state: state.has_all(iname.spearfishing, iname.fishing_line, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
    
 # ---- Scuttleport ----
 
  # grapple + eelectrocute (will add metal shell later)
    set_rule(multiworld.get_location(lname.oldworldwhorl_scuttleport_eelectrocute, player),
-             lambda state: state.has_all(iname.fishing_line, iname.eelectrocute, player))
+             lambda state: state.has_all({iname.fishing_line, iname.eelectrocute}, player))
    
 # ---- The Unfathom ----
 
