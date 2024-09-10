@@ -27,6 +27,6 @@ post_pag = "The Sands Between - Post Pagurus" # after the pagurus map piece is r
 secluded_ridge = "Secluded Ridge & Trashbin Plateau" # area in sands that requires mantis punch to access
 grove_main = "Expired Grove - Main" # grove up to heikea
 grove_village = "Expired Grove - Village" # grove path to topoda
-vale_main = "Flotsame Vale - Main" # flotsam vale before getting all map pieces
+vale_main = "Flotsam Vale - Main" # flotsam vale before getting all map pieces
 scuttleport = "Scuttleport" # part of the flotsam vale region, but specifically the area where the player finds voltai
 plains = "Abyssal Plains" # the last big area in the unfathom just before the inkerton fight
