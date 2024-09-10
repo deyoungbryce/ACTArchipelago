@@ -46,28 +46,28 @@ class ACTWorld(World):
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
-        if self.options.fork_location:
+        if self.options.forkLocation:
             fork = self.create_item(iname.fork)
-            if self.options.fork_location == "vanilla_location":
+            if self.options.forkLocation == "vanilla_location":
                 self.multiworld.get_location(lname.fork_pickup, self.player).place_locked_item(fork)
             items_to_create[iname.fork] = 0
 
-        if self.options.shelleport_location:
+        if self.options.shelleportLocation:
             shelleport = self.create_item(iname.shelleport)
-            if self.options.shelleport_location == "starting_items":
+            if self.options.shelleportLocation == "starting_items":
                 self.multiworld.push_precollected(shelleport)
-            elif self.options.shelleport_location == "vanilla_location":
+            elif self.options.shelleportLocation == "vanilla_location":
                 self.multiworld.get_location(lname.shelleport_skill, self.player).place_locked_item(shelleport)
             items_to_create[iname.shelleport] = 0
 
-        if self.options.fishing_line_location:
+        if self.options.fishinglinelocation:
             fishing_line = self.create_item(iname.fishing_line)
-            if self.options.fishing_line_location == "vanilla_location":
+            if self.options.fishinglinelocation == "vanilla_location":
                 self.multiworld.get_location(lname.fishing_line, self.player).place_locked_item(fishing_line)
             items_to_create[iname.fishing_line] = 0
 
-        #if self.options.remove_costumes:
-        #    items_to_create[costume_list] = 0
+        if self.options.removeCostumes:
+            items_to_create[costume_list] = 0
 
         for item, quantity in items_to_create.items():
             for i in range(quantity):
