@@ -27,6 +27,8 @@ location_table: Dict[str, ACTLocationData] = {
     # progression item locations
     lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide"),
     #lname.pristine_pearl: ACTLocationData(rname.snail_cave, x, "Moon Snail's Cave"), #Redundant, overlaps with Platoon Pathfinder
+    lname.map_piece_heikea_arena: ACTLocationData(rname.grove_main, 252, "Expired Grove Main"),
+    lname.map_piece_vale: ACTLocationData(rname.flotsam_vale, 396, "Flotsam Vale"),
     lname.home_shell: ACTLocationData(rname.carcinia_ruins, 618, "Completion"),
 
     # boss locations
@@ -331,7 +333,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.stainlessrelic_ridge_overlook: ACTLocationData(rname.secluded_ridge, 186, "The Sands Between - Secluded Ridge"), #c56be461-0e5c-406e-8af0-83021f2f2fb6-2_A-OOGroveRadius
     lname.kelpsprout_ridge_eelend: ACTLocationData(rname.secluded_ridge, 188, "The Sands Between - Secluded Ridge"), #d56339c0-fc26-4f53-a289-2c00b6f7ab38-2_A-OOGroveRadius
     lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 190, "The Sands Between - Secluded Ridge"), #8e381b9e-ab7a-44ad-81c3-19157c97e0c6-2_A-OOGroveRadius
-    lname.oldworldwhorl_ridge_ncliff: ACTLocationData(rname.secluded_ridge, 205, "The Sands Between - Secluded Ridge"), #80e66e11-8e9a-4896-9db1-f8cd4a25fefc-2_A-OOGroveRadius
+    lname.oldworldwhorl_ridge_eelclam: ACTLocationData(rname.secluded_ridge, 205, "The Sands Between - Secluded Ridge"), #80e66e11-8e9a-4896-9db1-f8cd4a25fefc-2_A-OOGroveRadius
 
     lname.oldworldwhorl_grovemain_southclam: ACTLocationData(rname.grove_main, 217, "Expired Grove Main"), #09b60c18-2172-41bb-9588-a3e764559b15-2_B-GroveForestHigh
     lname.bloodstar_grovemain_waterfall: ACTLocationData(rname.grove_main, 229, "Expired Grove Main"), #f1d3eafe-c252-4768-abcd-7f459e734d35-2_A-GroveForestLow
