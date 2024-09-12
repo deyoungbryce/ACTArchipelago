@@ -2,7 +2,7 @@
 
 ## Required Software
 
-- [Another Crab's Treasure](gamepagelinkhere) (Steam or PC Gamepass versions)
+- [Another Crab's Treasure](https://aggrocrab.com/ACT) (Steam or PC Gamepass versions)
 - [Another Crab's Treasure APWorld](githublinkhere)
 
 **Either:**

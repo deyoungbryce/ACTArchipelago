@@ -9,6 +9,7 @@ pristine_pearl = "Pristine Pearl" # pearl to bring back to the duchess that make
 map_piece_fv = "Map Piece - Flotsam Vale"
 map_piece_heikea = "Map Piece - Heikea"
 map_piece_pagurus = "Map Piece - Pagurus"
+home_shell = "Kril's Home Shell"
 
 # upgrade items
 bloodstar_limb = "Bloodstar Limb" # health upgrades
