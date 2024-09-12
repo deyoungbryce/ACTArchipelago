@@ -48,21 +48,21 @@ class ACTWorld(World):
 
         if self.options.fork_location:
             fork = self.create_item(iname.fork)
-            if self.options.forkLocation == "vanilla_location":
+            if self.options.fork_location == "vanilla_location":
                 self.multiworld.get_location(lname.fork_pickup, self.player).place_locked_item(fork)
             items_to_create[iname.fork] = 0
 
         if self.options.shelleport_location:
             shelleport = self.create_item(iname.shelleport)
-            if self.options.shelleportLocation == "starting_items":
+            if self.options.shelleport_location == "starting_items":
                 self.multiworld.push_precollected(shelleport)
-            elif self.options.shelleportLocation == "vanilla_location":
+            elif self.options.shelleport_location == "vanilla_location":
                 self.multiworld.get_location(lname.shelleport_skill, self.player).place_locked_item(shelleport)
             items_to_create[iname.shelleport] = 0
 
         if self.options.fishing_line_location:
             fishing_line = self.create_item(iname.fishing_line)
-            if self.options.fishinglinelocation == "vanilla_location":
+            if self.options.fishing_line_location == "vanilla_location":
                 self.multiworld.get_location(lname.fishing_line, self.player).place_locked_item(fishing_line)
             items_to_create[iname.fishing_line] = 0
 
