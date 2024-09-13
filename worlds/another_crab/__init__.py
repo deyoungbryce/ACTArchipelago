@@ -1,9 +1,8 @@
-import random
 from typing import Dict, List
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, items_total, ACTItem
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, location_total, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
@@ -42,7 +41,6 @@ class ACTWorld(World):
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
-        filler_needed = location_total - items_total
         #self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
@@ -72,19 +70,27 @@ class ACTWorld(World):
 
         self.multiworld.get_location(lname.home_shell, self.player).place_locked_item(self.create_item(iname.home_shell))
         items_to_create[iname.home_shell] = 0
+        
+        items_total: int = 0
+
+        for item in items_to_create:
+            items_total += items_to_create[item]
+
+        filler_needed = location_total - items_total
+        
+        available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
         if filler_needed < 0:
             filler_needed = 0
 
-        for counter in range(filler_needed):
-            items_to_create[random.choice(available_filler)] += 1
+        for counter in range(0, filler_needed):
+            filler_item = self.random.choice(available_filler)
+            items_to_create[filler_item] += 1
 
         for item, quantity in items_to_create.items():
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
                 ACT_items.append(ACT_item)
-
-        available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
         self.multiworld.itempool += ACT_items
 

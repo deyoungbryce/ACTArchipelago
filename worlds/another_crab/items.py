@@ -181,9 +181,6 @@ item_name_to_id: Dict[str, int] = {name: item_base_id + data.item_id_offset for 
 def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
-def get_item_quantity(item_name: str) -> int:
-    return item_table[item_name].quantity_in_item_pool
-
 filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
 
 costume_items: List[str] = [name for name in filler_items if get_item_group(name) == "Costume"]
@@ -191,8 +188,3 @@ costume_items: List[str] = [name for name in filler_items if get_item_group(name
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""
 }
-
-items_total: int = 0
-
-for item in item_table:
-    items_total += get_item_quantity(item)
