@@ -729,3 +729,5 @@ location_name_groups: Dict[str, Set[str]] = {}
 for loc_name, loc_data in location_table.items():
     if loc_data.location_group:
         location_name_groups.setdefault(loc_data.location_group, set()).add(loc_name)
+
+location_total: int = len(location_table)

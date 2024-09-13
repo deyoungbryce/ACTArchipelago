@@ -149,8 +149,8 @@ item_table: Dict[str, ACTItemData] = {
     iname.urchin_toss: ACTItemData(ItemClassification.useful, 1, 112, "Adapations"),
 
     iname.shelleport: ACTItemData(ItemClassification.progression, 1, 133, "Skills"),
-    iname.parry: ACTItemData(ItemClassification.useful, 1, 113, "Skills"),
-    iname.riposte: ACTItemData(ItemClassification.useful, 1, 114, "Skills"),
+    iname.parry: ACTItemData(ItemClassification.useful, 1, 136, "Skills"),
+    iname.riposte: ACTItemData(ItemClassification.useful, 1, 137, "Skills"),
     iname.natural_defenses: ACTItemData(ItemClassification.useful, 1, 115, "Skills"),
     iname.aggravation: ACTItemData(ItemClassification.useful, 1, 116, "Skills"),
     iname.self_repair: ACTItemData(ItemClassification.useful, 1, 117, "Skills"),
@@ -181,6 +181,9 @@ item_name_to_id: Dict[str, int] = {name: item_base_id + data.item_id_offset for 
 def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
+def get_item_quantity(item_name: str) -> int:
+    return item_table[item_name].quantity_in_item_pool
+
 filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
 
 costume_items: List[str] = [name for name in filler_items if get_item_group(name) == "Costume"]
@@ -188,3 +191,8 @@ costume_items: List[str] = [name for name in filler_items if get_item_group(name
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""
 }
+
+items_total: int = 0
+
+for item in item_table:
+    items_total += get_item_quantity(item)
