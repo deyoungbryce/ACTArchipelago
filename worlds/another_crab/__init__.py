@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Any
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
 
@@ -77,7 +77,7 @@ class ACTWorld(World):
             items_total += items_to_create[item]
 
         filler_needed = location_total - items_total
-        
+
         available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
         if filler_needed < 0:
@@ -123,3 +123,10 @@ class ACTWorld(World):
     # can probably be removed?
     def get_filler_item_name(self) -> str:
         return self.random.choice(filler_items)
+    
+    def fill_slot_data(self) -> Dict[str, Any]:
+        slot_data: Dict[str, Any] = {
+            "microplastic_multiplier": self.options.microplasticMultiplier.value
+        }
+
+        return slot_data
