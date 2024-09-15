@@ -4,7 +4,7 @@ from .names import region_names as rname
 
 ACT_regions: Dict[str, Set[str]] = {
     rname.menu: {
-        rname.central_shallows
+        rname.tide_pool
     },
     rname.tide_pool: {
         rname.starting_cave

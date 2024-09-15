@@ -26,6 +26,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.map_piece_fv: ACTItemData(ItemClassification.progression, 1, 5, "Progression"),
     iname.map_piece_heikea: ACTItemData(ItemClassification.progression, 1, 6, "Progression"), 
     iname.map_piece_pagurus: ACTItemData(ItemClassification.progression, 1, 7, "Progression"), 
+    iname.home_shell: ACTItemData(ItemClassification.progression, 1, 135, "Progression"),
 
     # upgrade
     iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 20, 8, "Upgrades"), # total in game: 25
@@ -148,8 +149,8 @@ item_table: Dict[str, ACTItemData] = {
     iname.urchin_toss: ACTItemData(ItemClassification.useful, 1, 112, "Adapations"),
 
     iname.shelleport: ACTItemData(ItemClassification.progression, 1, 133, "Skills"),
-    iname.parry: ACTItemData(ItemClassification.useful, 1, 113, "Skills"),
-    iname.riposte: ACTItemData(ItemClassification.useful, 1, 114, "Skills"),
+    iname.parry: ACTItemData(ItemClassification.useful, 1, 136, "Skills"),
+    iname.riposte: ACTItemData(ItemClassification.useful, 1, 137, "Skills"),
     iname.natural_defenses: ACTItemData(ItemClassification.useful, 1, 115, "Skills"),
     iname.aggravation: ACTItemData(ItemClassification.useful, 1, 116, "Skills"),
     iname.self_repair: ACTItemData(ItemClassification.useful, 1, 117, "Skills"),
@@ -180,9 +181,9 @@ item_name_to_id: Dict[str, int] = {name: item_base_id + data.item_id_offset for 
 def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
-filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group != "Costume"]
+filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
 
-costume_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler and get_item_group == "Costume"]
+costume_items: List[str] = [name for name in filler_items if get_item_group(name) == "Costume"]
 
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""

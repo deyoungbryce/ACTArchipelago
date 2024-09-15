@@ -5,10 +5,9 @@ class ForkLocation(Choice):
     """Choose where the Fork(weapon) location is set.
     Available Options: vanilla_location, shuffled, shuffled_early"""
     display_name: str = "Fork Location"
-    option_vanilla_location = 0
-    option_shuffled = 1
-    option_shuffled_early = 2
-    default = 0
+    option_shuffled = 0
+    option_vanilla_location = 1
+    default = 1
 
 class ShelleportLocation(Choice):
     """Choose where the Shelleport (fast travel) skill location is set
