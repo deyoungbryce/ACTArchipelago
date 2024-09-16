@@ -32,7 +32,16 @@ def set_region_rules(world: "ACTWorld") -> None:
 def set_location_rules(world: "ACTWorld") -> None:
    multiworld = world.multiworld
    player = world.player
-   #options = world.options
+   options = world.options
+
+# ---- YAML Options ----
+   if options.fork_location == "shuffled_early":
+      set_rule(multiworld.get_location(lname.magista, player),
+               lambda state: state.has(iname.fork, player))
+      
+   if options.shelleport_location == "shuffled_early":
+      set_rule(multiworld.get_location(lname.magista, player),
+               lambda state: state.has(iname.shelleport, player))
 
 # ---- Central Shallows ----
  # grapple

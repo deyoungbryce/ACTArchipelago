@@ -45,6 +45,7 @@ class ACTWorld(World):
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
+        # yaml options
         if self.options.fork_location:
             fork = self.create_item(iname.fork)
             if self.options.fork_location == "vanilla_location":
@@ -68,9 +69,11 @@ class ACTWorld(World):
         if self.options.remove_costumes:
             for costumes in costume_items: items_to_create[costumes] = 0
 
+        # force completion item to its location
         self.multiworld.get_location(lname.home_shell, self.player).place_locked_item(self.create_item(iname.home_shell))
         items_to_create[iname.home_shell] = 0
         
+        # fill empty locations with filler
         items_total: int = 0
 
         for item in items_to_create:
@@ -87,6 +90,7 @@ class ACTWorld(World):
             filler_item = self.random.choice(available_filler)
             items_to_create[filler_item] += 1
 
+        # add items to item pool
         for item, quantity in items_to_create.items():
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
@@ -109,20 +113,12 @@ class ACTWorld(World):
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
 
-        # old completion condition
-        #self.multiworld.completion_condition[self.player] = \
-        #    lambda state: state.can_reach(spot = lname.home_shell, resolution_hint="Location", player = self.player)
-        
         self.multiworld.completion_condition[self.player] = \
             lambda state: state.has(iname.home_shell, self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)
         set_location_rules(self)
-
-    # can probably be removed?
-    def get_filler_item_name(self) -> str:
-        return self.random.choice(filler_items)
     
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {
