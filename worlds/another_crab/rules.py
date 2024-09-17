@@ -32,7 +32,7 @@ def set_region_rules(world: "ACTWorld") -> None:
 def set_location_rules(world: "ACTWorld") -> None:
    multiworld = world.multiworld
    player = world.player
-   options = world.options
+   options = ACTGameOptions
 
 # ---- YAML Options ----
    if options.fork_location == "shuffled_early":
