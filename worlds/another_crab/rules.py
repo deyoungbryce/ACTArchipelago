@@ -14,7 +14,7 @@ def set_region_rules(world: "ACTWorld") -> None:
    player = world.player
    #options = world.options
 
-   multiworld.get_entrance("Central Shallows -> Moon Snail's Cave", player).access_rule = \
+   multiworld.get_entrance("Fort Slacktide - Before Destruction -> Moon Snail's Cave", player).access_rule = \
       lambda state: state.has(iname.fishing_line, player)
     
    multiworld.get_entrance("Fort Slacktide - After Destruction -> Reef's Edge", player).access_rule = \
@@ -32,16 +32,16 @@ def set_region_rules(world: "ACTWorld") -> None:
 def set_location_rules(world: "ACTWorld") -> None:
    multiworld = world.multiworld
    player = world.player
-   options = ACTGameOptions
+   options = world.options
 
 # ---- YAML Options ----
-   if options.fork_location == "shuffled_early":
-      set_rule(multiworld.get_location(lname.magista, player),
-               lambda state: state.has(iname.fork, player))
+   #if options.fork_location == "shuffled_early":
+   #   set_rule(multiworld.get_location(lname.magista, player),
+   #            lambda state: state.has(iname.fork, player))
       
-   if options.shelleport_location == "shuffled_early":
-      set_rule(multiworld.get_location(lname.magista, player),
-               lambda state: state.has(iname.shelleport, player))
+   #if options.shelleport_location == "shuffled_early":
+   #  set_rule(multiworld.get_location(lname.magista, player),
+   #            lambda state: state.has(iname.shelleport, player))
 
 # ---- Central Shallows ----
  # grapple

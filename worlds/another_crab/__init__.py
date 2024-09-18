@@ -31,6 +31,19 @@ class ACTWorld(World):
 
     #slot_data_items = List[ACTItem]
 
+    def generate_early(self):
+        # early fork shuffling
+        if self.options.fork_location == "shuffled_early_local":
+            self.multiworld.local_early_items[self.player][iname.fork] = 1
+        if self.options.fork_location == "shuffled_early_global":
+            self.multiworld.early_items[self.player][iname.fork] = 1
+
+        # early shelleport shuffling
+        if self.options.shelleport_location == "shuffled_early_local":
+            self.multiworld.local_early_items[self.player][iname.shelleport] = 1
+        if self.options.shelleport_location == "shuffled_early_global":
+            self.multiworld.early_items[self.player][iname.shelleport] = 1
+
     def create_item(self, name: str) -> ACTItem:
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)

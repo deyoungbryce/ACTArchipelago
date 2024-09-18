@@ -8,9 +8,10 @@ class ForkLocation(Choice):
     - Vanilla Location: Forces Fork to be placed at its intended location."""
     display_name: str = "Fork Location"
     option_shuffled = 0
-    option_shuffled_early = 1
-    option_vanilla_location = 2
-    default = 2
+    option_shuffled_early_local = 1
+    option_shuffled_early_global = 2
+    option_vanilla_location = 3
+    default = 3
 
 class ShelleportLocation(Choice):
     """Choose where the Shelleport (fast travel) skill location is set
@@ -20,9 +21,10 @@ class ShelleportLocation(Choice):
     - Vanilla Location: Forces Shelleport to be placed at its intended location"""
     display_name: str = "Shelleport Location"
     option_shuffled = 0
-    option_shuffled_early = 1
-    option_starting_items = 2
-    option_vanilla_location = 3
+    option_shuffled_early_local = 1
+    option_shuffeld_early_global = 2
+    option_starting_items = 3
+    option_vanilla_location = 4
     default = 1
 
 class FishingLineLocation(Choice):

@@ -13,12 +13,14 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.central_shallows
     },
     rname.central_shallows: {
-        rname.snail_cave,
         rname.slacktide_before,
+    },
+    rname.slacktide_before: {
+        rname.snail_cave
+    },
+    rname.snail_cave: {
         rname.slacktide_after
     },
-    rname.snail_cave: set(),
-    rname.slacktide_before: set(),
     rname.slacktide_after: {
         rname.reefs_edge
     },
