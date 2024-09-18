@@ -4,7 +4,8 @@ from Options import Toggle, Range, Choice, PerGameCommonOptions
 class ForkLocation(Choice):
     """Choose where the Fork(weapon) location is set.
     - Shuffled: Fork is placed into item pool.
-    - Shuffled Early: Forces Fork to be required to beat The Duchess, Magista. This means you will get the Fork earlier.
+    - Shuffled Early Local: Forces Fork location to be somewhere early in your own game.
+    - Shuffled Early Global: Forces Fork location to be somewhere early in any game.
     - Vanilla Location: Forces Fork to be placed at its intended location."""
     display_name: str = "Fork Location"
     option_shuffled = 0
@@ -16,13 +17,14 @@ class ForkLocation(Choice):
 class ShelleportLocation(Choice):
     """Choose where the Shelleport (fast travel) skill location is set
     - Shuffled: Shelleport is placed into the item pool.
-    - Shuffled Early: Forces Shelleport to be required before reaching The Duchess, Magista. This means you will get Shelleport earlier.
+    - Shuffled Early Local: Forces Shelleport location to be somewhere early in your own game.
+    - Sheffled Early Global: Forces Shelleport location to somewhere early in any game.
     - Starting Items: Places Shelleport in your starting inventory.
     - Vanilla Location: Forces Shelleport to be placed at its intended location"""
     display_name: str = "Shelleport Location"
     option_shuffled = 0
     option_shuffled_early_local = 1
-    option_shuffeld_early_global = 2
+    option_shuffled_early_global = 2
     option_starting_items = 3
     option_vanilla_location = 4
     default = 1
