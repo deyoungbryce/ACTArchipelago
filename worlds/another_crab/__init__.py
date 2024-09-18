@@ -82,10 +82,6 @@ class ACTWorld(World):
 
         if self.options.remove_costumes:
             for costumes in costume_items: items_to_create[costumes] = 0
-
-        # force completion item to its location
-        self.multiworld.get_location(lname.home_shell, self.player).place_locked_item(self.create_item(iname.home_shell))
-        items_to_create[iname.home_shell] = 0
         
         # fill empty locations with filler
         items_total: int = 0
@@ -127,8 +123,9 @@ class ACTWorld(World):
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
 
+        # player can complete the game if they can reach the final region
         self.multiworld.completion_condition[self.player] = \
-            lambda state: state.has(iname.home_shell, self.player)
+            lambda state: state.can_reach_region(spot = rname.carcinia_ruins, player = self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)

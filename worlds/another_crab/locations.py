@@ -19,7 +19,7 @@ location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
 
-    #Last used number: 618
+    # Last used number: 619; 618 is available
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     lname.fork_pickup: ACTLocationData(rname.starting_cave, 1, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
@@ -29,7 +29,6 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.pristine_pearl: ACTLocationData(rname.snail_cave, x, "Moon Snail's Cave"), #Redundant, overlaps with Platoon Pathfinder
     lname.map_piece_heikea_arena: ACTLocationData(rname.grove_main, 252, "Expired Grove Main"),
     lname.map_piece_vale: ACTLocationData(rname.flotsam_vale, 396, "Flotsam Vale"),
-    lname.home_shell: ACTLocationData(rname.carcinia_ruins, 618, "Completion"),
 
     # boss locations
     lname.nephro: ACTLocationData(rname.central_shallows, 3, "Central Shallows"),
