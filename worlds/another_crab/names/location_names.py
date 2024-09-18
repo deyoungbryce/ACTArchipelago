@@ -544,6 +544,7 @@ pufferquill_grovemain_sponges = "Puffer Quill (Expired Grove Main - Cross Sponge
 limpet_grovemain_sodacan = "Limpet (Expired Grove Main - Soda Can Stepping Stones)"
 lumpsucker_grovemain_canopy = "Lumpsucker (Expired Grove Main - Carton Canopy)"
 sharktooth_grovemain_pizza = "Shark Tooth (Expired Grove Main - Under Pizza Box)"
+anothercrab_grovemain_sniper = "Another Crab (Expired Grove Main - Beginning of Sniper Path)"
 contactlens_grovemain_carts = "Contact Lens (Expired Grove Main - Behind Shopping Cart Buildings)"
 cottonball_grovemain_mantis = "Cotton Ball (Expired Grove Main - Mantis Block on Oil Drum Path)"
 mussel_grovemain_fishing = "Mussel (Expired Grove Main - Fishing by Entrance)"

@@ -69,6 +69,7 @@ class ACTWorld(World):
             shelleport = self.create_item(iname.shelleport)
             if self.options.shelleport_location == "starting_items":
                 self.multiworld.push_precollected(shelleport)
+                items_to_create[iname.shelleport] = 0
             elif self.options.shelleport_location == "vanilla_location":
                 self.get_location(lname.shelleport_skill).place_locked_item(shelleport)
                 items_to_create[iname.shelleport] = 0

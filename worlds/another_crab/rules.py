@@ -42,6 +42,10 @@ def set_location_rules(world: "ACTWorld") -> None:
    #if options.shelleport_location == "shuffled_early":
    #  set_rule(multiworld.get_location(lname.magista, player),
    #            lambda state: state.has(iname.shelleport, player))
+      
+# ---- Cave of Respite ----
+   set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
+             lambda state: state.has(iname.spearfishing, player))
 
 # ---- Central Shallows ----
  # grapple
