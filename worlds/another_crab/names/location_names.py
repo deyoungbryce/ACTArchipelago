@@ -30,7 +30,7 @@ breadclaw_shallows_eastledge = "Breadclaw (Central Shallows - East Grapple Ledge
 hairclaw_shallows_turret = "Hairclaw (Central Shallows - Grapple to Castle Turret)"
 chipclaw_shallows_sandcastle = "Chipclaw (Central Shallows - Southwest Sandcastle)"
 clothesclaw_shallows_shellsplitter = "Clothesclaw (Central Shallows - Defeat Royal Shellsplitter)"
-clothesclaw_shallows_southwestfort = "Clothesclaw (Fort Slacktide - Small Tower Outside Southwest Fort)"
+clothesclaw_shallows_southwestfort = "Clothesclaw (Central Shallows - Small Tower Outside Southwest Fort)"
 breadclaw_shallows_sunkentower = "Breadclaw (Central Shallows - Sunken Tower near Flip-Flop Bridge)"
 breadclaw_shallows_slacktidesouthfish = "Breadclaw (Central Shallows - Fishing South of Slacktide Entrance)"
 

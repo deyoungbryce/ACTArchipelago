@@ -72,7 +72,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_shallows_eastledge: ACTLocationData(rname.central_shallows, 14, "Central Shallows"), #51dbcbfd-4a82-4c22-b2ee-1a03deeca4cc-2_B-ShallowsBigSand
     lname.hairclaw_shallows_turret: ACTLocationData(rname.central_shallows, 15, "Central Shallows"), #b2d21ade-41ab-47fc-960b-0beb6d07359d-2_B-ShallowsBigSand
     lname.chipclaw_shallows_sandcastle: ACTLocationData(rname.central_shallows, 16, "Central Shallows"), #12c6e5c5-eee1-4f9a-a3c4-68c2bd098a14-2_B-ShallowsBigSand
-    lname.clothesclaw_shallows_shellsplitter: ACTLocationData(rname.central_shallows, 17, "Central Shallows"), #AUTO NEEDS TO DO BOSS SCRIPT
+    #lname.clothesclaw_shallows_shellsplitter: ACTLocationData(rname.central_shallows, 17, "Central Shallows"), #AUTO NEEDS TO DO BOSS SCRIPT
     lname.clothesclaw_shallows_southwestfort: ACTLocationData(rname.central_shallows, 45, "Central Shallows"), #e13e2c76-a638-4023-aa84-f6f29fd7bf65-2_B-ShallowsBigSand
     lname.breadclaw_shallows_sunkentower: ACTLocationData(rname.central_shallows, 124, "Central Shallows"), #1e33dfd0-6445-47f9-b1bf-3e8be7897a79-2_B-ShallowsBigSand
     lname.breadclaw_shallows_slacktidesouthfish: ACTLocationData(rname.central_shallows, 126, "Central Shallows"), #0f64d031-4163-4979-9497-116cac06e234-2_B-ShallowsBigSand

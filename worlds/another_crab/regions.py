@@ -44,10 +44,11 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.grove_village: set(),
     rname.flotsam_vale: {
         rname.grove_village,
-        rname.scuttleport,
+        rname.scuttleport
+    },
+    rname.scuttleport: {
         rname.pinbarge
     },
-    rname.scuttleport: set(),
     rname.pinbarge: {
         rname.unfathom
     },

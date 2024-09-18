@@ -26,7 +26,7 @@ def set_region_rules(world: "ACTWorld") -> None:
    multiworld.get_entrance("Flotsam Vale -> Scuttleport", player).access_rule = \
       lambda state: state.has_all({iname.map_piece_fv, iname.map_piece_heikea, iname.map_piece_pagurus}, player)
     
-   multiworld.get_entrance("Flotsam Vale -> Pinbarge", player).access_rule = \
+   multiworld.get_entrance("Scuttleport -> Pinbarge", player).access_rule = \
       lambda state: state.has(iname.eelectrocute, player)
     
 def set_location_rules(world: "ACTWorld") -> None:
