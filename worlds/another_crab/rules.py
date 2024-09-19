@@ -38,8 +38,9 @@ def set_location_rules(world: "ACTWorld") -> None:
    options = world.options
 
 # ---- Cave of Respite ----
+ # spearfishing
    set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Central Shallows ----
  # grapple
