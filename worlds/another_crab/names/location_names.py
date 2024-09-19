@@ -491,8 +491,8 @@ seastar_reefsedge_crabs = "Seastar (Reef's Edge - Surrounded by Crabs)"
 seastarplus_reefsedge_pole = "Sea Star+ (Reef's Edge - Top of Large Hammer Crab Pole)"
 whelkplus_reefsedge_sponge = "Whelk+ (Reef's Edge - Near Orange Coral and Sponge)"
 
-limpet_newcarcinia_entrance = "Breadclaw (New Carcinia - Top of Cardboard Buildings Near Entrance)"
-rustynail_newcarcinia_hammerhead = "(New Carcinia - On Top of Hammerhead Toolbox)"
+limpet_newcarcinia_entrance = "Limpet (New Carcinia - Top of Cardboard Buildings Near Entrance)"
+rustynail_newcarcinia_hammerhead = "Rusty Nail (New Carcinia - On Top of Hammerhead Toolbox)"
 
 sanddollar_newcarcinia_hammerhead = "Sand Dollar (New Carcinia - Flat Coral Near/Above Hammerhead)"
 
