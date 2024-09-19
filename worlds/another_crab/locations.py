@@ -19,7 +19,7 @@ location_table: Dict[str, ACTLocationData] = {
     # starting item locations (will probably just include heartkelp_initial and fork pickup because they are the items you pick up right at the beginning of the game)
 
 
-    #Last used number: 618
+    # Last used number: 619; 618 is available
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
     lname.fork_pickup: ACTLocationData(rname.starting_cave, 1, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
@@ -29,7 +29,6 @@ location_table: Dict[str, ACTLocationData] = {
     #lname.pristine_pearl: ACTLocationData(rname.snail_cave, x, "Moon Snail's Cave"), #Redundant, overlaps with Platoon Pathfinder
     lname.map_piece_heikea_arena: ACTLocationData(rname.grove_main, 252, "Expired Grove Main"),
     lname.map_piece_vale: ACTLocationData(rname.flotsam_vale, 396, "Flotsam Vale"),
-    lname.home_shell: ACTLocationData(rname.carcinia_ruins, 618, "Completion"),
 
     # boss locations
     lname.nephro: ACTLocationData(rname.central_shallows, 3, "Central Shallows"),
@@ -72,7 +71,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_shallows_eastledge: ACTLocationData(rname.central_shallows, 14, "Central Shallows"), #51dbcbfd-4a82-4c22-b2ee-1a03deeca4cc-2_B-ShallowsBigSand
     lname.hairclaw_shallows_turret: ACTLocationData(rname.central_shallows, 15, "Central Shallows"), #b2d21ade-41ab-47fc-960b-0beb6d07359d-2_B-ShallowsBigSand
     lname.chipclaw_shallows_sandcastle: ACTLocationData(rname.central_shallows, 16, "Central Shallows"), #12c6e5c5-eee1-4f9a-a3c4-68c2bd098a14-2_B-ShallowsBigSand
-    lname.clothesclaw_shallows_shellsplitter: ACTLocationData(rname.central_shallows, 17, "Central Shallows"), #AUTO NEEDS TO DO BOSS SCRIPT
+    #lname.clothesclaw_shallows_shellsplitter: ACTLocationData(rname.central_shallows, 17, "Central Shallows"), #AUTO NEEDS TO DO BOSS SCRIPT
     lname.clothesclaw_shallows_southwestfort: ACTLocationData(rname.central_shallows, 45, "Central Shallows"), #e13e2c76-a638-4023-aa84-f6f29fd7bf65-2_B-ShallowsBigSand
     lname.breadclaw_shallows_sunkentower: ACTLocationData(rname.central_shallows, 124, "Central Shallows"), #1e33dfd0-6445-47f9-b1bf-3e8be7897a79-2_B-ShallowsBigSand
     lname.breadclaw_shallows_slacktidesouthfish: ACTLocationData(rname.central_shallows, 126, "Central Shallows"), #0f64d031-4163-4979-9497-116cac06e234-2_B-ShallowsBigSand
@@ -520,7 +519,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.limpet_slacktide_stairs: ACTLocationData(rname.slacktide_before, 36, "Fort Slacktide - Before Destruction"), #b5e751fb-8ff5-440e-aa9c-9d9c75977be7-2_B-ShallowsBigSand
     lname.seastar_slacktide_grappleroom: ACTLocationData(rname.slacktide_before, 37, "Fort Slacktide - Before Destruction"), #35603032-802e-4811-ae95-8e8eb11c1dfa-2_B-ShallowsBigSand
     lname.barnacle_slacktide_bigurchin: ACTLocationData(rname.slacktide_before, 38, "Fort Slacktide - Before Destruction"), #98329dde-9889-4cbb-a656-61f83dca2eca-2_B-ShallowsBigSand
-    lname.rustynail_slacktide_bigurchin: ACTLocationData(rname.slacktide_before, 317, "Fort Slacktide - Before Destruction"),
+    lname.rustynail_slacktide_bigurchin: ACTLocationData(rname.slacktide_before, 317, "Fort Slacktide - Before Destruction"), #87e60901-5489-437e-82c2-d70ca2390364-2_B-ShallowsBigSand
 
     lname.limpet_snailcave_jelly: ACTLocationData(rname.snail_cave, 39, "Moon Snail's Cave"), #c1a31dc1-9ec5-42e9-8dcf-291f7cdc8a26-2_D-MoonSnailShellCave
 
@@ -584,6 +583,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.pufferquill_grovemain_sponges: ACTLocationData(rname.grove_main, 220, "Expired Grove Main"), #c6a56f3d-c134-41cd-83b7-4a755fa32284-2_A-GroveForestLow
     lname.limpet_grovemain_sodacan: ACTLocationData(rname.grove_main, 236, "Expired Grove Main"), #093c4972-ff5e-4ba6-b9a8-136411e1017f-2_A-GroveForestLow
     lname.lumpsucker_grovemain_canopy: ACTLocationData(rname.grove_main, 247, "Expired Grove Main"), #3789e56d-69b5-4d6c-adb1-6454b101840d-2_A-GroveForestLow
+    lname.anothercrab_grovemain_sniper: ACTLocationData(rname.grove_main, 619, "Expired Grove Main"), #8e4714bf-cc7f-4bde-9c88-7fcdbf8d0afe-2_A-GroveForestLow
     lname.sharktooth_grovemain_pizza: ACTLocationData(rname.grove_main, 251, "Expired Grove Main"), #8e34f6a5-5844-4767-ab15-4fbaf6c147dc-2_B-GroveForestHigh
     lname.contactlens_grovemain_carts: ACTLocationData(rname.grove_main, 262, "Expired Grove Main"), #0e278f86-0f9d-468f-95b2-586df2a94689-2_A-GroveForestLow
     lname.cottonball_grovemain_mantis: ACTLocationData(rname.grove_main, 263, "Expired Grove Main"), #fa3cfc64-4f87-452c-bf59-4f599cb3f6fa-2_A-GroveForestLow

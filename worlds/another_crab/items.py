@@ -26,7 +26,6 @@ item_table: Dict[str, ACTItemData] = {
     iname.map_piece_fv: ACTItemData(ItemClassification.progression, 1, 5, "Progression"),
     iname.map_piece_heikea: ACTItemData(ItemClassification.progression, 1, 6, "Progression"), 
     iname.map_piece_pagurus: ACTItemData(ItemClassification.progression, 1, 7, "Progression"), 
-    iname.home_shell: ACTItemData(ItemClassification.progression, 1, 135, "Progression"),
 
     # upgrade
     iname.bloodstar_limb: ACTItemData(ItemClassification.useful, 20, 8, "Upgrades"), # total in game: 25
@@ -117,7 +116,7 @@ item_table: Dict[str, ACTItemData] = {
 
     # consumable
     iname.barbed_hook: ACTItemData(ItemClassification.filler, 113, 87, "Consumable"),
-    iname.shark_egg: ACTItemData(ItemClassification.filler, 4, 133, "Consumable"),
+    iname.shark_egg: ACTItemData(ItemClassification.filler, 4, 135, "Consumable"),
 
     # costume
     iname.plastic_poncho: ACTItemData(ItemClassification.filler, 1, 88, "Costume"),

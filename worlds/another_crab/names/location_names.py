@@ -30,7 +30,7 @@ breadclaw_shallows_eastledge = "Breadclaw (Central Shallows - East Grapple Ledge
 hairclaw_shallows_turret = "Hairclaw (Central Shallows - Grapple to Castle Turret)"
 chipclaw_shallows_sandcastle = "Chipclaw (Central Shallows - Southwest Sandcastle)"
 clothesclaw_shallows_shellsplitter = "Clothesclaw (Central Shallows - Defeat Royal Shellsplitter)"
-clothesclaw_shallows_southwestfort = "Clothesclaw (Fort Slacktide - Small Tower Outside Southwest Fort)"
+clothesclaw_shallows_southwestfort = "Clothesclaw (Central Shallows - Small Tower Outside Southwest Fort)"
 breadclaw_shallows_sunkentower = "Breadclaw (Central Shallows - Sunken Tower near Flip-Flop Bridge)"
 breadclaw_shallows_slacktidesouthfish = "Breadclaw (Central Shallows - Fishing South of Slacktide Entrance)"
 
@@ -544,6 +544,7 @@ pufferquill_grovemain_sponges = "Puffer Quill (Expired Grove Main - Cross Sponge
 limpet_grovemain_sodacan = "Limpet (Expired Grove Main - Soda Can Stepping Stones)"
 lumpsucker_grovemain_canopy = "Lumpsucker (Expired Grove Main - Carton Canopy)"
 sharktooth_grovemain_pizza = "Shark Tooth (Expired Grove Main - Under Pizza Box)"
+anothercrab_grovemain_sniper = "Another Crab (Expired Grove Main - Beginning of Sniper Path)"
 contactlens_grovemain_carts = "Contact Lens (Expired Grove Main - Behind Shopping Cart Buildings)"
 cottonball_grovemain_mantis = "Cotton Ball (Expired Grove Main - Mantis Block on Oil Drum Path)"
 mussel_grovemain_fishing = "Mussel (Expired Grove Main - Fishing by Entrance)"

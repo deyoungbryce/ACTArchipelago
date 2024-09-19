@@ -13,12 +13,14 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.central_shallows
     },
     rname.central_shallows: {
-        rname.snail_cave,
         rname.slacktide_before,
+    },
+    rname.slacktide_before: {
+        rname.snail_cave
+    },
+    rname.snail_cave: {
         rname.slacktide_after
     },
-    rname.snail_cave: set(),
-    rname.slacktide_before: set(),
     rname.slacktide_after: {
         rname.reefs_edge
     },
@@ -42,10 +44,11 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.grove_village: set(),
     rname.flotsam_vale: {
         rname.grove_village,
-        rname.scuttleport,
+        rname.scuttleport
+    },
+    rname.scuttleport: {
         rname.pinbarge
     },
-    rname.scuttleport: set(),
     rname.pinbarge: {
         rname.unfathom
     },
