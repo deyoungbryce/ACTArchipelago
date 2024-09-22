@@ -356,7 +356,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.oldworldwhorl_scuttleport_eelectrocute: ACTLocationData(rname.scuttleport, 483, "Scuttleport"), #1af5fbc8-b8d7-47e7-a66d-480feb0c2594-2_C-Facilities
 
     lname.bloodstar_unfathom_eastpath: ACTLocationData(rname.unfathom, 494, "The Unfathom"), #81a413d0-b588-49c7-9210-86d193c7eb6c-2_B-DarkCanyon
-    lname.bloodstar_unfathom_shortcut: ACTLocationData(rname.unfathom, 494, "The Unfathom"), #baba3ba3-395a-4547-b060-ddaf0e9fe966-2_B-DarkCanyon
+    lname.bloodstar_unfathom_shortcut: ACTLocationData(rname.unfathom, 505, "The Unfathom"), #baba3ba3-395a-4547-b060-ddaf0e9fe966-2_B-DarkCanyon
 
     lname.stainlessrelic_plains_sponges: ACTLocationData(rname.plains, 518, "Abyssal Plains"), #e1d2aa11-415c-46c1-8a81-0ab60bb39847-2_C-HermitCave
     lname.stainlessrelic_plains_snipers: ACTLocationData(rname.plains, 520, "Abyssal Plains"), #f6f1900f-540b-4068-8c1a-7ca8e3f820d9-2_D-SilentFlats
