@@ -16,6 +16,9 @@ def set_region_rules(world: "ACTWorld") -> None:
 
    multiworld.get_entrance("Fort Slacktide - Before Destruction -> Moon Snail's Cave", player).access_rule = \
       lambda state: state.has(iname.fishing_line, player)
+   
+   multiworld.get_entrance("Moon Snail's Cave -> Fort Slacktide - After Destruction", player).access_rule = \
+      lambda state: state.has(iname.pristine_pearl, player)
     
    multiworld.get_entrance("Fort Slacktide - After Destruction -> Reef's Edge", player).access_rule = \
       lambda state: state.has(iname.fishing_line, player)
@@ -28,24 +31,16 @@ def set_region_rules(world: "ACTWorld") -> None:
     
    multiworld.get_entrance("Scuttleport -> Pinbarge", player).access_rule = \
       lambda state: state.has(iname.eelectrocute, player)
-    
+
 def set_location_rules(world: "ACTWorld") -> None:
    multiworld = world.multiworld
    player = world.player
    options = world.options
 
-# ---- YAML Options ----
-   #if options.fork_location == "shuffled_early":
-   #   set_rule(multiworld.get_location(lname.magista, player),
-   #            lambda state: state.has(iname.fork, player))
-      
-   #if options.shelleport_location == "shuffled_early":
-   #  set_rule(multiworld.get_location(lname.magista, player),
-   #            lambda state: state.has(iname.shelleport, player))
-      
 # ---- Cave of Respite ----
+ # spearfishing
    set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Central Shallows ----
  # grapple
@@ -75,22 +70,30 @@ def set_location_rules(world: "ACTWorld") -> None:
  
  # spearfishing
    set_rule(multiworld.get_location(lname.mussel_shallows_southwestcastlefish, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
     
    set_rule(multiworld.get_location(lname.breadclaw_shallows_slacktidesouthfish, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
     
    set_rule(multiworld.get_location(lname.anemone_shallows_southwestcastlehiddenfishing, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
     
    set_rule(multiworld.get_location(lname.razorblade_shallows_slacktidebottlefishing, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
     
    set_rule(multiworld.get_location(lname.anemone_shallows_umbrellafishing, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Fort Slacktide ----
  # grapple
+  #                 ______________________ needed only until i find a better solution to early slacktide
+   set_rule(multiworld.get_location(lname.limpet_slacktide_stairs, player),
+             lambda state: state.has(iname.fishing_line, player))
+   
+   set_rule(multiworld.get_location(lname.fishing_line, player),
+             lambda state: state.has(iname.fishing_line, player))
+  #                 ______________________
+   
    set_rule(multiworld.get_location(lname.seastar_slacktide_grappleroom, player),
              lambda state: state.has(iname.fishing_line, player))
     
@@ -111,7 +114,7 @@ def set_location_rules(world: "ACTWorld") -> None:
     
  # spearfishing
    set_rule(multiworld.get_location(lname.breadclaw_slacktide_roofhiddenfish, player),
-             lambda state: state.has(iname.spearfishing, player))
+             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Reef's Edge ----
  # grapple
