@@ -21,7 +21,7 @@ def set_region_rules(world: "ACTWorld") -> None:
       lambda state: state.has(iname.pristine_pearl, player)
     
    multiworld.get_entrance("Fort Slacktide - After Destruction -> Reef's Edge", player).access_rule = \
-      lambda state: state.has(iname.fishing_line, player)
+      lambda state: state.has_all({iname.fishing_line, iname.pristine_pearl}, player)
     
    multiworld.get_entrance("The Sands Between -> Secluded Ridge & Trashbin Plateau", player).access_rule = \
       lambda state: state.has(iname.mantis_punch, player)
