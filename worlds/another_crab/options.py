@@ -14,6 +14,12 @@ class ForkLocation(Choice):
     option_vanilla_location = 3
     default = 3
 
+class AllowForkless(Toggle):
+    """If true, allows for bosses to have to be defeated without the fork.
+    Must set fork location to shuffled if true."""
+    display_name:str = "Allow Forkless"
+    default: bool = False
+ 
 class ShelleportLocation(Choice):
     """Choose where the Shelleport (fast travel) skill location is set
     - Shuffled: Shelleport is placed into the item pool.
@@ -58,6 +64,7 @@ class DeathLink(Toggle):
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
     fork_location: ForkLocation
+    allow_forkless: AllowForkless
     shelleport_location: ShelleportLocation
     fishing_line_location: FishingLineLocation
     remove_costumes: RemoveCostumes
