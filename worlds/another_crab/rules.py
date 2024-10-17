@@ -1,4 +1,4 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Dict, List
 from worlds.generic.Rules import set_rule
 from BaseClasses import CollectionState
 
@@ -9,10 +9,19 @@ from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
+forkless_skills: List[str] = {
+   iname.parry,
+   iname.riposte,
+   iname.natural_defenses
+}
+
 def set_region_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
   player = world.player
   #options = world.options
+
+  multiworld.get_entrance("Central Shallows -> Fort Slacktide - Before Destruction", player).access_rule = \
+    lambda state: state.can_reach_location(lname.nephro, player)
 
   multiworld.get_entrance("Fort Slacktide - Before Destruction -> Moon Snail's Cave", player).access_rule = \
     lambda state: state.has(iname.fishing_line, player)
@@ -40,7 +49,10 @@ def set_location_rules(world: "ACTWorld") -> None:
 # ---- Forkless Logic ----
   if options.allow_forkless:
     set_rule(multiworld.get_location(lname.nephro, player),
-            lambda state: state.has_all({}, player))
+            lambda state: state.has_all({forkless_skills}, player))
+    
+    set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
+            lambda state: state.has_all({forkless_skills}, player))
 
 # ---- Cave of Respite ----
  # spearfishing
