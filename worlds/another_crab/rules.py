@@ -9,11 +9,11 @@ from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
-forkless_skills: List[str] = {
-   iname.parry,
-   iname.riposte,
-   iname.natural_defenses
-}
+#forkless_skills: List[str] = {
+#   iname.parry,
+#   iname.riposte,
+#   iname.natural_defenses
+#}
 
 def set_region_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
@@ -47,12 +47,12 @@ def set_location_rules(world: "ACTWorld") -> None:
   options = world.options
 
 # ---- Forkless Logic ----
-  if options.allow_forkless:
-    set_rule(multiworld.get_location(lname.nephro, player),
-            lambda state: state.has_all({forkless_skills}, player))
-    
-    set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
-            lambda state: state.has_all({forkless_skills}, player))
+  #if options.allow_forkless:
+  #  set_rule(multiworld.get_location(lname.nephro, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
+  #  
+  #  set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
 
 # ---- Cave of Respite ----
  # spearfishing
