@@ -64,7 +64,7 @@ class DeathLink(Toggle):
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
     fork_location: ForkLocation
-    allow_forkless: AllowForkless
+    #allow_forkless: AllowForkless
     shelleport_location: ShelleportLocation
     fishing_line_location: FishingLineLocation
     remove_costumes: RemoveCostumes

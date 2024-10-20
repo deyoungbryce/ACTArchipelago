@@ -133,7 +133,8 @@ class ACTWorld(World):
     
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {
-            "microplastic_multiplier": self.options.microplasticMultiplier.value
+            "microplastic_multiplier": float(self.options.microplasticMultiplier.value),
+            "death_link": bool(self.options.deathlink.value)
         }
 
         return slot_data
