@@ -58,6 +58,15 @@ def set_location_rules(world: "ACTWorld") -> None:
  # spearfishing
   set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.chipclaw_caveofrespite_forkroomfishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.mussel_caveofrespite_crabfightfishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.sanddollar_caveofrespite_pathfishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Central Shallows ----
  # grapple
