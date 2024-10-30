@@ -2,29 +2,43 @@ from dataclasses import dataclass
 from Options import Toggle, Range, Choice, PerGameCommonOptions
 
 class ForkLocation(Choice):
-    """Choose where the Fork(weapon) location is set.
-    - Shuffled: Fork is placed into item pool.
+    """Choose where the Fork(weapon) location is set. Does nothing if Allow Forkless option is enabled.
     - Shuffled Early Local: Forces Fork location to be somewhere early in your own game.
     - Shuffled Early Global: Forces Fork location to be somewhere early in any game.
     - Vanilla Location: Forces Fork to be placed at its intended location."""
     display_name: str = "Fork Location"
-    option_shuffled = 0
+    option_vanilla_location = 0
     option_shuffled_early_local = 1
     option_shuffled_early_global = 2
-    option_vanilla_location = 3
-    default = 3
+    default = 0
 
-#class AllowForkless(Toggle):
-#    """If true, allows for bosses to have to be defeated without the fork.
-#    Must set fork location to shuffled if true."""
+#class AllowForkless(Choice):
+#    """If enabled, allows for the Fork to not be required early on, meaning you may have to play some amount of the game without it. Ignores Fork Location option and shuffles Fork into item pool if enabled.
+#    - Disabled: Fork is required to fight early bosses, meaning that it will be placed early in your run.
+#    - Forkless Easy: Ensures that the intended forkless strategy is not too advanced
+#    - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary"""
 #    display_name:str = "Allow Forkless"
-#    default: bool = False
+#    option_disabled = 0
+#    option_forkless_easy = 1
+#    option_forkless_hard = 2
+#    default = 0
+
+#class LogicRules(Choice):
+#    """Set the preferred logic rules for your game
+#    - Restricted: Standard logic, no skips/glitches required to complete goal.
+#    - No Major Glitches: Allows for {list of easy logic rules here} to be needed to complete goal.
+#    - Unrestricted: In addition to the list under No Major Glitches allows for {list of more advanced rules here} to be needed to complete goal."""
+#    display_name:str = "Logic Rules"
+#    option_restricted = 0
+#    option_no_major_glitches = 1
+#    option_unrestricted = 2
+#    default = 0
  
 class ShelleportLocation(Choice):
     """Choose where the Shelleport (fast travel) skill location is set
     - Shuffled: Shelleport is placed into the item pool.
     - Shuffled Early Local: Forces Shelleport location to be somewhere early in your own game.
-    - Sheffled Early Global: Forces Shelleport location to somewhere early in any game.
+    - Shuffled Early Global: Forces Shelleport location to somewhere early in any game.
     - Starting Items: Places Shelleport in your starting inventory.
     - Vanilla Location: Forces Shelleport to be placed at its intended location"""
     display_name: str = "Shelleport Location"
@@ -65,6 +79,7 @@ class DeathLink(Toggle):
 class ACTGameOptions(PerGameCommonOptions):
     fork_location: ForkLocation
     #allow_forkless: AllowForkless
+    #logic_rules: LogicRules
     shelleport_location: ShelleportLocation
     fishing_line_location: FishingLineLocation
     remove_costumes: RemoveCostumes
