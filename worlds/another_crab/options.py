@@ -12,16 +12,16 @@ class ForkLocation(Choice):
     option_shuffled_early_global = 2
     default = 0
 
-#class AllowForkless(Choice):
-#    """If enabled, allows for the Fork to not be required early on, meaning you may have to play some amount of the game without it. Ignores Fork Location option and shuffles Fork into item pool if enabled.
-#    - Disabled: Fork is required to fight early bosses, meaning that it will be placed early in your run.
-#    - Forkless Easy: Ensures that the intended forkless strategy is not too advanced
-#    - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary"""
-#    display_name:str = "Allow Forkless"
-#    option_disabled = 0
-#    option_forkless_easy = 1
-#    option_forkless_hard = 2
-#    default = 0
+class AllowForkless(Choice):
+    """If enabled, allows for the Fork to not be required early on, meaning you may have to play some amount of the game without it. Ignores Fork Location option and shuffles Fork into item pool if enabled.
+    - Disabled: Fork is required to fight early bosses, meaning that it will be placed early in your run.
+    - Forkless Easy: Ensures that the intended forkless strategy is not too advanced
+    - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary"""
+    display_name:str = "Allow Forkless"
+    option_disabled = 0
+    option_forkless_easy = 1
+    option_forkless_hard = 2
+    default = 0
 
 #class LogicRules(Choice):
 #    """Set the preferred logic rules for your game
@@ -78,7 +78,7 @@ class DeathLink(Toggle):
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
     fork_location: ForkLocation
-    #allow_forkless: AllowForkless
+    allow_forkless: AllowForkless
     #logic_rules: LogicRules
     shelleport_location: ShelleportLocation
     fishing_line_location: FishingLineLocation

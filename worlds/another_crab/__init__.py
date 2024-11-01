@@ -33,9 +33,9 @@ class ACTWorld(World):
 
     def generate_early(self):
         # early fork shuffling
-        if self.options.fork_location == "shuffled_early_local":
+        if self.options.fork_location == "shuffled_early_local" and not self.options.allow_forkless:
             self.multiworld.local_early_items[self.player][iname.fork] = 1
-        if self.options.fork_location == "shuffled_early_global":
+        if self.options.fork_location == "shuffled_early_global" and not self.options.allow_forkless:
             self.multiworld.early_items[self.player][iname.fork] = 1
 
         # early shelleport shuffling
@@ -59,7 +59,7 @@ class ACTWorld(World):
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
         # yaml options
-        if self.options.fork_location:
+        if self.options.fork_location and not self.options.allow_forkless:
             fork = self.create_item(iname.fork)
             if self.options.fork_location == "vanilla_location":
                 self.get_location(lname.fork_pickup).place_locked_item(fork)

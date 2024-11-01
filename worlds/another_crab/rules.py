@@ -9,14 +9,16 @@ from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
-#forkless_skills: List[str] = {
-#   iname.parry,
-#   iname.riposte,
-#   iname.natural_defenses
+#forkless_easy_skills: List[str] = {
+
+#}
+
+#forkless_hard_skills: List[str] = {
+  
 #}
 
 #def can_rolling_attack(state: CollectionState, player: int) -> bool:
-#  return state.has({necessary items here}, player)
+#  return state.has_all({necessary items here}, player)
 
 #def has_summon(state: CollectionState, player: int) -> bool:
 #  return state.has() or state.has()
@@ -59,13 +61,19 @@ def set_location_rules(world: "ACTWorld") -> None:
   options = world.options
 
 # ---- Forkless Logic ----
-  #if options.allow_forkless:
+  #if options.allow_forkless == "forkless_easy":
   #  set_rule(multiworld.get_location(lname.nephro, player),
   #          lambda state: state.has_all({forkless_skills}, player))
   #  
   #  set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
   #          lambda state: state.has_all({forkless_skills}, player))
-
+  
+  #if options.allow_forkless == "forkless_hard":
+  #   set_rule(multiworld.get_location(lname.nephro, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
+  #   
+  #   set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
 # ---- Cave of Respite ----
  # spearfishing
   set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
