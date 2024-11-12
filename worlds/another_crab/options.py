@@ -70,6 +70,14 @@ class MicroplasticMultiplier(Range):
     range_end: float = 100
     default: float = 1
 
+class TrapAmount(Range):
+    """Defines a percentage of the filler items to be replaced with trap items
+    Set to 0 to not include any traps"""
+    display_name: str = "Trap Amount"
+    range_start: int = 0
+    range_end: int = 100
+    default: int = 0
+
 class DeathLink(Toggle):
     """Enables Death Link"""
     display_name: str = "Death Link"
@@ -84,4 +92,5 @@ class ACTGameOptions(PerGameCommonOptions):
     fishing_line_location: FishingLineLocation
     remove_costumes: RemoveCostumes
     microplasticMultiplier: MicroplasticMultiplier
+    trapamount: TrapAmount
     deathlink: DeathLink

@@ -2,7 +2,7 @@ from typing import Dict, List, Any
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, ACTItem
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, ACTItem
 from .locations import location_table, location_name_groups, location_name_to_id, location_total, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
@@ -83,18 +83,26 @@ class ACTWorld(World):
         if self.options.remove_costumes:
             for costumes in costume_items: items_to_create[costumes] = 0
         
-        # fill empty locations with filler
+        # fill empty locations with filler and traps
         items_total: int = 0
 
         for item in items_to_create:
             items_total += items_to_create[item]
 
-        filler_needed = location_total - items_total
+        total_filler = location_total - items_total
 
         available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
 
-        if filler_needed < 0:
-            filler_needed = 0
+        if total_filler < 0:
+            total_filler = 0
+
+        traps_needed = total_filler * self.options.trapamount.value / 100
+
+        for counter in range(0, traps_needed):
+            trap_item = self.random.choice(trap_items)
+            items_to_create[trap_item] += 1
+
+        filler_needed = total_filler - traps_needed
 
         for counter in range(0, filler_needed):
             filler_item = self.random.choice(available_filler)

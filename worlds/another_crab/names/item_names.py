@@ -165,3 +165,12 @@ pagurus_allergy = "Pagurus Allergy" #used for later when we randomize pagurus's 
 
 
 # ---- Traps ----
+gunk_trap = "Gunk Trap"
+scour_trap = "Scour Trap"
+bleached_trap = "Bleached Trap"
+fear_trap = "Fear Trap"
+clutz_trap = "Clutz Trap"
+text_trap = "Text Trap"
+shell_shatter_trap = "Shell Shatter Trap"
+poison_cocktail_trap = "Poison Cocktail Trap"
+taser_trap = "Taser Trap"

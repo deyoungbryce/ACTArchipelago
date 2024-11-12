@@ -171,7 +171,15 @@ item_table: Dict[str, ACTItemData] = {
     iname.umami_training3: ACTItemData(ItemClassification.useful, 1, 132, "Skills"),
 
     # traps
-    #iname.trap_example: ACTItemData(ItemClassification.trap, ~, ~, "Traps")
+    iname.gunk_trap: ACTItemData(ItemClassification.trap, 0, 138, "Traps"),
+    iname.scour_trap: ACTItemData(ItemClassification.trap, 0, 139, "Traps"),
+    iname.bleached_trap: ACTItemData(ItemClassification.trap, 0, 140, "Traps"),
+    iname.fear_trap: ACTItemData(ItemClassification.trap, 0, 141, "Traps"),
+    iname.clutz_trap: ACTItemData(ItemClassification.trap, 0, 142, "Traps"),
+    iname.text_trap: ACTItemData(ItemClassification.trap, 0, 143, "Traps"),
+    iname.shell_shatter_trap: ACTItemData(ItemClassification.trap, 0, 144, "Traps"),
+    iname.poison_cocktail_trap: ACTItemData(ItemClassification.trap, 0, 145, "Traps"),
+    iname.taser_trap: ACTItemData(ItemClassification.trap, 0, 146, "Traps")
 
 }
 
@@ -181,6 +189,8 @@ def get_item_group(item_name: str) -> str:
     return item_table[item_name].item_group
 
 filler_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.filler]
+
+trap_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.trap]
 
 costume_items: List[str] = [name for name in filler_items if get_item_group(name) == "Costume"]
 
