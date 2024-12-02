@@ -1,0 +1,1 @@
+soda_can_nephro1 = "Soda Can Nephro Vending Machine 1"

@@ -140,7 +140,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.clothesclaw_ridge_overlookfish: ACTLocationData(rname.secluded_ridge, 206, "The Sands Between - Secluded Ridge"), #4f737f9e-a952-490c-b54d-1f74735af9cc-2_A-OOGroveRadius
     lname.chipclaw_ridge_southfish: ACTLocationData(rname.secluded_ridge, 207, "The Sands Between - Secluded Ridge"), #82043889-30eb-45f4-8f87-45dd2f5d69ed-2_A-OOGroveRadius
 
-    lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plataeu"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
+    lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plateau"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
 
     lname.breadclaw_grovemain_takeout: ACTLocationData(rname.grove_main, 219, "Expired Grove Main"), #4933d4b0-a56a-4472-b9a6-4469fd335fa4-2_A-GroveForestLow
     lname.breadclaw_grovemain_tiretop: ACTLocationData(rname.grove_main, 224, "Expired Grove Main"), #da04ed8f-2d99-48f9-8412-67748d983d2b-2_A-GroveForestLow
@@ -343,11 +343,11 @@ location_table: Dict[str, ACTLocationData] = {
     lname.stainlessrelic_grovevillage_clam: ACTLocationData(rname.grove_village, 307, "Expired Grove Village"), #269526ef-6bb0-42cf-a93d-e2cac970e424-2_E-Cliffs
     lname.oldworldwhorl_grovevillage_topoda: ACTLocationData(rname.grove_village, 316, "Expired Grove Village"), #8b9b3b77-b95f-46a2-adfd-ca962e8f0cef-2_E-Cliffs
 
-    lname.bloodstar_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 344, "Flotsame Vale"), #45cca266-a175-4020-9dd7-e0b844421aff-2_B-LowSwamp
-    lname.oldworldwhorl_flotsamvale_cavepath: ACTLocationData(rname.flotsam_vale, 354, "Flotsame Vale"), #53cea11a-cfb6-4894-8e18-375ea895caed-2_A-HighSwamp
-    lname.oldworldwhorl_flotsamvale_snail: ACTLocationData(rname.flotsam_vale, 357, "Flotsame Vale"), #32f43e6e-a382-4938-b068-f1eab35a0269-2_A-HighSwamp
-    lname.bloodstar_flotsamvale_craneclam: ACTLocationData(rname.flotsam_vale, 397, "Flotsame Vale"), #977f86dc-aeb1-471f-bb86-4db41bcbfc2c-2_A-HighSwamp
-    lname.tacklepouch_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 403, "Flotsame Vale"), #b6c01d3a-31e3-457d-b53f-ecf0ff3b7e9f-2_B-LowSwamp
+    lname.bloodstar_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 344, "Flotsam Vale"), #45cca266-a175-4020-9dd7-e0b844421aff-2_B-LowSwamp
+    lname.oldworldwhorl_flotsamvale_cavepath: ACTLocationData(rname.flotsam_vale, 354, "Flotsam Vale"), #53cea11a-cfb6-4894-8e18-375ea895caed-2_A-HighSwamp
+    lname.oldworldwhorl_flotsamvale_snail: ACTLocationData(rname.flotsam_vale, 357, "Flotsam Vale"), #32f43e6e-a382-4938-b068-f1eab35a0269-2_A-HighSwamp
+    lname.bloodstar_flotsamvale_craneclam: ACTLocationData(rname.flotsam_vale, 397, "Flotsam Vale"), #977f86dc-aeb1-471f-bb86-4db41bcbfc2c-2_A-HighSwamp
+    lname.tacklepouch_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 403, "Flotsam Vale"), #b6c01d3a-31e3-457d-b53f-ecf0ff3b7e9f-2_B-LowSwamp
 
     lname.stainlessrelic_scuttleport_clam: ACTLocationData(rname.scuttleport, 438, "Scuttleport"), #95c7f334-5083-4ee8-bbcb-65033ca154f5-2_C-Facilities
     lname.bloodstar_scuttleport_magrailclam: ACTLocationData(rname.scuttleport, 469, "Scuttleport"), #f5ed972d-9d53-45b3-93b0-a389464d8941-2_C-Facilities
@@ -407,7 +407,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.barbedhook_ridge_overlookpath: ACTLocationData(rname.secluded_ridge, 192, "The Sands Between - Secluded Ridge"), #d9ee8d70-3493-4e7b-91b3-b42278ff0ad4-2_A-OOGroveRadius
     lname.sharkegg_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 212, "The Sands Between - Secluded Ridge"), #dcc6b99e-1d47-481f-86ca-e14a5743f460-2_A-OOGroveRadius
 
-    lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plataeu"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
+    lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plateau"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
 
     lname.barbedhook_grovemain_sniper: ACTLocationData(rname.secluded_ridge, 214, "Expired Grove Main"), #8fd70034-2415-4934-975b-2303d159f567-2_A-GroveForestLow
     lname.barbedhook_grovemain_riverledge: ACTLocationData(rname.secluded_ridge, 215, "Expired Grove Main"), #0860891c-3db6-4e51-8c0b-58b09ac8ece0-2_A-GroveForestLow
@@ -573,10 +573,10 @@ location_table: Dict[str, ACTLocationData] = {
     lname.cockle_ridge_eelfish: ACTLocationData(rname.secluded_ridge, 208, "The Sands Between - Secluded Ridge"), #d32ade52-c34e-4cb7-957c-df605339ee4c-2_A-OOGroveRadius
     lname.bobber_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 211, "The Sands Between - Secluded Ridge"), #fc2cf7ed-6ff6-40bb-987a-936da0afa93b-2_A-OOGroveRadius
 
-    lname.cockle_trashbin_peak: ACTLocationData(rname.secluded_ridge, 199, "The Sands Between - Trashbin Plataeu"), #ca4c297f-e9fd-4a78-b89a-811d2394406b-2_A-OOGroveRadius
-    lname.sinker_trashbin_peak: ACTLocationData(rname.secluded_ridge, 200, "The Sands Between - Trashbin Plataeu"), #36611427-18cc-45f3-ad50-a51cc02ccb1d-2_A-OOGroveRadius
-    lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plataeu"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
-    lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plataeu"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
+    lname.cockle_trashbin_peak: ACTLocationData(rname.secluded_ridge, 199, "The Sands Between - Trashbin Plateau"), #ca4c297f-e9fd-4a78-b89a-811d2394406b-2_A-OOGroveRadius
+    lname.sinker_trashbin_peak: ACTLocationData(rname.secluded_ridge, 200, "The Sands Between - Trashbin Plateau"), #36611427-18cc-45f3-ad50-a51cc02ccb1d-2_A-OOGroveRadius
+    lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plateau"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
+    lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plateau"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
 
     lname.barnacle_grovemain_colander: ACTLocationData(rname.grove_main, 213, "Expired Grove Main"), #74aa4107-6a5a-4868-ae54-942e4421be3f-2_A-GroveForestLow
     lname.seastar_grovemain_eastrock: ACTLocationData(rname.grove_main, 218, "Expired Grove Main"), #17cb1eed-8d88-4464-b33b-215c837035f6-2_A-GroveForestLow
