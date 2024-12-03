@@ -8,28 +8,20 @@ from .names import shell_location_names as slname
 class ACTShell(Item):
     game: str = "Another Crabs Treasure"
 
+class ACTShellLocations(Location):
+    game: str = "Another Crabs Treasure"
+
 shell_base_id: int = 483021700
 
 class ShellData(NamedTuple):
     shell_id_offset: int
     rolling_attack: bool
     magic_damage: bool
+    regions: List[str]
 
 shell_table: Dict[str, ShellData] = {
-    sname.soda_can: (1, True, True),
+    sname.soda_can: (1, True, True, [rname.central_shallows, rname.snail_cave]),
     sname.bottle_cap: (2, True, False)
 }
 
-class ACTShellLocations(Location):
-    game: str = "Another Crabs Treasure"
-
-shell_location_base_id: int = 483021700
-
-class ShellLocationData(NamedTuple):
-    region: str
-    shell_location_id_offset: int
-    shell_location_group: Optional[str] = None
-
-shell_location_table: Dict[str, ShellLocationData] = {
-    slname.soda_can_nephro1: (rname.central_shallows, 1, "Soda Cans")
-}
+shell_name_to_id: Dict[str, int] = {name: shell_base_id + data.shell_id_offset for name, data in shell_table.items()}

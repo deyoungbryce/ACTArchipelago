@@ -3,6 +3,7 @@ from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
 
 from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, ACTItem
+from .shells import shell_table, shell_name_to_id, shell_list, shell_location_table, ACTShell, ACTShellLocations
 from .locations import location_table, location_name_groups, location_name_to_id, location_total, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
@@ -138,6 +139,20 @@ class ACTWorld(World):
     def set_rules(self) -> None:
         set_region_rules(self)
         set_location_rules(self)
+
+    def randomize_shells(self):
+        shell_list: List[str] = [name for name in shell_table.items()]
+        for shell_name, shell_id in shell_name_to_id.items():
+            regions = self.multiworld.get_region(shell_table[shell_name].regions, self.player)
+    #        shell_locations = ACTShellLocations(self.player, shell_name, shell_id, regions)
+        self.random.shuffle(shell_list)
+
+        for shell in shell_table.items():
+            randomized_shells = Dict[str, str] = {shell: shell_list}
+
+        print(randomized_shells)
+
+
     
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {

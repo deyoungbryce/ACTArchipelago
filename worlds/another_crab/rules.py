@@ -54,6 +54,13 @@ def set_region_rules(world: "ACTWorld") -> None:
     
   multiworld.get_entrance("Scuttleport -> Pinbarge", player).access_rule = \
     lambda state: state.has(iname.eelectrocute, player)
+  
+def set_shell_rules(world: "ACTWorld") -> None:
+   multiworld = world.multiworld
+   player = world.player
+
+   set_rule(multiworld.get_location(lname.nephro, player),
+            lambda state: state.can_reach_region())
 
 def set_location_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
