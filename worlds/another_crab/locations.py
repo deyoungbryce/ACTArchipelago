@@ -1,8 +1,7 @@
-from typing import Dict, NamedTuple, Set, Optional
+from typing import Dict, List, NamedTuple, Set, Optional
 from BaseClasses import Location
 
-from .names import location_names as lname
-from .names import region_names as rname
+from .names import location_names as lname, region_names as rname, shell_names as sname
 
 class ACTLocation(Location):
     game: str = "Another Crabs Treasure"
@@ -22,7 +21,7 @@ location_table: Dict[str, ACTLocationData] = {
     # Last used number: 619; 618 is available
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
-    lname.fork_pickup: ACTLocationData(rname.starting_cave, 1, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
+    lname.fork_pickup: ACTLocationData(rname.starting_cave, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
     lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide"),
@@ -720,10 +719,84 @@ location_table: Dict[str, ACTLocationData] = {
     lname.umami_training1_skill: ACTLocationData(rname.snail_cave, 335, "Moon Snail Skills"),
     lname.umami_training2_skill: ACTLocationData(rname.snail_cave, 336, "Moon Snail Skills"),
     lname.umami_training3_skill: ACTLocationData(rname.snail_cave, 337, "Moon Snail Skills"),
+
+    ##### shell locations
+    sname.soda_can: ACTLocationData({}, 618, "Shells"),
+    sname.bottle_cap: ACTLocationData({}, 620, "Shells"),
+    sname.tin_can: ACTLocationData({}, 621, "Shells"),
+    sname.shot_glass: ACTLocationData({}, 622, "Shells"),
+    sname.banana_peel: ACTLocationData({}, 623, "Shells"),
+    sname.party_hat: ACTLocationData({}, 624, "Shells"),
+    sname.coconut: ACTLocationData({}, 625, "Shells"),
+    sname.teacup: ACTLocationData({}, 626, "Shells"),
+    sname.sauce_nozzle: ACTLocationData({}, 627, "Shells"),
+    sname.thimble: ACTLocationData({}, 628, "Shells"),
+    sname.bebop_cup: ACTLocationData({}, 629, "Shells"),
+    sname.tennis_ball: ACTLocationData({}, 630, "Shells"),
+    sname.f_key: ACTLocationData({}, 631, "Shells"),
+    sname.mason_jar: ACTLocationData({}, 632, "Shells"),
+    sname.salt_shaker: ACTLocationData({}, 633, "Shells"),
+    sname.conchiglie: ACTLocationData({}, 634, "Shells"),
+    sname.bartholomew: ACTLocationData({}, 635, "Shells"),
+    sname.disco_ball: ACTLocationData({}, 636, "Shells"),
+    sname.baby_shoe: ACTLocationData({}, 637, "Shells"),
+    sname.lil_bro: ACTLocationData({}, 638, "Shells"),
+    sname.matryoshka_large: ACTLocationData({}, 639, "Shells"),
+    sname.matryoshka_medium: ACTLocationData({}, 640, "Shells"),
+    sname.matryoshka_small: ACTLocationData({}, 641, "Shells"),
+    sname.shuttlecock: ACTLocationData({}, 642, "Shells"),
+    sname.felix_cube: ACTLocationData({}, 643, "Shells"),
+    sname.piggy_bank: ACTLocationData({}, 644, "Shells"),
+    sname.trophy: ACTLocationData({}, 645, "Shells"),
+    sname.imposter: ACTLocationData({}, 646, "Shells"),
+    sname.lil_red_cup: ACTLocationData({}, 647, "Shells"),
+    sname.wafer_cone: ACTLocationData({}, 648, "Shells"),
+    sname.yoccult: ACTLocationData({}, 649, "Shells"),
+    sname.coffee_pod: ACTLocationData({}, 650, "Shells"),
+    sname.egg_shell: ACTLocationData({}, 651, "Shells"),
+    sname.coffee_mug: ACTLocationData({}, 652, "Shells"),
+    sname.cascadia_roll: ACTLocationData({}, 653, "Shells"),
+    sname.ham_tin: ACTLocationData({}, 654, "Shells"),
+    sname.skull: ACTLocationData({}, 655, "Shells"),
+    sname.crab_husk: ACTLocationData({}, 656, "Shells"),
+    sname.legal_brick: ACTLocationData({}, 657, "Shells"),
+    sname.spring: ACTLocationData({}, 658, "Shells"),
+    sname.shotgun_shell: ACTLocationData({}, 659, "Shells"),
+    sname.rubber_duck: ACTLocationData({}, 660, "Shells"),
+    sname.boxing_glove: ACTLocationData({}, 661, "Shells"),
+    sname.cardboard_box: ACTLocationData({}, 662, "Shells"),
+    sname.tissue_box: ACTLocationData({}, 663, "Shells"),
+    sname.valve: ACTLocationData({}, 664, "Shells"),
+    sname.dumptruck: ACTLocationData({}, 665, "Shells"),
+    sname.ink_cartridge: ACTLocationData({}, 666, "Shells"),
+    sname.gacha_capsule: ACTLocationData({}, 667, "Shells"),
+    sname.lightbulb: ACTLocationData({}, 668, "Shells"),
+    sname.mouse: ACTLocationData({}, 669, "Shells"),
+    sname.going_under_64: ACTLocationData({}, 670, "Shells"),
+    sname.sock: ACTLocationData({}, 671, "Shells"),
+    sname.doll_head: ACTLocationData({}, 672, "Shells"),
+    sname.service_bell: ACTLocationData({}, 673, "Shells"),
+    sname.party_popper: ACTLocationData({}, 674, "Shells"),
+    sname.scrub_aggie: ACTLocationData({}, 675, "Shells"),
+    sname.dentures: ACTLocationData({}, 676, "Shells"),
+    sname.pill_bottle: ACTLocationData({}, 677, "Shells"),
+    sname.detergent_cap: ACTLocationData({}, 678, "Shells"),
+    sname.ultrasoft: ACTLocationData({}, 679, "Shells"),
+    sname.champagne_flute: ACTLocationData({}, 680, "Shells"),
+    sname.dish_scrubber: ACTLocationData({}, 681, "Shells"),
+    sname.snow_globe: ACTLocationData({}, 682, "Shells"),
+    sname.knights_helmet: ACTLocationData({}, 683, "Shells"),
+    sname.spirit_conch: ACTLocationData({}, 684, "Shells"),
+    sname.plug_fuse: ACTLocationData({}, 685, "Shells")
 }
 
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + data.location_id_offset for name, data in location_table.items()}
+
+def get_location_group(location_name: str) -> str:
+    return location_table[location_name].location_group
+
+shell_locations: List[str] = [name for name, data in location_table.items() if data.location_group == "Shells"]
 
 location_name_groups: Dict[str, Set[str]] = {}
 for loc_name, loc_data in location_table.items():

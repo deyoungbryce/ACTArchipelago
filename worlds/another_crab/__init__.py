@@ -1,10 +1,10 @@
 from typing import Dict, List, Any
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification
+from Fill import fill_restrictive
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, ACTItem
-from .shells import shell_table, shell_name_to_id, shell_list, shell_location_table, ACTShell, ACTShellLocations
-from .locations import location_table, location_name_groups, location_name_to_id, location_total, ACTLocation
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, shell_items, ACTItem
+from .locations import location_table, location_name_groups, location_name_to_id, location_total, shell_locations, ACTLocation
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
@@ -45,6 +45,15 @@ class ACTWorld(World):
         if self.options.shelleport_location == "shuffled_early_global":
             self.multiworld.early_items[self.player][iname.shelleport] = 1
 
+    def pre_fill(self):
+
+        random_shell = [self.random.shuffle(shell_items)]
+
+        for location in shell_locations:
+            self.get_location(location).place_locked_item(random_shell)
+
+        return super().pre_fill()
+
     def create_item(self, name: str) -> ACTItem:
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
@@ -58,6 +67,9 @@ class ACTWorld(World):
         #self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
+
+        # removing shells from the total item pool because we only want them shuffled within their own pool
+        for shells in shell_items: items_to_create[shells] = 0
 
         # yaml options
         if self.options.fork_location and not self.options.allow_forkless:
@@ -139,20 +151,6 @@ class ACTWorld(World):
     def set_rules(self) -> None:
         set_region_rules(self)
         set_location_rules(self)
-
-    def randomize_shells(self):
-        shell_list: List[str] = [name for name in shell_table.items()]
-        for shell_name, shell_id in shell_name_to_id.items():
-            regions = self.multiworld.get_region(shell_table[shell_name].regions, self.player)
-    #        shell_locations = ACTShellLocations(self.player, shell_name, shell_id, regions)
-        self.random.shuffle(shell_list)
-
-        for shell in shell_table.items():
-            randomized_shells = Dict[str, str] = {shell: shell_list}
-
-        print(randomized_shells)
-
-
     
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {

@@ -2,7 +2,7 @@ from itertools import groupby
 from typing import Dict, List, Set, NamedTuple
 from BaseClasses import ItemClassification, Item
 
-from .names import item_names as iname
+from .names import item_names as iname, shell_names as sname
 
 class ACTItem(Item):
     game: str = "Another Crabs Treasure"
@@ -179,7 +179,76 @@ item_table: Dict[str, ACTItemData] = {
     iname.text_trap: ACTItemData(ItemClassification.trap, 0, 143, "Traps"),
     iname.shell_shatter_trap: ACTItemData(ItemClassification.trap, 0, 144, "Traps"),
     iname.poison_cocktail_trap: ACTItemData(ItemClassification.trap, 0, 145, "Traps"),
-    iname.taser_trap: ACTItemData(ItemClassification.trap, 0, 146, "Traps")
+    iname.taser_trap: ACTItemData(ItemClassification.trap, 0, 146, "Traps"),
+
+    # shells
+    sname.soda_can: ACTItemData(ItemClassification.filler, 1, 147, "Shells"),
+    sname.bottle_cap: ACTItemData(ItemClassification.filler, 1, 148, "Shells"),
+    sname.tin_can: ACTItemData(ItemClassification.filler, 1, 149, "Shells"),
+    sname.shot_glass: ACTItemData(ItemClassification.filler, 1, 150, "Shells"),
+    sname.banana_peel: ACTItemData(ItemClassification.filler, 1, 151, "Shells"),
+    sname.party_hat: ACTItemData(ItemClassification.filler, 1, 152, "Shells"),
+    sname.coconut: ACTItemData(ItemClassification.filler, 1, 153, "Shells"),
+    sname.teacup: ACTItemData(ItemClassification.filler, 1, 154, "Shells"),
+    sname.sauce_nozzle: ACTItemData(ItemClassification.filler, 1, 155, "Shells"),
+    sname.thimble: ACTItemData(ItemClassification.filler, 1, 156, "Shells"),
+    sname.bebop_cup: ACTItemData(ItemClassification.filler, 1, 157, "Shells"),
+    sname.tennis_ball: ACTItemData(ItemClassification.filler, 1, 158, "Shells"),
+    sname.f_key: ACTItemData(ItemClassification.filler, 1, 159, "Shells"),
+    sname.mason_jar: ACTItemData(ItemClassification.filler, 1, 160, "Shells"),
+    sname.salt_shaker: ACTItemData(ItemClassification.filler, 1, 161, "Shells"),
+    sname.conchiglie: ACTItemData(ItemClassification.filler, 1, 162, "Shells"),
+    sname.bartholomew: ACTItemData(ItemClassification.filler, 1, 163, "Shells"),
+    sname.disco_ball: ACTItemData(ItemClassification.filler, 1, 164, "Shells"),
+    sname.baby_shoe: ACTItemData(ItemClassification.filler, 1, 165, "Shells"),
+    sname.lil_bro: ACTItemData(ItemClassification.filler, 1, 166, "Shells"),
+    sname.matryoshka_large: ACTItemData(ItemClassification.filler, 1, 167, "Shells"),
+    sname.matryoshka_medium: ACTItemData(ItemClassification.filler, 1, 168, "Shells"),
+    sname.matryoshka_small: ACTItemData(ItemClassification.filler, 1, 169, "Shells"),
+    sname.shuttlecock: ACTItemData(ItemClassification.filler, 1, 170, "Shells"),
+    sname.felix_cube: ACTItemData(ItemClassification.filler, 1, 171, "Shells"),
+    sname.piggy_bank: ACTItemData(ItemClassification.filler, 1, 172, "Shells"),
+    sname.trophy: ACTItemData(ItemClassification.filler, 1, 173, "Shells"),
+    sname.imposter: ACTItemData(ItemClassification.filler, 1, 174, "Shells"),
+    sname.lil_red_cup: ACTItemData(ItemClassification.filler, 1, 175, "Shells"),
+    sname.wafer_cone: ACTItemData(ItemClassification.filler, 1, 176, "Shells"),
+    sname.yoccult: ACTItemData(ItemClassification.filler, 1, 177, "Shells"),
+    sname.coffee_pod: ACTItemData(ItemClassification.filler, 1, 178, "Shells"),
+    sname.egg_shell: ACTItemData(ItemClassification.filler, 1, 179, "Shells"),
+    sname.coffee_mug: ACTItemData(ItemClassification.filler, 1, 180, "Shells"),
+    sname.cascadia_roll: ACTItemData(ItemClassification.filler, 1, 181, "Shells"),
+    sname.ham_tin: ACTItemData(ItemClassification.filler, 1, 182, "Shells"),
+    sname.skull: ACTItemData(ItemClassification.filler, 1, 183, "Shells"),
+    sname.crab_husk: ACTItemData(ItemClassification.filler, 1, 184, "Shells"),
+    sname.legal_brick: ACTItemData(ItemClassification.filler, 1, 185, "Shells"),
+    sname.spring: ACTItemData(ItemClassification.filler, 1, 186, "Shells"),
+    sname.shotgun_shell: ACTItemData(ItemClassification.filler, 1, 187, "Shells"),
+    sname.rubber_duck: ACTItemData(ItemClassification.filler, 1, 188, "Shells"),
+    sname.boxing_glove: ACTItemData(ItemClassification.filler, 1, 189, "Shells"),
+    sname.cardboard_box: ACTItemData(ItemClassification.filler, 1, 190, "Shells"),
+    sname.tissue_box: ACTItemData(ItemClassification.filler, 1, 191, "Shells"),
+    sname.valve: ACTItemData(ItemClassification.filler, 1, 192, "Shells"),
+    sname.dumptruck: ACTItemData(ItemClassification.filler, 1, 193, "Shells"),
+    sname.ink_cartridge: ACTItemData(ItemClassification.filler, 1, 194, "Shells"),
+    sname.gacha_capsule: ACTItemData(ItemClassification.filler, 1, 195, "Shells"),
+    sname.lightbulb: ACTItemData(ItemClassification.filler, 1, 196, "Shells"),
+    sname.mouse: ACTItemData(ItemClassification.filler, 1, 197, "Shells"),
+    sname.going_under_64: ACTItemData(ItemClassification.filler, 1, 198, "Shells"),
+    sname.sock: ACTItemData(ItemClassification.filler, 1, 199, "Shells"),
+    sname.doll_head: ACTItemData(ItemClassification.filler, 1, 200, "Shells"),
+    sname.service_bell: ACTItemData(ItemClassification.filler, 1, 201, "Shells"),
+    sname.party_popper: ACTItemData(ItemClassification.filler, 1, 202, "Shells"),
+    sname.scrub_aggie: ACTItemData(ItemClassification.filler, 1, 203, "Shells"),
+    sname.dentures: ACTItemData(ItemClassification.filler, 1, 204, "Shells"),
+    sname.pill_bottle: ACTItemData(ItemClassification.filler, 1, 205, "Shells"),
+    sname.detergent_cap: ACTItemData(ItemClassification.filler, 1, 206, "Shells"),
+    sname.ultrasoft: ACTItemData(ItemClassification.filler, 1, 207, "Shells"),
+    sname.champagne_flute: ACTItemData(ItemClassification.filler, 1, 208, "Shells"),
+    sname.dish_scrubber: ACTItemData(ItemClassification.filler, 1, 209, "Shells"),
+    sname.snow_globe: ACTItemData(ItemClassification.filler, 1, 210, "Shells"),
+    sname.knights_helmet: ACTItemData(ItemClassification.filler, 1, 211, "Shells"),
+    sname.spirit_conch: ACTItemData(ItemClassification.filler, 1, 212, "Shells"),
+    sname.plug_fuse: ACTItemData(ItemClassification.filler, 1, 213, "Shells")
 
 }
 
@@ -193,6 +262,8 @@ filler_items: List[str] = [name for name, data in item_table.items() if data.cla
 trap_items: List[str] = [name for name, data in item_table.items() if data.classification == ItemClassification.trap]
 
 costume_items: List[str] = [name for name in filler_items if get_item_group(name) == "Costume"]
+
+shell_items: List[str] = [name for name in filler_items if get_item_group(name) == "Shells"]
 
 item_name_groups: Dict[str, Set[str]] = {
     group: set(item_names) for group, item_names in groupby(sorted(item_table, key=get_item_group), get_item_group) if group != ""
