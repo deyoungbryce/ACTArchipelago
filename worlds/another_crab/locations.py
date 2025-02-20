@@ -721,7 +721,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.umami_training3_skill: ACTLocationData(rname.snail_cave, 337, "Moon Snail Skills"),
 
     ##### shell locations
-    sname.soda_can: ACTLocationData({}, 618, "Shells"),
+    sname.soda_can: ACTLocationData({rname.central_shallows, rname.slacktide_after}, 618, "Shells"),
     sname.bottle_cap: ACTLocationData({}, 620, "Shells"),
     sname.tin_can: ACTLocationData({}, 621, "Shells"),
     sname.shot_glass: ACTLocationData({}, 622, "Shells"),

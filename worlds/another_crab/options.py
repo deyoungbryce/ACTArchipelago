@@ -1,6 +1,13 @@
 from dataclasses import dataclass
 from Options import Toggle, Range, Choice, PerGameCommonOptions
 
+class Goal(Choice):
+    """Choose your goal for the multiworld"""
+    display_name: str = "Goal"
+    option_firth = 0
+    option_roland = 1
+    default = 0
+
 class ForkLocation(Choice):
     """Choose where the Fork(weapon) location is set. Does nothing if Allow Forkless option is enabled.
     - Shuffled Early Local: Forces Fork location to be somewhere early in your own game.
@@ -17,7 +24,7 @@ class AllowForkless(Choice):
     - Disabled: Fork is required to fight early bosses, meaning that it will be placed early in your run.
     - Forkless Easy: Ensures that the intended forkless strategy is not too advanced
     - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary"""
-    display_name:str = "Allow Forkless"
+    display_name: str = "Allow Forkless"
     option_disabled = 0
     option_forkless_easy = 1
     option_forkless_hard = 2
@@ -53,10 +60,15 @@ class FishingLineLocation(Choice):
     """Choose where the Fishing Line (grapple) location is set
     - Shuffled: Fishing Line is placed into item pool.
     - Vanilla Location: Forces Fishing Line to be placed at its intended location"""
-    display_name:str = "Fishing Line Location"
+    display_name: str = "Fishing Line Location"
     option_shuffled = 0
     option_vanilla_location = 1
     default = 0
+
+class RandomShells(Toggle):
+    """Choose whether or not shells will be randomized. Only randomizes shells within other shell locations."""
+    display_name: str = "Random Shells"
+    default: bool = True
 
 class RemoveCostumes(Toggle):
     """Set to true to remove costumes from the item pool."""
@@ -85,11 +97,13 @@ class DeathLink(Toggle):
 
 @dataclass
 class ACTGameOptions(PerGameCommonOptions):
+    goal: Goal
     fork_location: ForkLocation
     allow_forkless: AllowForkless
     #logic_rules: LogicRules
     shelleport_location: ShelleportLocation
     fishing_line_location: FishingLineLocation
+    randomshells: RandomShells
     remove_costumes: RemoveCostumes
     microplasticMultiplier: MicroplasticMultiplier
     trapamount: TrapAmount

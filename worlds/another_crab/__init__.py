@@ -1,6 +1,6 @@
 from typing import Dict, List, Any
 from worlds.AutoWorld import WebWorld, World
-from BaseClasses import Region, ItemClassification
+from BaseClasses import Region, ItemClassification, CollectionState
 from Fill import fill_restrictive
 
 from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, shell_items, ACTItem
@@ -30,7 +30,7 @@ class ACTWorld(World):
     item_name_to_id = item_name_to_id
     location_name_to_id = location_name_to_id
 
-    #slot_data_items = List[ACTItem]
+    slot_data_items = List[ACTItem]
 
     def generate_early(self):
         # early fork shuffling
@@ -45,12 +45,15 @@ class ACTWorld(World):
         if self.options.shelleport_location == "shuffled_early_global":
             self.multiworld.early_items[self.player][iname.shelleport] = 1
 
+    def get_locations(self):
+        return self.multiworld.get_locations(self.player)
+
     def pre_fill(self):
+        state = CollectionState(self.multiworld)
 
-        random_shell = [self.random.shuffle(shell_items)]
-
-        for location in shell_locations:
-            self.get_location(location).place_locked_item(random_shell)
+        if self.options.randomshells == True:
+            self.random.shuffle(shell_locations)
+            fill_restrictive(self.multiworld, state, shell_locations, shell_items, single_player_placement=True, lock=True, allow_excluded=False)
 
         return super().pre_fill()
 
@@ -64,7 +67,7 @@ class ACTWorld(World):
 
     def create_items(self) -> None:
         ACT_items: List[ACTItem] = []
-        #self.slot_data_items = []
+        self.slot_data_items = []
 
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
@@ -125,6 +128,8 @@ class ACTWorld(World):
         for item, quantity in items_to_create.items():
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
+                if item in shell_items:
+                    self.slot_data_items.append(ACT_item)
                 ACT_items.append(ACT_item)
 
         self.multiworld.itempool += ACT_items
@@ -145,8 +150,13 @@ class ACTWorld(World):
             region.locations.append(location)
 
         # player can complete the game if they can reach the final region
-        self.multiworld.completion_condition[self.player] = \
-            lambda state: state.can_reach_region(spot = rname.carcinia_ruins, player = self.player)
+        if self.options.goal == "firth":
+            self.multiworld.completion_condition[self.player] = \
+                lambda state: state.can_reach_region(spot = rname.carcinia_ruins, player = self.player)
+            
+        if self.options.goal == "roland":
+            self.multiworld.completion_condition[self.player] = \
+                lambda state: state.can_reach_region(spot = rname.pinbarge, player = self.player)
 
     def set_rules(self) -> None:
         set_region_rules(self)
@@ -155,7 +165,11 @@ class ACTWorld(World):
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {
             "microplastic_multiplier": float(self.options.microplasticMultiplier.value),
-            "death_link": bool(self.options.deathlink.value)
+            "death_link": bool(self.options.deathlink.value),
+            "goal": str(self.options.goal.value)
         }
+        
+        for shell, location in shell_items, shell_locations:
+            slot_data[shell, location]
 
         return slot_data
