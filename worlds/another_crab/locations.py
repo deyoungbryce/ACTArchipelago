@@ -110,7 +110,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.clothesclaw_sandsbetween_grove: ACTLocationData(rname.sands_between, 112, "The Sands Between"), #cd2f3731-b9f4-4f88-abd2-44d142eca493-2_A-OOGroveRadius
     lname.breadclaw_sandsbetween_propanecliff: ACTLocationData(rname.sands_between, 135, "The Sands Between"), #f553b94c-14ea-4852-8ae7-564b8d30b24d-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_northchains: ACTLocationData(rname.sands_between, 137, "The Sands Between"), #7e4ef7d0-214a-4358-a0c3-866a869d71e0-2_A-OOGroveRadius
-    lname.clothesclaw_sandsbetween_litterpitfall: ACTLocationData(rname.sands_between, 138, "The Sands Between"), #9faef117-fd92-47cb-b4d8-cc2a07404a69-2_A-OOGroveRadius
+    lname.clothesclaw_sandsbetween_coolerpitfall: ACTLocationData(rname.sands_between, 138, "The Sands Between"), #9faef117-fd92-47cb-b4d8-cc2a07404a69-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_southgrovepit: ACTLocationData(rname.sands_between, 139, "The Sands Between"), #305be10e-d5a7-42e6-88f1-2cebdd524bbb-2_A-OOGroveRadius
     lname.paperclaw_sandsbetween_southeelshortcut: ACTLocationData(rname.sands_between, 147, "The Sands Between"), #0e2d558b-26a7-4213-be83-77355fe06128-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_southeel: ACTLocationData(rname.sands_between, 150, "The Sands Between"), #5c8133eb-ddb3-4b24-9849-f4d3f03491e0-2_A-OOGroveRadius
