@@ -721,8 +721,8 @@ location_table: Dict[str, ACTLocationData] = {
     lname.umami_training3_skill: ACTLocationData(rname.snail_cave, 337, "Moon Snail Skills"),
 
     ##### shell locations
-    sname.soda_can: ACTLocationData({rname.central_shallows, rname.slacktide_after}, 618, "Shells"),
-    sname.bottle_cap: ACTLocationData({}, 620, "Shells"),
+    sname.soda_can: ACTLocationData({rname.central_shallows, rname.snail_cave, rname.slacktide_after, rname.secluded_ridge, rname.expired_grove, rname.grove_main, rname.grove_village, rname.flotsam_vale, rname.scuttleport, rname.unfathom, rname.old_ocean}, 618, "Shells"),
+    sname.bottle_cap: ACTLocationData({rname.snail_cave, rname.central_shallows, rname.slacktide_after, rname.expired_grove, rname.grove_main, rname.grove_village, rname.flotsam_vale, rname.scuttleport, rname.unfathom, rname.old_ocean}, 620, "Shells"),
     sname.tin_can: ACTLocationData({}, 621, "Shells"),
     sname.shot_glass: ACTLocationData({}, 622, "Shells"),
     sname.banana_peel: ACTLocationData({}, 623, "Shells"),
