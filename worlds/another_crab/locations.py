@@ -1,8 +1,7 @@
-from typing import Dict, NamedTuple, Set, Optional
+from typing import Dict, List, NamedTuple, Set, Optional
 from BaseClasses import Location
 
-from .names import location_names as lname
-from .names import region_names as rname
+from .names import location_names as lname, region_names as rname, shell_names as sname
 
 class ACTLocation(Location):
     game: str = "Another Crabs Treasure"
@@ -22,7 +21,7 @@ location_table: Dict[str, ACTLocationData] = {
     # Last used number: 619; 618 is available
 
     #lname.heartkelp_inital: ACTLocationData("Tide Pools", "Starting Items"),#950e628c-f657-48d4-b93b-f8717627f6b3-2_A-ShallowsTidePools
-    lname.fork_pickup: ACTLocationData(rname.starting_cave, 1, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
+    lname.fork_pickup: ACTLocationData(rname.starting_cave, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
     lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide"),
@@ -111,7 +110,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.clothesclaw_sandsbetween_grove: ACTLocationData(rname.sands_between, 112, "The Sands Between"), #cd2f3731-b9f4-4f88-abd2-44d142eca493-2_A-OOGroveRadius
     lname.breadclaw_sandsbetween_propanecliff: ACTLocationData(rname.sands_between, 135, "The Sands Between"), #f553b94c-14ea-4852-8ae7-564b8d30b24d-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_northchains: ACTLocationData(rname.sands_between, 137, "The Sands Between"), #7e4ef7d0-214a-4358-a0c3-866a869d71e0-2_A-OOGroveRadius
-    lname.clothesclaw_sandsbetween_litterpitfall: ACTLocationData(rname.sands_between, 138, "The Sands Between"), #9faef117-fd92-47cb-b4d8-cc2a07404a69-2_A-OOGroveRadius
+    lname.clothesclaw_sandsbetween_coolerpitfall: ACTLocationData(rname.sands_between, 138, "The Sands Between"), #9faef117-fd92-47cb-b4d8-cc2a07404a69-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_southgrovepit: ACTLocationData(rname.sands_between, 139, "The Sands Between"), #305be10e-d5a7-42e6-88f1-2cebdd524bbb-2_A-OOGroveRadius
     lname.paperclaw_sandsbetween_southeelshortcut: ACTLocationData(rname.sands_between, 147, "The Sands Between"), #0e2d558b-26a7-4213-be83-77355fe06128-2_A-OOGroveRadius
     lname.hairclaw_sandsbetween_southeel: ACTLocationData(rname.sands_between, 150, "The Sands Between"), #5c8133eb-ddb3-4b24-9849-f4d3f03491e0-2_A-OOGroveRadius
@@ -140,7 +139,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.clothesclaw_ridge_overlookfish: ACTLocationData(rname.secluded_ridge, 206, "The Sands Between - Secluded Ridge"), #4f737f9e-a952-490c-b54d-1f74735af9cc-2_A-OOGroveRadius
     lname.chipclaw_ridge_southfish: ACTLocationData(rname.secluded_ridge, 207, "The Sands Between - Secluded Ridge"), #82043889-30eb-45f4-8f87-45dd2f5d69ed-2_A-OOGroveRadius
 
-    lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plataeu"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
+    lname.stapleclaw_trashbin_eelfish: ACTLocationData(rname.secluded_ridge, 209, "The Sands Between - Trashbin Plateau"), #190034bb-c13e-42ec-bac4-037cc828fde3-2_A-OOGroveRadius
 
     lname.breadclaw_grovemain_takeout: ACTLocationData(rname.grove_main, 219, "Expired Grove Main"), #4933d4b0-a56a-4472-b9a6-4469fd335fa4-2_A-GroveForestLow
     lname.breadclaw_grovemain_tiretop: ACTLocationData(rname.grove_main, 224, "Expired Grove Main"), #da04ed8f-2d99-48f9-8412-67748d983d2b-2_A-GroveForestLow
@@ -343,11 +342,11 @@ location_table: Dict[str, ACTLocationData] = {
     lname.stainlessrelic_grovevillage_clam: ACTLocationData(rname.grove_village, 307, "Expired Grove Village"), #269526ef-6bb0-42cf-a93d-e2cac970e424-2_E-Cliffs
     lname.oldworldwhorl_grovevillage_topoda: ACTLocationData(rname.grove_village, 316, "Expired Grove Village"), #8b9b3b77-b95f-46a2-adfd-ca962e8f0cef-2_E-Cliffs
 
-    lname.bloodstar_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 344, "Flotsame Vale"), #45cca266-a175-4020-9dd7-e0b844421aff-2_B-LowSwamp
-    lname.oldworldwhorl_flotsamvale_cavepath: ACTLocationData(rname.flotsam_vale, 354, "Flotsame Vale"), #53cea11a-cfb6-4894-8e18-375ea895caed-2_A-HighSwamp
-    lname.oldworldwhorl_flotsamvale_snail: ACTLocationData(rname.flotsam_vale, 357, "Flotsame Vale"), #32f43e6e-a382-4938-b068-f1eab35a0269-2_A-HighSwamp
-    lname.bloodstar_flotsamvale_craneclam: ACTLocationData(rname.flotsam_vale, 397, "Flotsame Vale"), #977f86dc-aeb1-471f-bb86-4db41bcbfc2c-2_A-HighSwamp
-    lname.tacklepouch_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 403, "Flotsame Vale"), #b6c01d3a-31e3-457d-b53f-ecf0ff3b7e9f-2_B-LowSwamp
+    lname.bloodstar_flotsamvale_submerged: ACTLocationData(rname.flotsam_vale, 344, "Flotsam Vale"), #45cca266-a175-4020-9dd7-e0b844421aff-2_B-LowSwamp
+    lname.oldworldwhorl_flotsamvale_cavepath: ACTLocationData(rname.flotsam_vale, 354, "Flotsam Vale"), #53cea11a-cfb6-4894-8e18-375ea895caed-2_A-HighSwamp
+    lname.oldworldwhorl_flotsamvale_snail: ACTLocationData(rname.flotsam_vale, 357, "Flotsam Vale"), #32f43e6e-a382-4938-b068-f1eab35a0269-2_A-HighSwamp
+    lname.bloodstar_flotsamvale_craneclam: ACTLocationData(rname.flotsam_vale, 397, "Flotsam Vale"), #977f86dc-aeb1-471f-bb86-4db41bcbfc2c-2_A-HighSwamp
+    lname.tacklepouch_flotsamvale_waterfall: ACTLocationData(rname.flotsam_vale, 403, "Flotsam Vale"), #b6c01d3a-31e3-457d-b53f-ecf0ff3b7e9f-2_B-LowSwamp
 
     lname.stainlessrelic_scuttleport_clam: ACTLocationData(rname.scuttleport, 438, "Scuttleport"), #95c7f334-5083-4ee8-bbcb-65033ca154f5-2_C-Facilities
     lname.bloodstar_scuttleport_magrailclam: ACTLocationData(rname.scuttleport, 469, "Scuttleport"), #f5ed972d-9d53-45b3-93b0-a389464d8941-2_C-Facilities
@@ -407,7 +406,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.barbedhook_ridge_overlookpath: ACTLocationData(rname.secluded_ridge, 192, "The Sands Between - Secluded Ridge"), #d9ee8d70-3493-4e7b-91b3-b42278ff0ad4-2_A-OOGroveRadius
     lname.sharkegg_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 212, "The Sands Between - Secluded Ridge"), #dcc6b99e-1d47-481f-86ca-e14a5743f460-2_A-OOGroveRadius
 
-    lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plataeu"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
+    lname.barbedhook_trashbin_eelgrapple: ACTLocationData(rname.secluded_ridge, 210, "The Sands Between - Trashbin Plateau"), #2bccca10-1f27-4762-9a9b-8e628586e0a4-2_A-OOGroveRadius
 
     lname.barbedhook_grovemain_sniper: ACTLocationData(rname.secluded_ridge, 214, "Expired Grove Main"), #8fd70034-2415-4934-975b-2303d159f567-2_A-GroveForestLow
     lname.barbedhook_grovemain_riverledge: ACTLocationData(rname.secluded_ridge, 215, "Expired Grove Main"), #0860891c-3db6-4e51-8c0b-58b09ac8ece0-2_A-GroveForestLow
@@ -573,10 +572,10 @@ location_table: Dict[str, ACTLocationData] = {
     lname.cockle_ridge_eelfish: ACTLocationData(rname.secluded_ridge, 208, "The Sands Between - Secluded Ridge"), #d32ade52-c34e-4cb7-957c-df605339ee4c-2_A-OOGroveRadius
     lname.bobber_ridge_broomspire: ACTLocationData(rname.secluded_ridge, 211, "The Sands Between - Secluded Ridge"), #fc2cf7ed-6ff6-40bb-987a-936da0afa93b-2_A-OOGroveRadius
 
-    lname.cockle_trashbin_peak: ACTLocationData(rname.secluded_ridge, 199, "The Sands Between - Trashbin Plataeu"), #ca4c297f-e9fd-4a78-b89a-811d2394406b-2_A-OOGroveRadius
-    lname.sinker_trashbin_peak: ACTLocationData(rname.secluded_ridge, 200, "The Sands Between - Trashbin Plataeu"), #36611427-18cc-45f3-ad50-a51cc02ccb1d-2_A-OOGroveRadius
-    lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plataeu"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
-    lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plataeu"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
+    lname.cockle_trashbin_peak: ACTLocationData(rname.secluded_ridge, 199, "The Sands Between - Trashbin Plateau"), #ca4c297f-e9fd-4a78-b89a-811d2394406b-2_A-OOGroveRadius
+    lname.sinker_trashbin_peak: ACTLocationData(rname.secluded_ridge, 200, "The Sands Between - Trashbin Plateau"), #36611427-18cc-45f3-ad50-a51cc02ccb1d-2_A-OOGroveRadius
+    lname.smallbattery_trashbin_mantis: ACTLocationData(rname.secluded_ridge, 201, "The Sands Between - Trashbin Plateau"), #0d86fe0e-ae41-4fb2-beb2-9bb5e558429a-2_A-OOGroveRadius
+    lname.googlyeye_trashbin_pineapple: ACTLocationData(rname.secluded_ridge, 202, "The Sands Between - Trashbin Plateau"), #7935fe1e-318c-4f90-901b-fa001de6e4dc-2_A-OOGroveRadius
 
     lname.barnacle_grovemain_colander: ACTLocationData(rname.grove_main, 213, "Expired Grove Main"), #74aa4107-6a5a-4868-ae54-942e4421be3f-2_A-GroveForestLow
     lname.seastar_grovemain_eastrock: ACTLocationData(rname.grove_main, 218, "Expired Grove Main"), #17cb1eed-8d88-4464-b33b-215c837035f6-2_A-GroveForestLow
@@ -720,10 +719,85 @@ location_table: Dict[str, ACTLocationData] = {
     lname.umami_training1_skill: ACTLocationData(rname.snail_cave, 335, "Moon Snail Skills"),
     lname.umami_training2_skill: ACTLocationData(rname.snail_cave, 336, "Moon Snail Skills"),
     lname.umami_training3_skill: ACTLocationData(rname.snail_cave, 337, "Moon Snail Skills"),
+
+    ##### shell locations
+    # not even sure if the regions will work like that
+    sname.soda_can: ACTLocationData({rname.central_shallows, rname.snail_cave, rname.slacktide_after, rname.secluded_ridge, rname.expired_grove, rname.grove_main, rname.grove_village, rname.flotsam_vale, rname.scuttleport, rname.unfathom, rname.old_ocean}, 618, "Shells"),
+    sname.bottle_cap: ACTLocationData({rname.snail_cave, rname.central_shallows, rname.slacktide_after, rname.expired_grove, rname.grove_main, rname.grove_village, rname.flotsam_vale, rname.scuttleport, rname.unfathom, rname.old_ocean}, 620, "Shells"),
+    sname.tin_can: ACTLocationData({}, 621, "Shells"),
+    sname.shot_glass: ACTLocationData({}, 622, "Shells"),
+    sname.banana_peel: ACTLocationData({}, 623, "Shells"),
+    sname.party_hat: ACTLocationData({}, 624, "Shells"),
+    sname.coconut: ACTLocationData({}, 625, "Shells"),
+    sname.teacup: ACTLocationData({}, 626, "Shells"),
+    sname.sauce_nozzle: ACTLocationData({}, 627, "Shells"),
+    sname.thimble: ACTLocationData({}, 628, "Shells"),
+    sname.bebop_cup: ACTLocationData({}, 629, "Shells"),
+    sname.tennis_ball: ACTLocationData({}, 630, "Shells"),
+    sname.f_key: ACTLocationData({}, 631, "Shells"),
+    sname.mason_jar: ACTLocationData({}, 632, "Shells"),
+    sname.salt_shaker: ACTLocationData({}, 633, "Shells"),
+    sname.conchiglie: ACTLocationData({}, 634, "Shells"),
+    sname.bartholomew: ACTLocationData({}, 635, "Shells"),
+    sname.disco_ball: ACTLocationData({}, 636, "Shells"),
+    sname.baby_shoe: ACTLocationData({}, 637, "Shells"),
+    sname.lil_bro: ACTLocationData({}, 638, "Shells"),
+    sname.matryoshka_large: ACTLocationData({}, 639, "Shells"),
+    sname.matryoshka_medium: ACTLocationData({}, 640, "Shells"),
+    sname.matryoshka_small: ACTLocationData({}, 641, "Shells"),
+    sname.shuttlecock: ACTLocationData({}, 642, "Shells"),
+    sname.felix_cube: ACTLocationData({}, 643, "Shells"),
+    sname.piggy_bank: ACTLocationData({}, 644, "Shells"),
+    sname.trophy: ACTLocationData({}, 645, "Shells"),
+    sname.imposter: ACTLocationData({}, 646, "Shells"),
+    sname.lil_red_cup: ACTLocationData({}, 647, "Shells"),
+    sname.wafer_cone: ACTLocationData({}, 648, "Shells"),
+    sname.yoccult: ACTLocationData({}, 649, "Shells"),
+    sname.coffee_pod: ACTLocationData({}, 650, "Shells"),
+    sname.egg_shell: ACTLocationData({}, 651, "Shells"),
+    sname.coffee_mug: ACTLocationData({}, 652, "Shells"),
+    sname.cascadia_roll: ACTLocationData({}, 653, "Shells"),
+    sname.ham_tin: ACTLocationData({}, 654, "Shells"),
+    sname.skull: ACTLocationData({}, 655, "Shells"),
+    sname.crab_husk: ACTLocationData({}, 656, "Shells"),
+    sname.legal_brick: ACTLocationData({}, 657, "Shells"),
+    sname.spring: ACTLocationData({}, 658, "Shells"),
+    sname.shotgun_shell: ACTLocationData({}, 659, "Shells"),
+    sname.rubber_duck: ACTLocationData({}, 660, "Shells"),
+    sname.boxing_glove: ACTLocationData({}, 661, "Shells"),
+    sname.cardboard_box: ACTLocationData({}, 662, "Shells"),
+    sname.tissue_box: ACTLocationData({}, 663, "Shells"),
+    sname.valve: ACTLocationData({}, 664, "Shells"),
+    sname.dumptruck: ACTLocationData({}, 665, "Shells"),
+    sname.ink_cartridge: ACTLocationData({}, 666, "Shells"),
+    sname.gacha_capsule: ACTLocationData({}, 667, "Shells"),
+    sname.lightbulb: ACTLocationData({}, 668, "Shells"),
+    sname.mouse: ACTLocationData({}, 669, "Shells"),
+    sname.going_under_64: ACTLocationData({}, 670, "Shells"),
+    sname.sock: ACTLocationData({}, 671, "Shells"),
+    sname.doll_head: ACTLocationData({}, 672, "Shells"),
+    sname.service_bell: ACTLocationData({}, 673, "Shells"),
+    sname.party_popper: ACTLocationData({}, 674, "Shells"),
+    sname.scrub_aggie: ACTLocationData({}, 675, "Shells"),
+    sname.dentures: ACTLocationData({}, 676, "Shells"),
+    sname.pill_bottle: ACTLocationData({}, 677, "Shells"),
+    sname.detergent_cap: ACTLocationData({}, 678, "Shells"),
+    sname.ultrasoft: ACTLocationData({}, 679, "Shells"),
+    sname.champagne_flute: ACTLocationData({}, 680, "Shells"),
+    sname.dish_scrubber: ACTLocationData({}, 681, "Shells"),
+    sname.snow_globe: ACTLocationData({}, 682, "Shells"),
+    sname.knights_helmet: ACTLocationData({}, 683, "Shells"),
+    sname.spirit_conch: ACTLocationData({}, 684, "Shells"),
+    sname.plug_fuse: ACTLocationData({}, 685, "Shells")
 }
 
 
 location_name_to_id: Dict[str, int] = {name: location_base_id + data.location_id_offset for name, data in location_table.items()}
+
+def get_location_group(location_name: str) -> str:
+    return location_table[location_name].location_group
+
+shell_locations: List[str] = [name for name, data in location_table.items() if data.location_group == "Shells"]
 
 location_name_groups: Dict[str, Set[str]] = {}
 for loc_name, loc_data in location_table.items():

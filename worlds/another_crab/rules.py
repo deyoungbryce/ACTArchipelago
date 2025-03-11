@@ -9,11 +9,25 @@ from .names import region_names as rname
 if TYPE_CHECKING:
     from . import ACTWorld
 
-#forkless_skills: List[str] = {
-#   iname.parry,
-#   iname.riposte,
-#   iname.natural_defenses
+#forkless_easy_skills: List[str] = {
+
 #}
+
+#forkless_hard_skills: List[str] = {
+  
+#}
+
+#def can_rolling_attack(state: CollectionState, player: int) -> bool:
+#  return state.has_all({necessary items here}, player)
+
+#def has_summon(state: CollectionState, player: int) -> bool:
+#  return state.has() or state.has()
+
+#def can_magic_damage(state: CollectionState, player: int) -> bool:
+#  return state.has()
+
+#def can_regen_umami(state: CollectionState, player: int) -> bool:
+#   return state.has()
 
 def set_region_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
@@ -40,6 +54,13 @@ def set_region_rules(world: "ACTWorld") -> None:
     
   multiworld.get_entrance("Scuttleport -> Pinbarge", player).access_rule = \
     lambda state: state.has(iname.eelectrocute, player)
+  
+def set_shell_rules(world: "ACTWorld") -> None:
+   multiworld = world.multiworld
+   player = world.player
+
+   set_rule(multiworld.get_location(lname.nephro, player),
+            lambda state: state.can_reach_region())
 
 def set_location_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
@@ -47,16 +68,34 @@ def set_location_rules(world: "ACTWorld") -> None:
   options = world.options
 
 # ---- Forkless Logic ----
-  #if options.allow_forkless:
+
+  # not really sure if this will work in this state even, have had trouble with trying to use if/else statements here
+
+  #if options.allow_forkless == "forkless_easy":
   #  set_rule(multiworld.get_location(lname.nephro, player),
   #          lambda state: state.has_all({forkless_skills}, player))
   #  
   #  set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
   #          lambda state: state.has_all({forkless_skills}, player))
-
+  
+  #if options.allow_forkless == "forkless_hard":
+  #   set_rule(multiworld.get_location(lname.nephro, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
+  #   
+  #   set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
+  #          lambda state: state.has_all({forkless_skills}, player))
 # ---- Cave of Respite ----
  # spearfishing
   set_rule(multiworld.get_location(lname.clothesclaw_caveofrespite_entrancefishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.chipclaw_caveofrespite_forkroomfishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.mussel_caveofrespite_crabfightfishing, player),
+            lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
+  
+  set_rule(multiworld.get_location(lname.sanddollar_caveofrespite_pathfishing, player),
             lambda state: state.has_all({iname.spearfishing, iname.fishing_line}, player))
 
 # ---- Central Shallows ----
