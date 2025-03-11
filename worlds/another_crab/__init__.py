@@ -51,6 +51,7 @@ class ACTWorld(World):
     def pre_fill(self):
         state = CollectionState(self.multiworld)
 
+        # not sure if this will work, but this is intended to only shuffle shells within their own locations
         if self.options.randomshells == True:
             self.random.shuffle(shell_locations)
             fill_restrictive(self.multiworld, state, shell_locations, shell_items, single_player_placement=True, lock=True, allow_excluded=False)
@@ -61,7 +62,7 @@ class ACTWorld(World):
         item_data = item_table[name]
         return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
 
-    # not actually used rn
+    # not actually used rn, may be useful for shell rando
     def create_event(self, event: str) -> ACTItem:
         return ACTItem(event, True, None, self.player)
 
@@ -100,6 +101,7 @@ class ACTWorld(World):
             for costumes in costume_items: items_to_create[costumes] = 0
         
         # fill empty locations with filler and traps
+        ## I've had some issues with strange generation cases due to this way of handling filler items
         items_total: int = 0
 
         for item in items_to_create:
@@ -162,6 +164,8 @@ class ACTWorld(World):
         set_region_rules(self)
         set_location_rules(self)
     
+    # shell slotdata stuff almost certainly isn't going to work properly like this
+
     def fill_slot_data(self) -> Dict[str, Any]:
         slot_data: Dict[str, Any] = {
             "microplastic_multiplier": float(self.options.microplasticMultiplier.value),

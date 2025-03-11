@@ -68,6 +68,9 @@ def set_location_rules(world: "ACTWorld") -> None:
   options = world.options
 
 # ---- Forkless Logic ----
+
+  # not really sure if this will work in this state even, have had trouble with trying to use if/else statements here
+
   #if options.allow_forkless == "forkless_easy":
   #  set_rule(multiworld.get_location(lname.nephro, player),
   #          lambda state: state.has_all({forkless_skills}, player))

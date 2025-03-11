@@ -8,6 +8,8 @@ class Goal(Choice):
     option_roland = 1
     default = 0
 
+# might be worth finding a way to combine ForkLocation and AllowForkless into one option for simplicity's sake
+
 class ForkLocation(Choice):
     """Choose where the Fork(weapon) location is set. Does nothing if Allow Forkless option is enabled.
     - Shuffled Early Local: Forces Fork location to be somewhere early in your own game.

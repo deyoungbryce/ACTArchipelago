@@ -182,6 +182,7 @@ item_table: Dict[str, ACTItemData] = {
     iname.taser_trap: ACTItemData(ItemClassification.trap, 0, 146, "Traps"),
 
     # shells
+    # might be worth trying to use event items for these
     sname.soda_can: ACTItemData(ItemClassification.filler, 1, 147, "Shells"),
     sname.bottle_cap: ACTItemData(ItemClassification.filler, 1, 148, "Shells"),
     sname.tin_can: ACTItemData(ItemClassification.filler, 1, 149, "Shells"),
