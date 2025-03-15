@@ -3,8 +3,8 @@ from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification, CollectionState
 from Fill import fill_restrictive
 
-from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, shell_items, ACTItem
-from .locations import location_table, location_name_groups, location_name_to_id, location_total, shell_locations, ACTLocation
+from .items import item_table, item_name_groups, item_name_to_id, filler_items, costume_items, trap_items, shell_items, ACTItem, ACTItemData
+from .locations import location_table, location_name_groups, location_name_to_id, location_total, shell_locations, ACTLocation, ACTLocationData
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
@@ -31,6 +31,7 @@ class ACTWorld(World):
     location_name_to_id = location_name_to_id
 
     slot_data_items = List[ACTItem]
+    shells_placed : List[str] = []
 
     def generate_early(self):
         # early fork shuffling
@@ -51,16 +52,27 @@ class ACTWorld(World):
     def pre_fill(self):
         state = CollectionState(self.multiworld)
 
-        # not sure if this will work, but this is intended to only shuffle shells within their own locations
+        #Shuffle Shell Event Locations
         if self.options.randomshells == True:
             self.random.shuffle(shell_locations)
-            fill_restrictive(self.multiworld, state, shell_locations, shell_items, single_player_placement=True, lock=True, allow_excluded=False)
+            
+            # for i in range(len(shell_items)):
+            #     print(shell_locations[i] + " : " + shell_items[i])
+            #     loc = location_table[shell_locations[i]]
+            #     ACTLocation(self.player,shell_locations[i],None,loc.region).place_locked_item(ACTItem(shell_items[i],ItemClassification.progression,None,self.player))
+            #     self.shells_placed.append(shell_items[i])
+            # print(self.shells_placed)
+
+            #fill_restrictive(self.multiworld, state, shell_locations, shell_items, single_player_placement=True, lock=True, allow_excluded=False)
 
         return super().pre_fill()
 
     def create_item(self, name: str) -> ACTItem:
         item_data = item_table[name]
-        return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
+        if item_data.item_id_offset != None:
+            return ACTItem(name, item_data.classification, self.item_name_to_id[name], self.player)
+        else:
+            return ACTItem(name, item_data.classification, None, self.player)
 
     # not actually used rn, may be useful for shell rando
     def create_event(self, event: str) -> ACTItem:
@@ -73,7 +85,10 @@ class ACTWorld(World):
         items_to_create: Dict[str, int] = {item: data.quantity_in_item_pool for item, data in item_table.items()}
 
         # removing shells from the total item pool because we only want them shuffled within their own pool
-        for shells in shell_items: items_to_create[shells] = 0
+        
+        for shells in shell_items: 
+            print("ShellItem_"+shells)
+            items_to_create[shells] = 0
 
         # yaml options
         if self.options.fork_location and not self.options.allow_forkless:
@@ -116,23 +131,25 @@ class ACTWorld(World):
 
         traps_needed = total_filler * self.options.trapamount.value / 100
 
-        for counter in range(0, traps_needed):
+        for counter in range(0, round(traps_needed)):
             trap_item = self.random.choice(trap_items)
             items_to_create[trap_item] += 1
 
         filler_needed = total_filler - traps_needed
 
-        for counter in range(0, filler_needed):
+        for counter in range(0, round(filler_needed)):
             filler_item = self.random.choice(available_filler)
             items_to_create[filler_item] += 1
 
         # add items to item pool
         for item, quantity in items_to_create.items():
+            print("Creating " + str(quantity) + " " + item)
             for i in range(quantity):
                 ACT_item: ACTItem = self.create_item(item)
                 if item in shell_items:
                     self.slot_data_items.append(ACT_item)
-                ACT_items.append(ACT_item)
+                else:
+                    ACT_items.append(ACT_item)
 
         self.multiworld.itempool += ACT_items
 
@@ -146,6 +163,13 @@ class ACTWorld(World):
             region = self.multiworld.get_region(region_name, self.player)
             region.add_exits(exits)
         
+        for i in range(len(shell_locations)):
+            print("Region append " +shell_locations[i])
+            region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
+            location = ACTLocation(self.player, location_table[i], None, region)
+            location.place_locked_item(ACTItem(shell_items[i],ItemClassification.progression,None,self.player))
+            region.locations.append(location)
+
         for location_name, location_id in location_name_to_id.items():
             region = self.multiworld.get_region(location_table[location_name].region, self.player)
             location = ACTLocation(self.player, location_name, location_id, region)
@@ -167,13 +191,17 @@ class ACTWorld(World):
     # shell slotdata stuff almost certainly isn't going to work properly like this
 
     def fill_slot_data(self) -> Dict[str, Any]:
+
+        shell_rando: Dict[str,str] = {}
+        for i in range(len(shell_items)):
+            shell_rando.update({shell_locations[i]:shell_items[i]})
+
         slot_data: Dict[str, Any] = {
             "microplastic_multiplier": float(self.options.microplasticMultiplier.value),
             "death_link": bool(self.options.deathlink.value),
-            "goal": str(self.options.goal.value)
+            "goal": str(self.options.goal.value),
+            "shell_rando": shell_rando
         }
-        
-        for shell, location in shell_items, shell_locations:
-            slot_data[shell, location]
+
 
         return slot_data

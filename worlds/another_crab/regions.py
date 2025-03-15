@@ -1,6 +1,7 @@
 from typing import Dict, Set
 
 from .names import region_names as rname
+from .names import shell_names as sname
 
 ACT_regions: Dict[str, Set[str]] = {
     rname.menu: {
@@ -19,7 +20,9 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.snail_cave
     },
     rname.snail_cave: {
-        rname.slacktide_after
+        rname.slacktide_after,
+        sname.soda_can,
+        sname.bottle_cap
     },
     rname.slacktide_after: {
         rname.reefs_edge
@@ -67,6 +70,10 @@ ACT_regions: Dict[str, Set[str]] = {
     rname.trash_island: {
         rname.carcinia_ruins
     },
-    rname.carcinia_ruins: set()
+    rname.carcinia_ruins: set(),
+    sname.soda_can: set(),
+    sname.bottle_cap: set()
+
+
 }
 

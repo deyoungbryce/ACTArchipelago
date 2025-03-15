@@ -32,7 +32,7 @@ class AllowForkless(Choice):
     option_forkless_hard = 2
     default = 0
 
-#class LogicRules(Choice):
+# class LogicRules(Choice):
 #    """Set the preferred logic rules for your game
 #    - Restricted: Standard logic, no skips/glitches required to complete goal.
 #    - No Major Glitches: Allows for {list of easy logic rules here} to be needed to complete goal.

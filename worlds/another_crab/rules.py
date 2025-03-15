@@ -6,6 +6,7 @@ from .options import ACTGameOptions
 from .names import location_names as lname
 from .names import item_names as iname
 from .names import region_names as rname
+
 if TYPE_CHECKING:
     from . import ACTWorld
 
