@@ -18,17 +18,7 @@ if TYPE_CHECKING:
   
 #}
 
-#def can_rolling_attack(state: CollectionState, player: int) -> bool:
-#  return state.has_all({necessary items here}, player)
 
-#def has_summon(state: CollectionState, player: int) -> bool:
-#  return state.has() or state.has()
-
-#def can_magic_damage(state: CollectionState, player: int) -> bool:
-#  return state.has()
-
-#def can_regen_umami(state: CollectionState, player: int) -> bool:
-#   return state.has()
 
 def set_region_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld

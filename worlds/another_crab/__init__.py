@@ -31,7 +31,6 @@ class ACTWorld(World):
     location_name_to_id = location_name_to_id
 
     slot_data_items = List[ACTItem]
-    shells_placed : List[str] = []
 
     def generate_early(self):
         # early fork shuffling
@@ -57,18 +56,12 @@ class ACTWorld(World):
             self.random.shuffle(shell_locations)
             
             for i in range(len(shell_items)):
-                print(shell_locations[i] + " : " + shell_items[i])
-                loc = location_table[shell_locations[i]]
                 region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
                 shell_placed_loc = ACTLocation(self.player,shell_locations[i],None,region)
                 shell_placed_loc.place_locked_item(ACTItem(shell_items[i],ItemClassification.progression,None,self.player))
                 
                 region.locations.append(shell_placed_loc)
 
-                #self.shells_placed.append(shell_items[i])
-            print(self.shells_placed)
-
-            #fill_restrictive(self.multiworld, state, shell_locations, shell_items, single_player_placement=True, lock=True, allow_excluded=False)
 
         return super().pre_fill()
 
@@ -167,13 +160,6 @@ class ACTWorld(World):
         for region_name, exits in ACT_regions.items():
             region = self.multiworld.get_region(region_name, self.player)
             region.add_exits(exits)
-        
-        # for i in range(len(shell_locations)):
-        #     print("Region append " +shell_locations[i])
-        #     region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
-        #     location = ACTLocation(self.player, location_table[shell_locations[i]], None, region)
-        #     location.place_locked_item(ACTItem(shell_items[i],ItemClassification.progression,None,self.player))
-        #     region.locations.append(location)
 
         for location_name, location_id in location_name_to_id.items():
             region = self.multiworld.get_region(location_table[location_name].region, self.player)
