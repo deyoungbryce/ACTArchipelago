@@ -14,7 +14,7 @@ if TYPE_CHECKING:
 
 #Checks to see if the player can logically consistently deal damage
 def can_deal_damage(state: CollectionState,player:int) -> bool:
-    return can_rolling_attack(state,player) | can_magic_damage(state,player) | has_summon(state,player) | state.has(iname.fork) | can_atk_damage_shell(state,player)
+    return can_rolling_attack(state,player) | can_magic_damage(state,player) | can_atk_damage_shell(state,player) | has_summon(state,player)  | state.has(iname.fork,player)
 
 
 def can_rolling_attack(state: CollectionState, player: int) -> bool:
@@ -22,29 +22,68 @@ def can_rolling_attack(state: CollectionState, player: int) -> bool:
 
 #Checks if the player has any of the summonable fish stowaways
 def has_summon(state: CollectionState, player: int) -> bool:
-    return state.has_any({iname.chum,iname.lanternfish,iname.fredrick},player)
+    summon_count: int = 0
+    if state.has(iname.chum,player):
+        summon_count += 1
+    
+    if state.has(iname.fredrick,player):
+        summon_count += 1
+
+    if state.has(iname.lanternfish,player):
+        summon_count += 1
+
+    return summon_count >= 2
 
 #Checks if the player has adaptations
 #Skips Snail Sanctum since it needs lvl 2 to deal damage
 #Skips Tactical Tentacle since it may need the fork to attack
 #Skips Bobbit Trap since it may not do enough dmg at lvl 1
 def has_adaptation(state: CollectionState, player: int) -> bool:
-    return state.has_any({iname.royal_wave, iname.urchin_toss, iname.mantis_punch, iname.bubble_bullet, iname.eelectrocute})
+    return state.has_any({iname.royal_wave, iname.urchin_toss, iname.mantis_punch, iname.bubble_bullet, iname.eelectrocute},player)
 
 def can_magic_damage(state: CollectionState, player: int) -> bool:
-    return (can_reach_magic_shells(state,player) | has_adaptation(state,player)) and can_regen_umami(state,player)
+    return (can_reach_magic_shells(state,player) ) and can_regen_umami(state,player) #| has_adaptation(state,player)
 
 def can_regen_umami(state: CollectionState, player: int) -> bool:
-    return state.has_any_count({[iname.phytoplankton_plus,1],[iname.zooplankton,2],[iname.zooplankton_plus,1],[iname.phytoplankton_plus,2]},player)
+    return state.has_any_count({iname.phytoplankton_plus:1,iname.zooplankton:2,iname.zooplankton_plus:1,iname.phytoplankton_plus:2},player)
 
 def can_reach_magic_shells(state: CollectionState, player: int) -> bool:
-    return state.has(sname.soda_can) | state.has(sname.bottle_cap)
+    return can_twist_top(state,player) | can_pop_off(state,player) | can_rollout(state,player) | can_fizzle(state,player) | can_party_time(state,player) | can_shards(state,player) | can_squash(state,player) | can_twinkle(state,player)
 
 def can_reach_rolling_shells(state: CollectionState, player: int) -> bool:
-    return state.has(sname.soda_can) | state.has(sname.bottle_cap)
+    return state.has_any({sname.soda_can,sname.bottle_cap,sname.lil_red_cup,sname.shuttlecock,sname.bebop_cup},player)
 
 def can_atk_damage_shell(state: CollectionState, player: int) -> bool:
-    twist_top: bool = state.has(sname.sauce_nozzle) | state.has(sname.shuttlecock) | state.has(sname.felix_cube) | state.has(sname.dish_scrubber)
-    pop_off: bool = state.has(sname.bottle_cap) | state.has(sname.f_key) | state.has(sname.ham_tin) | state.has(sname.legal_brick) | state.has(sname.spring) | state.has(sname.detergent_cap)
-    rollout: bool = state.has(sname.coconut) | state.has(sname.tennis_ball) | state.has(sname.dumptruck) | state.has(sname.gacha_capsule) | state.has(sname.ultrasoft)
-    return twist_top | (pop_off and state.has(iname.sponge,player,2)) | (rollout and state.has(iname.sponge,player,2))
+    return can_twist_top(state,player) | (can_pop_off(state,player) and state.has(iname.sponge,player,2)) | (can_rollout(state,player) and state.has(iname.sponge,player,2))
+
+
+#Check if Shell Spells are Reachable
+def can_twist_top(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.sauce_nozzle, sname.shuttlecock,sname.felix_cube,sname.dish_scrubber},player)
+
+def can_pop_off(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.bottle_cap,sname.f_key,sname.ham_tin,sname.legal_brick,sname.spring,sname.detergent_cap},player)
+
+def can_rollout(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.coconut,sname.tennis_ball, sname.dumptruck, sname.gacha_capsule, sname.ultrasoft},player)
+
+def can_bombs_away(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.bartholomew,sname.shotgun_shell},player)
+
+def can_decoy(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.matryoshka_large,sname.matryoshka_medium,sname.matryoshka_small,sname.piggy_bank,sname.crab_husk,sname.rubber_duck},player)
+
+def can_fizzle(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.soda_can,sname.valve,sname.going_under_64},player)
+
+def can_party_time(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.party_hat,sname.trophy,sname.party_popper},player)
+
+def can_shards(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.shot_glass,sname.mason_jar,sname.salt_shaker},player)
+
+def can_squash(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.boxing_glove,sname.sock},player)
+
+def can_twinkle(state: CollectionState, player: int) -> bool:
+    return state.has_any({sname.disco_ball,sname.spirit_conch},player)

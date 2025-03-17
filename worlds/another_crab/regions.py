@@ -8,13 +8,16 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.tide_pool
     },
     rname.tide_pool: {
-        rname.starting_cave
+        rname.starting_cave,
+        sname.matryoshka_medium,
+        sname.matryoshka_small
     },
     rname.starting_cave: {
         rname.central_shallows
     },
     rname.central_shallows: {
         rname.slacktide_before,
+        sname.soda_can
     },
     rname.slacktide_before: {
         rname.snail_cave,
@@ -28,7 +31,7 @@ ACT_regions: Dict[str, Set[str]] = {
         sname.soda_can,
         sname.bottle_cap,
         sname.shot_glass,
-        sname.party_hat,
+        sname.party_hat
     },
     rname.slacktide_after: {
         rname.reefs_edge,
@@ -43,7 +46,17 @@ ACT_regions: Dict[str, Set[str]] = {
     },
     rname.new_carcinia: {
         rname.sands_between,
-        sname.f_key
+        sname.f_key,
+        sname.conchiglie,
+        sname.shuttlecock,
+        sname.bartholomew,
+        sname.lil_bro,
+        sname.piggy_bank,
+        sname.imposter,
+        sname.felix_cube,
+        sname.baby_shoe,
+        sname.trophy,
+        sname.matryoshka_large
     },
     rname.sands_between: {
         rname.post_pag,
@@ -61,13 +74,14 @@ ACT_regions: Dict[str, Set[str]] = {
         sname.wafer_cone,
         sname.shotgun_shell,
         sname.egg_shell,
-        sname.disco_ball
+        sname.disco_ball,
+        sname.lil_red_cup
     },
     rname.post_pag: set(),
     rname.secluded_ridge: set(),
     rname.grove_main: {
         rname.grove_village,
-        sname.coffee_mug,
+        sname.coffee_mug
     },
     rname.grove_village: {
         sname.skull,
@@ -96,7 +110,11 @@ ACT_regions: Dict[str, Set[str]] = {
         rname.plains,
         sname.doll_head,
         sname.lightbulb,
-        sname.mouse
+        sname.mouse,
+        sname.sock,
+        sname.going_under_64,
+        sname.party_popper,
+        sname.service_bell
     },
     rname.plains: {
         rname.old_ocean
@@ -110,7 +128,8 @@ ACT_regions: Dict[str, Set[str]] = {
         sname.snow_globe,
         sname.detergent_cap,
         sname.champagne_flute,
-        sname.dentures
+        sname.dentures,
+        sname.dish_scrubber
     },
     rname.drain_bottom: {
         rname.trash_island

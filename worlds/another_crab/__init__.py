@@ -1,4 +1,5 @@
 from typing import Dict, List, Any
+from Utils import visualize_regions
 from worlds.AutoWorld import WebWorld, World
 from BaseClasses import Region, ItemClassification, CollectionState
 from Fill import fill_restrictive
@@ -8,7 +9,7 @@ from .locations import location_table, location_name_groups, location_name_to_id
 from .regions import ACT_regions
 from .rules import set_location_rules, set_region_rules
 from .options import ACTGameOptions
-from .names import location_names as lname, item_names as iname, region_names as rname
+from .names import location_names as lname, item_names as iname, region_names as rname, shell_names as sname
 
 
 class ACTWeb(WebWorld):
@@ -31,6 +32,10 @@ class ACTWorld(World):
     location_name_to_id = location_name_to_id
 
     slot_data_items = List[ACTItem]
+    placed_shells = List[ACTLocation]
+
+    def generate_output(self, output_directory: str):
+        visualize_regions(self.multiworld.get_region("Menu", self.player), f"Player{self.player}.puml", show_entrance_names=False ) #regions_to_highlight=self.multiworld.get_all_state(self.player).reachable_regions[self.player]
 
     def generate_early(self):
         # early fork shuffling
@@ -53,7 +58,16 @@ class ACTWorld(World):
 
         #Shuffle Shell Event Locations
         if self.options.randomshells == True:
-            self.random.shuffle(shell_locations)
+            self.random.shuffle(shell_items)
+
+            shell_at_soda: ACTItemData = item_table[shell_items[shell_locations.index(sname.soda_can)]]
+            prevented_shells_at_soda = [sname.piggy_bank,sname.crab_husk,sname.rubber_duck,sname.baby_shoe]
+
+            #Make sure soda can has something usable for combat
+            if self.options.allow_forkless != "disabled":
+                while  shell_at_soda.classification != ItemClassification.progression or any(shell_at_soda == element for element in prevented_shells_at_soda):
+                    self.random.shuffle(shell_items)
+                    shell_at_soda = item_table[shell_items[shell_locations.index(sname.soda_can)]]
             
             for i in range(len(shell_items)):
                 region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
@@ -61,6 +75,7 @@ class ACTWorld(World):
                 shell_placed_loc.place_locked_item(ACTItem(shell_items[i],ItemClassification.progression,None,self.player))
                 
                 region.locations.append(shell_placed_loc)
+                #self.placed_shells.append(shell_placed_loc)
 
 
         return super().pre_fill()
@@ -165,6 +180,11 @@ class ACTWorld(World):
             region = self.multiworld.get_region(location_table[location_name].region, self.player)
             location = ACTLocation(self.player, location_name, location_id, region)
             region.locations.append(location)
+
+        # for i in range(len(shell_items)):
+        #     region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
+        #     location = self.placed_shells[i]
+        #     region.locations.append(location)
 
         # player can complete the game if they can reach the final region
         if self.options.goal == "firth":
