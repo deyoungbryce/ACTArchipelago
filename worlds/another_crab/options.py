@@ -11,7 +11,7 @@ class Goal(Choice):
 # might be worth finding a way to combine ForkLocation and AllowForkless into one option for simplicity's sake
 
 class ForkLocation(Choice):
-    """Choose where the Fork(weapon) location is set. Does nothing if Allow Forkless option is enabled.
+    """Choose where the Fork(weapon) location is set. Does nothing if [Allow Forkless] option is enabled.
     - Shuffled Early Local: Forces Fork location to be somewhere early in your own game.
     - Shuffled Early Global: Forces Fork location to be somewhere early in any game.
     - Vanilla Location: Forces Fork to be placed at its intended location."""
@@ -22,10 +22,10 @@ class ForkLocation(Choice):
     default = 0
 
 class AllowForkless(Choice):
-    """If enabled, allows for the Fork to not be required early on, meaning you may have to play some amount of the game without it. Ignores Fork Location option and shuffles Fork into item pool if enabled.
+    """If enabled, allows for the Fork to not be required early on, meaning you may have to play some amount of the game without it. Ignores [Fork Location] option and shuffles Fork into item pool if enabled.
     - Disabled: Fork is required to fight early bosses, meaning that it will be placed early in your run.
-    - Forkless Easy: Ensures that the intended forkless strategy is not too advanced
-    - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary"""
+    - Forkless Easy: Ensures that the intended forkless strategy is not too advanced (Includes logic for adaptation and shellspell focused builds)
+    - Forkless Hard: Allows for the possibility of more advanced forkless strategies to be necessary (Includes logic for rolling attack and summon focused builds)"""
     display_name: str = "Allow Forkless"
     option_disabled = 0
     option_forkless_easy = 1
@@ -78,9 +78,9 @@ class RemoveCostumes(Toggle):
     default: bool = False
 
 class MicroplasticMultiplier(Range):
-    """Multiplies the ammount of microplastics you recieve."""
+    """Multiplies the ammount of microplastics you recieve. Decimal values currently not supported"""
     display_name: str = "Microplastic Multiplier"
-    range_start: float = 0.01
+    range_start: float = 1
     range_end: float = 100
     default: float = 1
 

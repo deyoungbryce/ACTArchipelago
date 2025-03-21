@@ -9,8 +9,8 @@ ACT_regions: Dict[str, Set[str]] = {
     },
     rname.tide_pool: {
         rname.starting_cave,
-        sname.matryoshka_medium,
-        sname.matryoshka_small
+        #sname.matryoshka_medium,
+        #sname.matryoshka_small
     },
     rname.starting_cave: {
         rname.central_shallows
@@ -159,8 +159,8 @@ ACT_regions: Dict[str, Set[str]] = {
     sname.baby_shoe : set(),
     sname.lil_bro : set(),
     sname.matryoshka_large : set(),
-    sname.matryoshka_medium : set(),
-    sname.matryoshka_small : set(),
+    #sname.matryoshka_medium : set(),
+    #sname.matryoshka_small : set(),
     sname.shuttlecock : set(),
     sname.felix_cube : set(),
     sname.piggy_bank : set(),

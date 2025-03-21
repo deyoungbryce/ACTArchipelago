@@ -59,15 +59,27 @@ class ACTWorld(World):
         #Shuffle Shell Event Locations
         if self.options.randomshells == True:
             self.random.shuffle(shell_items)
-
+            randoVerified: bool = False
             shell_at_soda: ACTItemData = item_table[shell_items[shell_locations.index(sname.soda_can)]]
+            plug_region: Region = self.multiworld.get_region(location_table[shell_locations[shell_items.index(sname.plug_fuse)]].region,self.player)
             prevented_shells_at_soda = [sname.piggy_bank,sname.crab_husk,sname.rubber_duck,sname.baby_shoe]
-
-            #Make sure soda can has something usable for combat
-            if self.options.allow_forkless != "disabled":
-                while  shell_at_soda.classification != ItemClassification.progression or any(shell_at_soda == element for element in prevented_shells_at_soda):
+            prevented_plug_regions = [rname.scuttleport,rname.pinbarge,rname.unfathom,rname.plains,rname.old_ocean,rname.drain_bottom,rname.trash_island,rname.carcinia_ruins]
+            print(plug_region.entrances)
+            #Make sure shell rando will work
+            while randoVerified == False:
+                #Make sure soda can has something usable for combat
+                if self.options.allow_forkless != "disabled" and (shell_at_soda.classification != ItemClassification.progression or any(shell_at_soda == element for element in prevented_shells_at_soda)):
                     self.random.shuffle(shell_items)
                     shell_at_soda = item_table[shell_items[shell_locations.index(sname.soda_can)]]
+                    print(plug_region.entrances)
+                #elif plug_region.entrances
+                elif any(plug_region.entrances == element for element in prevented_plug_regions):
+                    self.random.shuffle(shell_items)
+                    shell_at_soda = item_table[shell_items[shell_locations.index(sname.soda_can)]]
+                    print(plug_region.entrances)
+                else:
+                    randoVerified = True
+
             
             for i in range(len(shell_items)):
                 region = self.multiworld.get_region(location_table[shell_locations[i]].region,self.player)
@@ -210,7 +222,7 @@ class ACTWorld(World):
         slot_data: Dict[str, Any] = {
             "microplastic_multiplier": float(self.options.microplasticMultiplier.value),
             "death_link": bool(self.options.deathlink.value),
-            "goal": str(self.options.goal.value),
+            "goal": int(self.options.goal.value),
             "shell_rando": shell_rando
         }
 

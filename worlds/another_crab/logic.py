@@ -13,8 +13,11 @@ if TYPE_CHECKING:
 
 
 #Checks to see if the player can logically consistently deal damage
-def can_deal_damage(state: CollectionState,player:int) -> bool:
+def can_deal_damage_hard(state: CollectionState,player:int) -> bool:
     return can_rolling_attack(state,player) | can_magic_damage(state,player) | can_atk_damage_shell(state,player) | has_summon(state,player)  | state.has(iname.fork,player)
+
+def can_deal_damage_easy(state: CollectionState,player:int) -> bool:
+    return can_magic_damage(state,player) | can_atk_damage_shell(state,player) | state.has(iname.fork,player)
 
 
 def can_rolling_attack(state: CollectionState, player: int) -> bool:
@@ -54,7 +57,10 @@ def can_reach_rolling_shells(state: CollectionState, player: int) -> bool:
     return state.has_any({sname.soda_can,sname.bottle_cap,sname.lil_red_cup,sname.shuttlecock,sname.bebop_cup},player)
 
 def can_atk_damage_shell(state: CollectionState, player: int) -> bool:
-    return can_twist_top(state,player) | (can_pop_off(state,player) and state.has(iname.sponge,player,2)) | (can_rollout(state,player) and state.has(iname.sponge,player,2))
+    sponge_val: int = 0
+    sponge_val += state.count(iname.sponge,player)
+    sponge_val += state.count(iname.sponge_plus,player) * 2
+    return can_twist_top(state,player) | (can_pop_off(state,player) and sponge_val >= 3) | (can_rollout(state,player) and sponge_val >= 3) | (can_party_time(state,player) and sponge_val >= 3)
 
 
 #Check if Shell Spells are Reachable

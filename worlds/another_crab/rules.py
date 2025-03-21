@@ -1,5 +1,5 @@
 from typing import TYPE_CHECKING, Dict, List
-from worlds.generic.Rules import set_rule
+from worlds.generic.Rules import add_rule, set_rule, forbid_item, add_item_rule
 from BaseClasses import CollectionState
 
 from .options import ACTGameOptions
@@ -26,7 +26,7 @@ if TYPE_CHECKING:
 def set_region_rules(world: "ACTWorld") -> None:
   multiworld = world.multiworld
   player = world.player
-  #options = world.options
+  options = world.options
 
   multiworld.get_entrance("Central Shallows -> Fort Slacktide - Before Destruction", player).access_rule = \
     lambda state: state.can_reach_location(lname.nephro, player)
@@ -49,12 +49,15 @@ def set_region_rules(world: "ACTWorld") -> None:
   multiworld.get_entrance("Scuttleport -> Pinbarge", player).access_rule = \
     lambda state: state.has(iname.eelectrocute, player)
   
-  #Matryoshka Shell Rules
-  multiworld.get_entrance("Tide Pools -> Matryoshka Medium",player).access_rule = \
-    lambda state: state.has(sname.matryoshka_large, player)
+  if options.randomshells :
+    add_rule( multiworld.get_entrance("Flotsam Vale -> Scuttleport",player),lambda state: state.has(sname.plug_fuse, player))
   
-  multiworld.get_entrance("Tide Pools -> Matryoshka Small",player).access_rule = \
-    lambda state: state.has(sname.matryoshka_medium, player)
+  #Matryoshka Shell Rules
+  #multiworld.get_entrance("Tide Pools -> Matryoshka Medium",player).access_rule = \
+    #lambda state: state.has(sname.matryoshka_large, player)
+  
+ # multiworld.get_entrance("Tide Pools -> Matryoshka Small",player).access_rule = \
+    #lambda state: state.has(sname.matryoshka_medium, player)
   
 
 # def set_shell_rules(world: "ACTWorld") -> None:
@@ -75,6 +78,9 @@ def set_location_rules(world: "ACTWorld") -> None:
 
   #Forkless Disabled, ensures player has fork for bosses
   if options.allow_forkless == "disabled":
+    set_rule(multiworld.get_location(lname.bloodstar_shallows_help,player),
+           lambda state: state.has(iname.fork,player))
+
     set_rule(multiworld.get_location(lname.nephro, player),
            lambda state: state.has(iname.fork,player))
     
@@ -133,63 +139,127 @@ def set_location_rules(world: "ACTWorld") -> None:
            lambda state: state.has(iname.fork,player))
     #if options.allow_forkless == "forkless_easy":
     #Forkless Enabled, ensures player has some means of dealing damage for bosses
-  else:
+  elif options.allow_forkless == "forkless_easy":
+    set_rule(multiworld.get_location(lname.bloodstar_shallows_help,player),
+           lambda state: logic.can_deal_damage_easy(state,player))
+    
     set_rule(multiworld.get_location(lname.nephro, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.platoon_pathfinder, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
       
     set_rule(multiworld.get_location(lname.magista, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.pagurus, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.lichenthrope, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.carbonara_connoisseur, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.heikea, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.topoda, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.inkerton, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.consortium, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.sludge_steamroller, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.ceviche_sisters, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.voltai, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.roland, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.petroch, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.camtscha, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.praya_dubia, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
     
     set_rule(multiworld.get_location(lname.firth, player),
-            lambda state: logic.can_deal_damage(state,player))
+            lambda state: logic.can_deal_damage_easy(state,player))
+  
+  else:
+    set_rule(multiworld.get_location(lname.bloodstar_shallows_help,player),
+           lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.nephro, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.royal_shellsplitter, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.platoon_pathfinder, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+      
+    set_rule(multiworld.get_location(lname.magista, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.pagurus, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.lichenthrope, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.carbonara_connoisseur, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.heikea, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.topoda, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.inkerton, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.consortium, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.sludge_steamroller, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.ceviche_sisters, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.voltai, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.roland, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.petroch, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.camtscha, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.praya_dubia, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
+    
+    set_rule(multiworld.get_location(lname.firth, player),
+            lambda state: logic.can_deal_damage_hard(state,player))
   
 
   # if options.allow_forkless == "forkless_hard":
