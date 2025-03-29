@@ -64,19 +64,19 @@ class ACTWorld(World):
             plug_region: Region = self.multiworld.get_region(location_table[shell_locations[shell_items.index(sname.plug_fuse)]].region,self.player)
             prevented_shells_at_soda = [sname.piggy_bank,sname.crab_husk,sname.rubber_duck,sname.baby_shoe]
             prevented_plug_regions = [rname.scuttleport,rname.pinbarge,rname.unfathom,rname.plains,rname.old_ocean,rname.drain_bottom,rname.trash_island,rname.carcinia_ruins]
-            print(plug_region.entrances)
+            print(plug_region.entrances[0].parent_region.name)
             #Make sure shell rando will work
             while randoVerified == False:
                 #Make sure soda can has something usable for combat
                 if self.options.allow_forkless != "disabled" and (shell_at_soda.classification != ItemClassification.progression or any(shell_at_soda == element for element in prevented_shells_at_soda)):
                     self.random.shuffle(shell_items)
                     shell_at_soda = item_table[shell_items[shell_locations.index(sname.soda_can)]]
-                    print(plug_region.entrances)
+                    print(shell_at_soda)
                 #elif plug_region.entrances
-                elif any(plug_region.entrances == element for element in prevented_plug_regions):
+                elif any(plug_region.entrances[0].parent_region.name == element for element in prevented_plug_regions):
                     self.random.shuffle(shell_items)
-                    shell_at_soda = item_table[shell_items[shell_locations.index(sname.soda_can)]]
-                    print(plug_region.entrances)
+                    plug_region: Region = self.multiworld.get_region(location_table[shell_locations[shell_items.index(sname.plug_fuse)]].region,self.player)
+                    print(plug_region.entrances[0].parent_region.name)
                 else:
                     randoVerified = True
 
@@ -112,11 +112,11 @@ class ACTWorld(World):
         # removing shells from the total item pool because we only want them shuffled within their own pool
         
         for shells in shell_items: 
-            print("ShellItem_"+shells)
             items_to_create[shells] = 0
 
         # yaml options
-        if self.options.fork_location and not self.options.allow_forkless:
+        if self.options.fork_location == "vanilla_location" and self.options.allow_forkless == "disabled":
+            print("vanilla fork")
             fork = self.create_item(iname.fork)
             if self.options.fork_location == "vanilla_location":
                 self.get_location(lname.fork_pickup).place_locked_item(fork)
@@ -135,7 +135,7 @@ class ACTWorld(World):
             fishing_line = self.create_item(iname.fishing_line)
             if self.options.fishing_line_location == "vanilla_location":
                 self.get_location(lname.fishing_line).place_locked_item(fishing_line)
-            items_to_create[iname.fishing_line] = 0
+                items_to_create[iname.fishing_line] = 0
 
         if self.options.remove_costumes:
             for costumes in costume_items: items_to_create[costumes] = 0
@@ -149,8 +149,8 @@ class ACTWorld(World):
 
         total_filler = location_total - items_total
 
-        available_filler: List[str] = [filler for filler in items_to_create if items_to_create[filler] > 0 and item_table[filler].classification == ItemClassification.filler]
-
+        available_filler: List[str] = [filler for filler in items_to_create if (items_to_create[filler] > 0) and item_table[filler].classification == ItemClassification.filler and item_table[filler].item_group != "Costume"]
+        print(available_filler)
         if total_filler < 0:
             total_filler = 0
 

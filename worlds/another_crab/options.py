@@ -78,7 +78,7 @@ class RemoveCostumes(Toggle):
     default: bool = False
 
 class MicroplasticMultiplier(Range):
-    """Multiplies the ammount of microplastics you recieve. Decimal values currently not supported"""
+    """Multiplies the ammount of microplastics you recieve. Decimal values currently not supported."""
     display_name: str = "Microplastic Multiplier"
     range_start: float = 1
     range_end: float = 100

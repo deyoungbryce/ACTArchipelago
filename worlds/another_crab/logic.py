@@ -53,8 +53,11 @@ def can_regen_umami(state: CollectionState, player: int) -> bool:
 def can_reach_magic_shells(state: CollectionState, player: int) -> bool:
     return can_twist_top(state,player) | can_pop_off(state,player) | can_rollout(state,player) | can_fizzle(state,player) | can_party_time(state,player) | can_shards(state,player) | can_squash(state,player) | can_twinkle(state,player)
 
+def can_reach_msg_dmg_shells(state: CollectionState, player: int) -> bool:
+    return can_fizzle(state,player) | can_party_time(state,player) | can_shards(state,player) | can_squash(state,player) | can_twinkle(state,player)
+
 def can_reach_rolling_shells(state: CollectionState, player: int) -> bool:
-    return state.has_any({sname.soda_can,sname.bottle_cap,sname.lil_red_cup,sname.shuttlecock,sname.bebop_cup},player)
+    return state.has_any({sname.soda_can,sname.bottle_cap,sname.lil_red_cup,sname.shuttlecock,sname.bebop_cup,sname.tin_can,sname.shot_glass,sname.party_hat,sname.coconut,sname.teacup,sname.sauce_nozzle,sname.thimble,sname.tennis_ball,sname.mason_jar,sname.salt_shaker,sname.conchiglie,sname.disco_ball,sname.lil_bro,sname.matryoshka_large,sname.wafer_cone,sname.yoccult,sname.coffee_pod,sname.egg_shell,sname.coffee_mug,sname.cascadia_roll,sname.skull,sname.spring,sname.shotgun_shell,sname.dumptruck,sname.gacha_capsule,sname.lightbulb,sname.doll_head,sname.service_bell,sname.party_popper,sname.scrub_aggie,sname.pill_bottle,sname.detergent_cap,sname.ultrasoft,sname.champagne_flute,sname.dish_scrubber,sname.snow_globe,sname.knights_helmet,iname.snail_sanctum,sname.plug_fuse,sname.piggy_bank},player)
 
 def can_atk_damage_shell(state: CollectionState, player: int) -> bool:
     sponge_val: int = 0

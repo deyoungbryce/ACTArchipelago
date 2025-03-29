@@ -33,6 +33,9 @@ def set_region_rules(world: "ACTWorld") -> None:
 
   multiworld.get_entrance("Fort Slacktide - Before Destruction -> Moon Snail's Cave", player).access_rule = \
     lambda state: state.has(iname.fishing_line, player)
+  
+  #add_rule(multiworld.get_entrance("Fort Slacktide - Before Destruction -> Moon Snail's Cave",player),
+    #lambda state: state.has_any({logic.can_reach_msg_dmg_shells(state,player), logic.has_adaptation(state,player)},player))
    
   multiworld.get_entrance("Moon Snail's Cave -> Fort Slacktide - After Destruction", player).access_rule = \
     lambda state: state.has(iname.pristine_pearl, player)
@@ -331,8 +334,8 @@ def set_location_rules(world: "ACTWorld") -> None:
   set_rule(multiworld.get_location(lname.limpet_slacktide_stairs, player),
             lambda state: state.has(iname.fishing_line, player))
    
-  set_rule(multiworld.get_location(lname.fishing_line, player),
-            lambda state: state.has(iname.fishing_line, player))
+  #set_rule(multiworld.get_location(lname.fishing_line, player),
+            #lambda state: state.has(iname.fishing_line, player))
   #                 ______________________
    
   set_rule(multiworld.get_location(lname.seastar_slacktide_grappleroom, player),

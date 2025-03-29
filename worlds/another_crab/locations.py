@@ -24,7 +24,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.fork_pickup: ACTLocationData(rname.starting_cave,0, "Starting Items"),#73329d8e-7c96-4e82-9d3c-e57cc61b46b4-2_A-ShallowsTidePools
 
     # progression item locations
-    lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide"),
+    lname.fishing_line: ACTLocationData(rname.slacktide_before, 2, "Fort Slacktide - Before Destruction"),
     #lname.pristine_pearl: ACTLocationData(rname.snail_cave, x, "Moon Snail's Cave"), #Redundant, overlaps with Platoon Pathfinder
     lname.map_piece_heikea_arena: ACTLocationData(rname.grove_main, 252, "Expired Grove Main"),
     lname.map_piece_vale: ACTLocationData(rname.flotsam_vale, 396, "Flotsam Vale"),
@@ -63,7 +63,7 @@ location_table: Dict[str, ACTLocationData] = {
     lname.breadclaw_shallows_bridge: ACTLocationData(rname.central_shallows, 7, "Central Shallows"), #8b269a88-c6d1-4b2a-8e5f-9d60c6d6fd15-2_B-ShallowsBigSand
     lname.breadclaw_shallows_eastwall: ACTLocationData(rname.central_shallows, 8, "Central Shallows"), #6aba5604-8269-46a5-b734-ef4dc3983265-2_B-ShallowsBigSand
     lname.breadclaw_shallows_eastsandal: ACTLocationData(rname.central_shallows, 9, "Central Shallows"), #889c343a-b969-4295-b059-a837fc457444-2_B-ShallowsBigSand
-    lname.breadclaw_shallows_cigarette: ACTLocationData(rname.central_shallows, 10, "Central Shallows"), #d1ddf122-d283-4509-8bfa-bff8fa209f35-2_B-ShallowsBigSand
+    lname.breadclaw_shallows_cigarette: ACTLocationData(rname.slacktide_after, 10, "Fort Slacktide - After Destruction"), #d1ddf122-d283-4509-8bfa-bff8fa209f35-2_B-ShallowsBigSand
     lname.breadclaw_shallows_fortwall: ACTLocationData(rname.central_shallows, 11, "Central Shallows"), #20bede55-9eae-40a3-a80a-63ee5b52d0bf-2_B-ShallowsBigSand
     lname.breadclaw_shallows_wallpiece: ACTLocationData(rname.central_shallows, 12, "Central Shallows"), #5732b602-c599-41b5-bc5d-93e88277a4b7-2_B-ShallowsBigSand
     lname.breadclaw_shallows_sandcastle: ACTLocationData(rname.central_shallows, 13, "Central Shallows"), #984eda06-d10e-4b2b-a5c4-389784ed18f6-2_B-ShallowsBigSand
