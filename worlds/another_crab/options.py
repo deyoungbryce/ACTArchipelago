@@ -2,10 +2,16 @@ from dataclasses import dataclass
 from Options import Toggle, Range, Choice, PerGameCommonOptions
 
 class Goal(Choice):
-    """Choose your goal for the multiworld"""
+    """Choose your goal for the multiworld
+    - Home: Defeat the final boss and equip the Home shell
+    - Roland: Defeat Roland on the Pinbarge
+    - Voltai: Defeat Voltai in Scuttleport
+    - Magista: Defeat Magista in Slacktide"""
     display_name: str = "Goal"
-    option_firth = 0
+    option_home = 0
     option_roland = 1
+    option_voltai = 2
+    option_magista = 3
     default = 0
 
 # might be worth finding a way to combine ForkLocation and AllowForkless into one option for simplicity's sake

@@ -2,6 +2,7 @@ from typing import Dict, List, NamedTuple, Set, Optional
 from BaseClasses import Location
 
 from .names import location_names as lname, region_names as rname, shell_names as sname
+from .options import ACTGameOptions
 
 class ACTLocation(Location):
     game: str = "Another Crabs Treasure"
@@ -808,9 +809,16 @@ def get_location_group(location_name: str) -> str:
 
 shell_locations: List[str] = [name for name, data in location_table.items() if data.location_group == "Shells"]
 
+temp_loc_total: int = 0
+
 location_name_groups: Dict[str, Set[str]] = {}
+
+
 for loc_name, loc_data in location_table.items():
+    if loc_data.location_group != "Shells":
+        temp_loc_total += 1
+
     if loc_data.location_group:
         location_name_groups.setdefault(loc_data.location_group, set()).add(loc_name)
 
-location_total: int = len(location_table)
+location_total: int = temp_loc_total
