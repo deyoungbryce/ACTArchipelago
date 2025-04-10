@@ -1,103 +1,103 @@
 # location names to be referenced in Locations.py
 
 # progression/important item locations
-fork_pickup = "Fork Pickup" # Kril's main weapon
+fork_pickup = "CR: Fork - vanilla fork location" # Kril's main weapon
 heartkelp_inital = "Heartkelp Pods Pickup" # the initial heartkelp pods item that the player picks up right at the beginning of the game
-fishing_line = "Fishing Line" # grapple ability found in fort slacktide
-pristine_pearl = "Pristine Pearl" # reward for defeating platoon pathfinder
-map_piece_vale = "Map Piece - Flotsam Vale" # the map piece found in the mailbox in flotsam vale
-map_piece_heikea_arena = "Map Piece - Heikea" # the map piece in heikea's boss arena after defeating them
-map_piece_pagurus_defeat = "Map Piece - Pagurus" # the map piece obtained after defeating pagurus
+fishing_line = "FSB: Fishing Line - vanilla fishing line location" # grapple ability found in fort slacktide
+pristine_pearl = "MSC: Pristine Pearl - dropped by area boss" # reward for defeating platoon pathfinder
+map_piece_vale = "FV: Map Piece - mailbox, after area boss" # the map piece found in the mailbox in flotsam vale
+map_piece_heikea_arena = "EGM: Map Piece - dropped by area boss" # the map piece in heikea's boss arena after defeating them
+map_piece_pagurus_defeat = "SB: Map Piece - dropped by area boss" # the map piece obtained after defeating pagurus
 home_shell = "Home Shell" # kril's shell, completion location
 
 # currency item locations
-breadclaw_caveofrespite_ledge = "Breadclaw (Cave of Respite - Ledge)" # the first breadclaw the player has access to, in the cave of respite
-chipclaw_caveofrespite_forkroomfishing = "Chipclaw (Cave of Respite - Fishing Near Fork Pickup)"
-mussel_caveofrespite_crabfightfishing = "Mussel (Cave of Respite - Fishing In Crab Fight Tutorial)"
-clothesclaw_caveofrespite_entrancefishing = "Clothesclaw (Cave of Respite - Fishing Before Cave Entrance)"
-sanddollar_caveofrespite_pathfishing = "Sand Dollar (Cave of Respite - Fishing on Path Before Cave)"
+breadclaw_caveofrespite_ledge = "CR: Breadclaw - ledge after intro" # the first breadclaw the player has access to, in the cave of respite
+chipclaw_caveofrespite_forkroomfishing = "CR: Chipclaw - spearfishing, near fork pickup"
+mussel_caveofrespite_crabfightfishing = "CR: Mussel - spearfishing, crab fight tutorial"
+clothesclaw_caveofrespite_entrancefishing = "CR: Clothesclaw - spearfishing, near cave entrance"
+sanddollar_caveofrespite_pathfishing = "CR: Sand Dollar - spearfishing, path before cave"
 
-breadclaw_shallows_southsandal = "Breadclaw (Central Shallows - South Red Flip-Flop)"
-breadclaw_shallows_westwall = "Breadclaw (Central Shallows - Along West Wall)"
-breadclaw_shallows_bridge = "Breadclaw (Central Shallows - Red Flip-Flop Bridge)"
-breadclaw_shallows_eastwall = "Breadclaw (Central Shallows - Along East Wall)"
-breadclaw_shallows_eastsandal = "Breadclaw (Central Shallows - East Red Flip-Flop)"
-breadclaw_shallows_cigarette = "Breadclaw (Central Shallows - Cigarette Butts" # breadclaw on the mound of cigarette butts near nephro's arena
-breadclaw_shallows_fortwall = "Breadclaw (Central Shallows - Along Fort Slacktide Wall)"
-breadclaw_shallows_wallpiece = "Breadclaw (Central Shallows - East Broken Fort Wall Piece)"
-breadclaw_shallows_sandcastle = "Breadclaw (Central Shallows - Southeast Sandcastle)"
-breadclaw_shallows_eastledge = "Breadclaw (Central Shallows - East Grapple Ledge)"
-hairclaw_shallows_turret = "Hairclaw (Central Shallows - Grapple to Castle Turret)"
-chipclaw_shallows_sandcastle = "Chipclaw (Central Shallows - Southwest Sandcastle)"
-clothesclaw_shallows_shellsplitter = "Clothesclaw (Central Shallows - Defeat Royal Shellsplitter)"
-clothesclaw_shallows_southwestfort = "Clothesclaw (Central Shallows - Small Tower Outside Southwest Fort)"
-breadclaw_shallows_sunkentower = "Breadclaw (Central Shallows - Sunken Tower near Flip-Flop Bridge)"
-breadclaw_shallows_slacktidesouthfish = "Breadclaw (Central Shallows - Fishing South of Slacktide Entrance)"
+breadclaw_shallows_southsandal = "CS: Breadclaw - red sandal, south"
+breadclaw_shallows_westwall = "CS: Breadclaw - along west wall"
+breadclaw_shallows_bridge = "CS: Breadclaw - red sandal bridge"
+breadclaw_shallows_eastwall = "CS: Breadclaw - along east wall"
+breadclaw_shallows_eastsandal = "CS: Breadclaw - red sandal, east"
+breadclaw_shallows_cigarette = "CS: Breadclaw - cigarette butt mound" # breadclaw on the mound of cigarette butts near nephro's arena
+breadclaw_shallows_fortwall = "CS: Breadclaw - along Fort Slacktide wall"
+breadclaw_shallows_wallpiece = "CS: Breadclaw - broken fort wall, east"
+breadclaw_shallows_sandcastle = "CS: Breadclaw - sandcastle, southeast"
+breadclaw_shallows_eastledge = "CS: Breadclaw - grapple to ledge, east"
+hairclaw_shallows_turret = "CS: Hairclaw - grapple to castle turret"
+chipclaw_shallows_sandcastle = "CS: Chipclaw - sandcastle, southwest"
+clothesclaw_shallows_shellsplitter = "CS: Clothesclaw - dropped by area miniboss"
+clothesclaw_shallows_southwestfort = "CS: Clothesclaw - small tower outside fort, southwest"
+breadclaw_shallows_sunkentower = "CS: Breadclaw - sunken tower, near red sandal bridge"
+breadclaw_shallows_slacktidesouthfish = "CS: Breadclaw - spearfishing, slacktide entrance, south"
 
-breadclaw_slacktide_crates = "Breadclaw (Fort Slacktide - Sand Crates and Barrels" # the breadclaw near the line of people waiting to meet the duchess
-breadclaw_slacktide_training = "Breadclaw (Fort Slacktide - On South Training Area Wall)"
+breadclaw_slacktide_crates = "FSB: Breadclaw - sand crates near duchess waiting line" # the breadclaw near the line of people waiting to meet the duchess
+breadclaw_slacktide_training = "FSB: Breadclaw - training area wall, south"
 
-breadclaw_snailcave_entrance = "Breadclaw (Moon Snail's Cave - Ledge Near Entrance)"
-breadclaw_snailcave_shortcut = "Breadclaw (Moon Snail's Cave = Ledge Near Shortcut)"
-breadclaw_snailcave_jelly = "Breadclaw (Moon Snail's Cave = Ledge Past Moon Jelly)"
+breadclaw_snailcave_entrance = "MSC: Breadclaw - ledge near entrance"
+breadclaw_snailcave_shortcut = "MSC: Breadclaw - ledge near shortcut"
+breadclaw_snailcave_jelly = "MSC: Breadclaw - ledge past first moon jelly"
 
-breadclaw_slacktide_crabtrio = "Breadclaw (Fort Slacktide - Near Crab Trio)" # breadclaw found in slacktide post-corruption sitting in a corner near a trio of crabs
-chipclaw_slacktide_brokenwall = "Chipclaw (Fort Slacktide - Behind Broken Wall)" # chipclaw found in the room after the enemy breaks out of the wall on the way to fight the duchess
-breadclaw_slacktide_roofhiddenfish = "Breadclaw (Fort Slacktide - Path to Roof Hidden Fishing)"
+breadclaw_slacktide_crabtrio = "FSA: Breadclaw - near crab trio" # breadclaw found in slacktide post-corruption sitting in a corner near a trio of crabs
+chipclaw_slacktide_brokenwall = "FSA: Chipclaw - behind broken wall" # chipclaw found in the room after the enemy breaks out of the wall on the way to fight the duchess
+breadclaw_slacktide_roofhiddenfish = "FSA: Breadclaw - spearfishing, path to roof"
 
-chipclaw_reefsedge_brokenbridge = "Chipclaw (Reef's Edge - Broken Bridge)"
-breadclaw_reefsedge_thimblecrab = "Breadclaw (Reef's Edge - Near Thimble Crab)"
-hairclaw_reefsedge_sign = "Hairclaw (Reef's Edge - Near I95 Sign On Ledge)"
+chipclaw_reefsedge_brokenbridge = "RE: Chipclaw - broken bridge"
+breadclaw_reefsedge_thimblecrab = "RE: Breadclaw - near thimble crab"
+hairclaw_reefsedge_sign = "RE: Hairclaw - on ledge near I95 sign"
 
-breadclaw_newcarcinia_entrance = "Breadclaw (New Carcinia - Top of Buildings Near Entrance)"
-breadclaw_newcarcinia_hammerhead = "Breadclaw (New Carcinia - Corner Near Hammerhead)"
-breadclaw_newcarcinia_bottomalley = "Breadclaw (New Carcinia - Alleyway Near Bottom Feeders)"
-breadclaw_newcarcinia_prawnalley = "Breadclaw (New Carcinia - Alleyway Across from Prawn Shop)"
-chipclaw_newcarcinia_leg = "Chipclaw (New Carcinia - On Building Near Climbable Mannequin Leg)"
-breadclaw_newcarcinia_tallbuilding = "Breadclaw (New Carcinia - On Tall Building Across from Prawn Shop)"
-breadclaw_newcarcinia_shortbuilding = "Breadclaw (New Carcinia - On Short Building Across From Mannequin Leg)"
-chipclaw_newcarcinia_prawnshop = "Chipclaw (New Carcinia - On Top of Prawn Shop)"
+breadclaw_newcarcinia_entrance = "NC: Breadclaw - building rooftops, near entrance"
+breadclaw_newcarcinia_hammerhead = "NC: Breadclaw - corner near Hammerhead"
+breadclaw_newcarcinia_bottomalley = "NC: Breadclaw - alleyway near Bottom Feeders"
+breadclaw_newcarcinia_prawnalley = "NC: Breadclaw - alleyway across from Prawn Shop"
+chipclaw_newcarcinia_leg = "NC: Chipclaw - building near mannequin leg"
+breadclaw_newcarcinia_tallbuilding = "NC: Breadclaw - building across from Prawn Shop"
+breadclaw_newcarcinia_shortbuilding = "NC: Breadclaw - building across from mannequin leg"
+chipclaw_newcarcinia_prawnshop = "NC: Chipclaw - top of Prawn Shop"
 
-breadclaw_sandsbetween_centralvista = "Breadclaw (The Sands Between - Central Vista Base)"
-hairclaw_sandsbetween_southernreef = "Hairclaw (The Sands Between - Above Bobbit Worm near Southern Reef)"
-chipclaw_sandsbetween_grove = "Chipclaw (The Sands Between - Sands near Expired Grove Entrance)"
-breadclaw_sandsbetween_chains = "Breadclaw (The Sands Between - West Edge near Chains)"
-clothesclaw_sandsbetween_bobbit = "Clothesclaw (The Sands Between - Second Terrace in Bobbit Den)"
-hairclaw_sandsbetween_bobbit = "Hairclaw (The Sands Between - Third Terrace in Bobbit Den near Bobbit Worm)"
-clothesclaw_sandsbetween_northwest = "Clothesclaw (The Sands Between - Rock Northwest of Central Vista)"
-clothesclaw_sandsbetween_grove = "Clothesclaw (The Sands Between - Cans near Expired Grove Entrance)"
-breadclaw_sandsbetween_propanecliff = "Breadclaw (The Sands Between - Cliff Near Propane)"
-hairclaw_sandsbetween_northchains = "Hairclaw (The Sands Between - North of Chains)"
-clothesclaw_sandsbetween_coolerpitfall = "Clothesclaw (The Sands Between - Pitfall Near Cooler Lid)"
-hairclaw_sandsbetween_southgrovepit = "Hairclaw (The Sands Between - Pitfall South of Grove)"
-paperclaw_sandsbetween_southeelshortcut = "Paperclaw (The Sands Between - Southern Eelectrocute Path, Near Shortcut)"
-hairclaw_sandsbetween_southeel = "Hairclaw (The Sands Between - South Eelectrocute Path Second Jump)"
-paperclaw_sandsbetween_trashanchor = "Paperclaw (The Sands Between - Behind Trashbag Near Anchor)"
-hairclaw_sandsbetween_anchorfish = "Hairclaw (The Sands Between - Fishing Near Anchor)"
-chipclaw_sandsbetween_northeastchainfish = "Chipclaw (The Sands Between - Fishing North East of Chains)"
-clothesclaw_sandsbetween_propanefish = "Clothesclaw (The Sands Between - Fishing Near Propane Tank)"
-clothesclaw_sandsbetween_anchorcentralfish = "Clothesclaw (The Sands Between - Fishing Between Central Vista and Anchor)"
-breadclaw_sandsbetween_nailfish = "Breadclaw (The Sands Between - Fishing Near Nail)"
-breadclaw_sandsbetween_palletfish = "Breadclaw (The Sands Between - Fishing In Wooden Pallet)"
-hairclaw_sandsbetween_southeelfish = "Hairclaw (The Sands Between - South Eelectrocute Path Large Island Fishing)"
-chipclaw_sandsbetween_anchoreelhiddenfish = "Chipclaw (The Sands Between - Hidden Fishing on Stone Cliff Near Anchor)"
+breadclaw_sandsbetween_centralvista = "SB: Breadclaw - central vista base"
+hairclaw_sandsbetween_southernreef = "SB: Hairclaw - above bobbit worm, south"
+chipclaw_sandsbetween_grove = "SB: Chipclaw - near Expired Grove entrance"
+breadclaw_sandsbetween_chains = "SB: Breadclaw - near chains, west"
+clothesclaw_sandsbetween_bobbit = "SB: Clothesclaw - second terrace, bobbit den"
+hairclaw_sandsbetween_bobbit = "SB: Hairclaw - third terrace, bobbit den"
+clothesclaw_sandsbetween_northwest = "SB: Clothesclaw - rock near central vista, northwest"
+clothesclaw_sandsbetween_grove = "SB: Clothesclaw - cans near Expired Grove entrance"
+breadclaw_sandsbetween_propanecliff = "SB: Breadclaw - cliff near propane tank"
+hairclaw_sandsbetween_northchains = "SB: Hairclaw - near chains, north"
+clothesclaw_sandsbetween_coolerpitfall = "SB: Clothesclaw - pitfall near cooler lid"
+hairclaw_sandsbetween_southgrovepit = "SB: Hairclaw - pitfall near Expired Grove entrance, south"
+paperclaw_sandsbetween_southeelshortcut = "SB: Paperclaw - eelectrocute path near shortcut, south"
+hairclaw_sandsbetween_southeel = "SB: Hairclaw - eelectrocute path, south"
+paperclaw_sandsbetween_trashanchor = "SB: Paperclaw - trashbag near anchor"
+hairclaw_sandsbetween_anchorfish = "SB: Hairclaw - spearfishing, near anchor"
+chipclaw_sandsbetween_northeastchainfish = "SB: Chipclaw - spearfishing, chains, northeast"
+clothesclaw_sandsbetween_propanefish = "SB: Clothesclaw - spearfishing, near propane tank"
+clothesclaw_sandsbetween_anchorcentralfish = "SB: Clothesclaw - spearfishing, between central vista and anchor"
+breadclaw_sandsbetween_nailfish = "SB: Breadclaw - spearfishing, near nail"
+breadclaw_sandsbetween_palletfish = "SB: Breadclaw - spearfishing, wooden pallet"
+hairclaw_sandsbetween_southeelfish = "SB: Hairclaw - spearfishing, eelectrocute path, south"
+chipclaw_sandsbetween_anchoreelhiddenfish = "SB: Chipclaw - spearfishing, cliff near anchor"
 
-stapleclaw_postpag_litter = "Stapleclaw (Post Pagurus - Litterbox)"
-hairclaw_postpag_chains = "Hairclaw (Post Pagurus - Middle of Chains)"
-clothesclaw_postpag_chains = "Clothesclaw (Post Pagurus - Middle of Chains)"
-hairclaw_postpag_nridge = "Hairclaw (Post Pagurus - North of Ridge Overlook)"
-hairclaw_postpag_ecentral = "Hairclaw (Post Pagurus - East of Central Vista)"
-chipclaw_postpag_nwpropane = "Chipclaw (Post Pagurus - Preserver North-West of Propane)"
-paperclaw_postpag_schain = "Paperclaw (Post Pagurus - South of Chains)"
+stapleclaw_postpag_litter = "SB: Stapleclaw - post pagurus, litterbox"
+hairclaw_postpag_chains = "SB: Hairclaw - post pagurus, middle of chains"
+clothesclaw_postpag_chains = "SB: Clothesclaw - post pagurus, middle of chains"
+hairclaw_postpag_nridge = "SB: Hairclaw - post pagurus, ridge overlook, north"
+hairclaw_postpag_ecentral = "SB: Hairclaw - post pagurus, central vista, east"
+chipclaw_postpag_nwpropane = "SB: Chipclaw - post pagurus, life preserver near propane"
+paperclaw_postpag_schain = "SB: Paperclaw - post pagurus, chains, south"
 
-clothesclaw_ridge_neridge = "Clothesclaw (Secluded Ridge - North East Secluded Ridge)"
-paperclaw_ridge_nearoverlook = "Paperclaw (Secluded Ridge - Hidden Crab near Ridge Overlook)"
-clothesclaw_ridge_broom = "Clothesclaw (Secluded Ridge - Near Broom)"
-breadclaw_ridge_south = "Breadclaw (Secluded Ridge - Southern Path)"
-clothesclaw_ridge_overlookfish = "Clothesclaw (Secluded Ridge - Fishing on Ridge Overlook)"
-chipclaw_ridge_southfish = "Chipclaw [Currency] (Fishing South of Ridge Overlook)"
+clothesclaw_ridge_neridge = "SR: Clothesclaw - to the northeast"
+paperclaw_ridge_nearoverlook = "SR: Paperclaw - ridge overlook, hidden crab"
+clothesclaw_ridge_broom = "SR: Clothesclaw - near broom"
+breadclaw_ridge_south = "SR: Breadclaw - southern path"
+clothesclaw_ridge_overlookfish = "SR: Clothesclaw - spearfishing, ridge overlook"
+chipclaw_ridge_southfish = "SR: Chipclaw - spearfishing, ridge overlook, south"
 
-stapleclaw_trashbin_eelfish = "Stapleclaw (Trashbin Plateau - Eelectrocute Grapple Path Fishing)"
+stapleclaw_trashbin_eelfish = "SR: Stapleclaw - spearfishing, eelectrocute grapple path"
 
 breadclaw_grovemain_takeout = "Breadclaw (Expired Grove Main - East Takeout Container)"
 breadclaw_grovemain_tiretop = "Breadclaw (Expired Grove Main - Near Tire Archway)"
